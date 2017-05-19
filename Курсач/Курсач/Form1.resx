@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="shashka1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="shashka1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 421</value>
+  </data>
+  <data name="shashka1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="shashka1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="shashka1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;shashka1.Name" xml:space="preserve">
+    <value>shashka1</value>
+  </data>
+  <data name="&gt;&gt;shashka1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka1.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="shashka2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 421</value>
+  </data>
+  <data name="shashka2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="shashka2.Text" xml:space="preserve">
+    <value>Шашка 2</value>
+  </data>
+  <data name="&gt;&gt;shashka2.Name" xml:space="preserve">
+    <value>shashka2</value>
+  </data>
+  <data name="&gt;&gt;shashka2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka2.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="shashka3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 421</value>
+  </data>
+  <data name="shashka3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="shashka3.Text" xml:space="preserve">
+    <value>Шашка 3</value>
+  </data>
+  <data name="&gt;&gt;shashka3.Name" xml:space="preserve">
+    <value>shashka3</value>
+  </data>
+  <data name="&gt;&gt;shashka3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka3.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="shashka4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 421</value>
+  </data>
+  <data name="shashka4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="shashka4.Text" xml:space="preserve">
+    <value>Шашка 4</value>
+  </data>
+  <data name="&gt;&gt;shashka4.Name" xml:space="preserve">
+    <value>shashka4</value>
+  </data>
+  <data name="&gt;&gt;shashka4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka4.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="shashka8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 363</value>
+  </data>
+  <data name="shashka8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka8.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="shashka8.Text" xml:space="preserve">
+    <value>Шашка 4</value>
+  </data>
+  <data name="&gt;&gt;shashka8.Name" xml:space="preserve">
+    <value>shashka8</value>
+  </data>
+  <data name="&gt;&gt;shashka8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka8.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="shashka7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 363</value>
+  </data>
+  <data name="shashka7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka7.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="shashka7.Text" xml:space="preserve">
+    <value>Шашка 3</value>
+  </data>
+  <data name="&gt;&gt;shashka7.Name" xml:space="preserve">
+    <value>shashka7</value>
+  </data>
+  <data name="&gt;&gt;shashka7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka7.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="shashka5.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="shashka5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 363</value>
+  </data>
+  <data name="shashka5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="shashka5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;shashka5.Name" xml:space="preserve">
+    <value>shashka5</value>
+  </data>
+  <data name="&gt;&gt;shashka5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka5.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="shashka6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 363</value>
+  </data>
+  <data name="shashka6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka6.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="shashka6.Text" xml:space="preserve">
+    <value>Шашка 2</value>
+  </data>
+  <data name="&gt;&gt;shashka6.Name" xml:space="preserve">
+    <value>shashka6</value>
+  </data>
+  <data name="&gt;&gt;shashka6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka6.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="shashka12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 305</value>
+  </data>
+  <data name="shashka12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka12.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="shashka12.Text" xml:space="preserve">
+    <value>Шашка 4</value>
+  </data>
+  <data name="&gt;&gt;shashka12.Name" xml:space="preserve">
+    <value>shashka12</value>
+  </data>
+  <data name="&gt;&gt;shashka12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka12.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka12.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="shashka11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 305</value>
+  </data>
+  <data name="shashka11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka11.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="shashka11.Text" xml:space="preserve">
+    <value>Шашка 3</value>
+  </data>
+  <data name="&gt;&gt;shashka11.Name" xml:space="preserve">
+    <value>shashka11</value>
+  </data>
+  <data name="&gt;&gt;shashka11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka11.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka11.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="shashka9.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="shashka9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 305</value>
+  </data>
+  <data name="shashka9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="shashka9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka9.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;shashka9.Name" xml:space="preserve">
+    <value>shashka9</value>
+  </data>
+  <data name="&gt;&gt;shashka9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka9.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="shashka10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 305</value>
+  </data>
+  <data name="shashka10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka10.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="shashka10.Text" xml:space="preserve">
+    <value>Шашка 2</value>
+  </data>
+  <data name="&gt;&gt;shashka10.Name" xml:space="preserve">
+    <value>shashka10</value>
+  </data>
+  <data name="&gt;&gt;shashka10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka10.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="shashka24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 15</value>
+  </data>
+  <data name="shashka24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka24.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="shashka24.Text" xml:space="preserve">
+    <value>Шашка 4</value>
+  </data>
+  <data name="&gt;&gt;shashka24.Name" xml:space="preserve">
+    <value>shashka24</value>
+  </data>
+  <data name="&gt;&gt;shashka24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka24.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka24.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="shashka23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 15</value>
+  </data>
+  <data name="shashka23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka23.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="shashka23.Text" xml:space="preserve">
+    <value>Шашка 3</value>
+  </data>
+  <data name="&gt;&gt;shashka23.Name" xml:space="preserve">
+    <value>shashka23</value>
+  </data>
+  <data name="&gt;&gt;shashka23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka23.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka23.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="shashka21.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="shashka21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 15</value>
+  </data>
+  <data name="shashka21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="shashka21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka21.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;shashka21.Name" xml:space="preserve">
+    <value>shashka21</value>
+  </data>
+  <data name="&gt;&gt;shashka21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka21.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka21.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="shashka22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 15</value>
+  </data>
+  <data name="shashka22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka22.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="shashka22.Text" xml:space="preserve">
+    <value>Шашка 2</value>
+  </data>
+  <data name="&gt;&gt;shashka22.Name" xml:space="preserve">
+    <value>shashka22</value>
+  </data>
+  <data name="&gt;&gt;shashka22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka22.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka22.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="shashka20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 73</value>
+  </data>
+  <data name="shashka20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka20.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="shashka20.Text" xml:space="preserve">
+    <value>Шашка 4</value>
+  </data>
+  <data name="&gt;&gt;shashka20.Name" xml:space="preserve">
+    <value>shashka20</value>
+  </data>
+  <data name="&gt;&gt;shashka20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka20.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka20.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="shashka19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 73</value>
+  </data>
+  <data name="shashka19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka19.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="shashka19.Text" xml:space="preserve">
+    <value>Шашка 3</value>
+  </data>
+  <data name="&gt;&gt;shashka19.Name" xml:space="preserve">
+    <value>shashka19</value>
+  </data>
+  <data name="&gt;&gt;shashka19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka19.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka19.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="shashka17.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="shashka17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 73</value>
+  </data>
+  <data name="shashka17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="shashka17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka17.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;shashka17.Name" xml:space="preserve">
+    <value>shashka17</value>
+  </data>
+  <data name="&gt;&gt;shashka17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka17.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka17.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="shashka18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 73</value>
+  </data>
+  <data name="shashka18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka18.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="shashka18.Text" xml:space="preserve">
+    <value>Шашка 2</value>
+  </data>
+  <data name="&gt;&gt;shashka18.Name" xml:space="preserve">
+    <value>shashka18</value>
+  </data>
+  <data name="&gt;&gt;shashka18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka18.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka18.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="shashka16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 131</value>
+  </data>
+  <data name="shashka16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka16.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="shashka16.Text" xml:space="preserve">
+    <value>Шашка 4</value>
+  </data>
+  <data name="&gt;&gt;shashka16.Name" xml:space="preserve">
+    <value>shashka16</value>
+  </data>
+  <data name="&gt;&gt;shashka16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka16.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka16.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="shashka15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 131</value>
+  </data>
+  <data name="shashka15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka15.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="shashka15.Text" xml:space="preserve">
+    <value>Шашка 3</value>
+  </data>
+  <data name="&gt;&gt;shashka15.Name" xml:space="preserve">
+    <value>shashka15</value>
+  </data>
+  <data name="&gt;&gt;shashka15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka15.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka15.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="shashka13.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="shashka13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 131</value>
+  </data>
+  <data name="shashka13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="shashka13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka13.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;shashka13.Name" xml:space="preserve">
+    <value>shashka13</value>
+  </data>
+  <data name="&gt;&gt;shashka13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka13.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka13.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="shashka14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shashka14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 131</value>
+  </data>
+  <data name="shashka14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="shashka14.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="shashka14.Text" xml:space="preserve">
+    <value>Шашка 2</value>
+  </data>
+  <data name="&gt;&gt;shashka14.Name" xml:space="preserve">
+    <value>shashka14</value>
+  </data>
+  <data name="&gt;&gt;shashka14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shashka14.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shashka14.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>506, 496</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Шашки</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>okno</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
