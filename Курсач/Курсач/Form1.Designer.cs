@@ -57,8 +57,11 @@
             // 
             // shashka1
             // 
-            this.shashka1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.shashka1.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.shashka1, "shashka1");
+            this.shashka1.FlatAppearance.BorderSize = 0;
+            this.shashka1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.shashka1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.shashka1.Name = "shashka1";
             this.shashka1.TabStop = false;
             this.shashka1.UseVisualStyleBackColor = false;
@@ -68,7 +71,11 @@
             // 
             // shashka2
             // 
-            this.shashka2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.shashka2.BackColor = System.Drawing.Color.Transparent;
+            this.shashka2.BackgroundImage = global::Курсач.Properties.Resources.чёрная_шашка;
+            this.shashka2.FlatAppearance.BorderSize = 0;
+            this.shashka2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.shashka2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.shashka2, "shashka2");
             this.shashka2.Name = "shashka2";
             this.shashka2.UseVisualStyleBackColor = false;
@@ -79,7 +86,11 @@
             // 
             // shashka3
             // 
-            this.shashka3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.shashka3.BackColor = System.Drawing.Color.Transparent;
+            this.shashka3.BackgroundImage = global::Курсач.Properties.Resources.чёрная_шашка;
+            this.shashka3.FlatAppearance.BorderSize = 0;
+            this.shashka3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.shashka3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.shashka3, "shashka3");
             this.shashka3.Name = "shashka3";
             this.shashka3.UseVisualStyleBackColor = false;
@@ -89,7 +100,11 @@
             // 
             // shashka4
             // 
-            this.shashka4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.shashka4.BackColor = System.Drawing.Color.Transparent;
+            this.shashka4.BackgroundImage = global::Курсач.Properties.Resources.чёрная_шашка;
+            this.shashka4.FlatAppearance.BorderSize = 0;
+            this.shashka4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.shashka4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.shashka4, "shashka4");
             this.shashka4.Name = "shashka4";
             this.shashka4.UseVisualStyleBackColor = false;
@@ -119,7 +134,11 @@
             // 
             // shashka5
             // 
-            this.shashka5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.shashka5.BackColor = System.Drawing.Color.Transparent;
+            this.shashka5.BackgroundImage = global::Курсач.Properties.Resources.чёрная_шашка;
+            this.shashka5.FlatAppearance.BorderSize = 0;
+            this.shashka5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.shashka5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.shashka5, "shashka5");
             this.shashka5.Name = "shashka5";
             this.shashka5.TabStop = false;

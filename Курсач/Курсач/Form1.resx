@@ -117,11 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="shashka1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="shashka1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6
+        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAA7BAAAOwQG4kWvtAAADwUlE
+        QVRoQ+2RS47UQBBE505sucbADVghseRzAtCcYM4BEuJ0jaOVYWWXX9lVdvV0C2bxFq7OzIinfjidTv8V
+        +HgN/nx7/2ML2hsNPh6FZILTCot5un0UfNwDFCapHi7uUeYe8LGHn58fn1IxKn76/umxCdoNhonjYyup
+        yKIkCfVANycOS+PjFg4O5kJUfAQ5Y2LOpm5b4OMaKXAuQSWvQc6c2CWNjzUcEoFY6iVwfnTpksZHwscj
+        CIu8JO4RnZql8bHERyMAC9wC94luTdL4mPGxOIzBt8S9ouOmND4aH4mDGHgPuF90XZXGR+HlOIRB94R7
+        RueqND6KWBwm++HNwyq004v7qvvvL49P5LV4EFoI8HArJNYC3WolhM/S5LZ4+PX13Swr6GgLJNID3WzB
+        vcNhIX3xIWJwtyyVN88f3yI0ayhjC/eXS+l38aGBYJcwFSbBNegGZa3h/uFyIU3CQ2RJpofyHmWuYQ85
+        ZcchwmU5EhC0K2hWlHdpt4Y95JQdS9nDwlScdgjazbcF7RH2CKdZuhS+mayhGzmDdmrYR25DhHMRURal
+        nVbynTKH5gn7yG24cC4oaL6H8l7OonnCPnKrCtNijVwil6PZPeSbOYtma1jY0lm2SzgXELkcze8h3yzz
+        aJ6QU7AQPv9AS0QOz8Vo9gj5ds6kWcJecnwVFrRE5PBcimaPkG/nTJol7CXHV2FBS0QOz6Vo9gj5ds6k
+        WcJecnwVFrRE5HCRi9H8HvJNkfNonrCXHEvhszQt1cgFcjGa3UO+mbNotoZlxSw84l/O5QTN91Dey1k0
+        T9hHbvYcJizKkrTTSr5T5tA8YR+5DREWuUguKWi+hfJOzqD5GvaRW014uLSgHYJ2821Be4Q9wmkpnKQP
+        CQsqLmhX0Kwo79JuDXvIKTsOERZlORLoobxHmWvYQ07ZkYSHSQuSWYNuUNYa7h8udWERQ7uEBRU2JGho
+        XlDGFu4vl9Lv4kNoKLiKdA90ewv3DodtYeFhLdLRVkiiBbrVijoHC1mxeDAWFnS4FxLL0E4v7hvddwkP
+        lb4m7hmdUVbgo/FyHMKge8D9omtVVuBjxkfiIAbeEveKjquyAh9L4th8nIJvQe40sSkr8LFExxJ3Ie0e
+        0ekMdS/Bxxrp+E2lnR9dmkQNPq7hkAh8UfGcOdEtK/BxC4dF8AyVHEGZM7FLVuBjCw4NFqWoeA90c2LO
+        pE4t4GMPucQElUQhgnaDw6IGH/eQSwVUvIeLe5S5B3w8Slk2IKnMYoduHwUfR0MyBO2OBh//XU4PfwEe
+        kCmjNtGh+wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="shashka1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="shashka1.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 421</value>
   </data>
@@ -147,6 +170,9 @@
   <data name="&gt;&gt;shashka1.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
+  <data name="shashka2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="shashka2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -158,9 +184,6 @@
   </data>
   <data name="shashka2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="shashka2.Text" xml:space="preserve">
-    <value>Шашка 2</value>
   </data>
   <data name="&gt;&gt;shashka2.Name" xml:space="preserve">
     <value>shashka2</value>
@@ -174,6 +197,9 @@
   <data name="&gt;&gt;shashka2.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
+  <data name="shashka3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="shashka3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -185,9 +211,6 @@
   </data>
   <data name="shashka3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="shashka3.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka3.Name" xml:space="preserve">
     <value>shashka3</value>
@@ -201,6 +224,9 @@
   <data name="&gt;&gt;shashka3.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <data name="shashka4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="shashka4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -212,9 +238,6 @@
   </data>
   <data name="shashka4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="shashka4.Text" xml:space="preserve">
-    <value>Шашка 4</value>
   </data>
   <data name="&gt;&gt;shashka4.Name" xml:space="preserve">
     <value>shashka4</value>
@@ -282,8 +305,8 @@
   <data name="&gt;&gt;shashka7.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="shashka5.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
+  <data name="shashka5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="shashka5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
