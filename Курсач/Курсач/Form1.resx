@@ -263,9 +263,6 @@
   <data name="shashka8.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="shashka8.Text" xml:space="preserve">
-    <value>Шашка 4</value>
-  </data>
   <data name="&gt;&gt;shashka8.Name" xml:space="preserve">
     <value>shashka8</value>
   </data>
@@ -289,9 +286,6 @@
   </data>
   <data name="shashka7.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
-  </data>
-  <data name="shashka7.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka7.Name" xml:space="preserve">
     <value>shashka7</value>
@@ -347,9 +341,6 @@
   <data name="shashka6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="shashka6.Text" xml:space="preserve">
-    <value>Шашка 2</value>
-  </data>
   <data name="&gt;&gt;shashka6.Name" xml:space="preserve">
     <value>shashka6</value>
   </data>
@@ -374,9 +365,6 @@
   <data name="shashka12.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="shashka12.Text" xml:space="preserve">
-    <value>Шашка 4</value>
-  </data>
   <data name="&gt;&gt;shashka12.Name" xml:space="preserve">
     <value>shashka12</value>
   </data>
@@ -400,9 +388,6 @@
   </data>
   <data name="shashka11.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
-  </data>
-  <data name="shashka11.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka11.Name" xml:space="preserve">
     <value>shashka11</value>
@@ -458,9 +443,6 @@
   <data name="shashka10.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="shashka10.Text" xml:space="preserve">
-    <value>Шашка 2</value>
-  </data>
   <data name="&gt;&gt;shashka10.Name" xml:space="preserve">
     <value>shashka10</value>
   </data>
@@ -485,9 +467,6 @@
   <data name="shashka24.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="shashka24.Text" xml:space="preserve">
-    <value>Шашка 4</value>
-  </data>
   <data name="&gt;&gt;shashka24.Name" xml:space="preserve">
     <value>shashka24</value>
   </data>
@@ -511,9 +490,6 @@
   </data>
   <data name="shashka23.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
-  </data>
-  <data name="shashka23.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka23.Name" xml:space="preserve">
     <value>shashka23</value>
@@ -569,9 +545,6 @@
   <data name="shashka22.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="shashka22.Text" xml:space="preserve">
-    <value>Шашка 2</value>
-  </data>
   <data name="&gt;&gt;shashka22.Name" xml:space="preserve">
     <value>shashka22</value>
   </data>
@@ -596,9 +569,6 @@
   <data name="shashka20.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="shashka20.Text" xml:space="preserve">
-    <value>Шашка 4</value>
-  </data>
   <data name="&gt;&gt;shashka20.Name" xml:space="preserve">
     <value>shashka20</value>
   </data>
@@ -622,9 +592,6 @@
   </data>
   <data name="shashka19.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
-  </data>
-  <data name="shashka19.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka19.Name" xml:space="preserve">
     <value>shashka19</value>
@@ -680,9 +647,6 @@
   <data name="shashka18.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="shashka18.Text" xml:space="preserve">
-    <value>Шашка 2</value>
-  </data>
   <data name="&gt;&gt;shashka18.Name" xml:space="preserve">
     <value>shashka18</value>
   </data>
@@ -707,9 +671,6 @@
   <data name="shashka16.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="shashka16.Text" xml:space="preserve">
-    <value>Шашка 4</value>
-  </data>
   <data name="&gt;&gt;shashka16.Name" xml:space="preserve">
     <value>shashka16</value>
   </data>
@@ -733,9 +694,6 @@
   </data>
   <data name="shashka15.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
-  </data>
-  <data name="shashka15.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka15.Name" xml:space="preserve">
     <value>shashka15</value>
@@ -791,9 +749,6 @@
   <data name="shashka14.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="shashka14.Text" xml:space="preserve">
-    <value>Шашка 2</value>
-  </data>
   <data name="&gt;&gt;shashka14.Name" xml:space="preserve">
     <value>shashka14</value>
   </data>
@@ -809,36 +764,6 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="менюToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 20</value>
-  </data>
-  <data name="менюToolStripMenuItem.Text" xml:space="preserve">
-    <value>Меню</value>
-  </data>
-  <data name="белыеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="белыеToolStripMenuItem.Text" xml:space="preserve">
-    <value>Белые</value>
-  </data>
-  <data name="черныеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="черныеToolStripMenuItem.Text" xml:space="preserve">
-    <value>Черные</value>
-  </data>
-  <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
-    <value>С другом</value>
-  </data>
-  <data name="новаяИграToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 20</value>
-  </data>
-  <data name="новаяИграToolStripMenuItem.Text" xml:space="preserve">
-    <value>Новая игра</value>
-  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -863,11 +788,41 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="менюToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 20</value>
+  </data>
+  <data name="менюToolStripMenuItem.Text" xml:space="preserve">
+    <value>Меню</value>
+  </data>
   <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 22</value>
   </data>
   <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
     <value>Справка</value>
+  </data>
+  <data name="новаяИграToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 20</value>
+  </data>
+  <data name="новаяИграToolStripMenuItem.Text" xml:space="preserve">
+    <value>Новая игра</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
+    <value>С другом</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Белые</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Черные</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
