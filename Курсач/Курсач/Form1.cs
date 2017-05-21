@@ -16,8 +16,14 @@ namespace Курсач
     {
         private int[] clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         private int[,] shah = new int[8, 8] { { 0, 1, 0, 1, 0, 1, 0, 1 }, { 1, 0, 1, 0, 1, 0, 1, 0 }, { 0, 1, 0, 1, 0, 1, 0, 1 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 1, 0, 1, 0, 1, 0 }, { 0, 1, 0, 1, 0, 1, 0, 1 }, { 1, 0, 1, 0, 1, 0, 1, 0 } };
+        private int x0, y0;
         Point DownPoint;
 
+        private int allow(int x, int y)
+        {
+            return 0;
+        }
+        
         public okno()
         {
             InitializeComponent();
@@ -60,6 +66,11 @@ namespace Курсач
                 y = shashka1.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
+                if (allow(x, y) == 0)
+                {
+                    shashka1.Location = new Point(x0, y0);
+                }
+                else
                 shashka1.Location = new Point(x, y);
                 DownPoint = new Point();
             }
@@ -105,15 +116,15 @@ namespace Курсач
                 y = shashka2.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka2.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka2.Location = new Point(x0, y0);
+                }
+                else
+                    shashka2.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka2.BringToFront();
-        }
-        
-        private void shashka2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void shashka3_Click(object sender, EventArgs e)
@@ -125,7 +136,12 @@ namespace Курсач
                 y = shashka3.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka3.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka3.Location = new Point(x0, y0);
+                }
+                else
+                    shashka3.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka3.BringToFront();
@@ -140,7 +156,12 @@ namespace Курсач
                 y = shashka4.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka4.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka4.Location = new Point(x0, y0);
+                }
+                else
+                    shashka4.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka4.BringToFront();
@@ -155,7 +176,12 @@ namespace Курсач
                 y = shashka5.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka5.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka5.Location = new Point(x0, y0);
+                }
+                else
+                    shashka5.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka5.BringToFront();
@@ -170,7 +196,12 @@ namespace Курсач
                 y = shashka6.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka6.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka6.Location = new Point(x0, y0);
+                }
+                else
+                    shashka6.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka6.BringToFront();
@@ -185,7 +216,12 @@ namespace Курсач
                 y = shashka7.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka7.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka7.Location = new Point(x0, y0);
+                }
+                else
+                    shashka7.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka7.BringToFront();
@@ -200,7 +236,12 @@ namespace Курсач
                 y = shashka8.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka8.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka8.Location = new Point(x0, y0);
+                }
+                else
+                    shashka8.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka8.BringToFront();
@@ -215,7 +256,12 @@ namespace Курсач
                 y = shashka9.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka9.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka9.Location = new Point(x0, y0);
+                }
+                else
+                    shashka9.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka9.BringToFront();
@@ -230,7 +276,12 @@ namespace Курсач
                 y = shashka10.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka10.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka10.Location = new Point(x0, y0);
+                }
+                else
+                    shashka10.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka10.BringToFront();
@@ -245,7 +296,12 @@ namespace Курсач
                 y = shashka12.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka12.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka12.Location = new Point(x0, y0);
+                }
+                else
+                    shashka12.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka12.BringToFront();
@@ -260,7 +316,12 @@ namespace Курсач
                 y = shashka14.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka14.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka14.Location = new Point(x0, y0);
+                }
+                else
+                    shashka14.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka14.BringToFront();
@@ -275,7 +336,12 @@ namespace Курсач
                 y = shashka15.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka15.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka15.Location = new Point(x0, y0);
+                }
+                else
+                    shashka15.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka15.BringToFront();
@@ -290,7 +356,12 @@ namespace Курсач
                 y = shashka16.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka16.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka16.Location = new Point(x0, y0);
+                }
+                else
+                    shashka16.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka16.BringToFront();
@@ -305,7 +376,12 @@ namespace Курсач
                 y = shashka17.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka17.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka17.Location = new Point(x0, y0);
+                }
+                else
+                    shashka17.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka17.BringToFront();
@@ -320,7 +396,12 @@ namespace Курсач
                 y = shashka18.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka18.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka18.Location = new Point(x0, y0);
+                }
+                else
+                    shashka18.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka18.BringToFront();
@@ -335,7 +416,12 @@ namespace Курсач
                 y = shashka19.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka19.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka19.Location = new Point(x0, y0);
+                }
+                else
+                    shashka19.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka19.BringToFront();
@@ -350,7 +436,12 @@ namespace Курсач
                 y = shashka20.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka20.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka20.Location = new Point(x0, y0);
+                }
+                else
+                    shashka20.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka20.BringToFront();
@@ -366,7 +457,12 @@ namespace Курсач
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
                 shashka21.Location = new Point(x, y);
-                DownPoint = new Point(); }
+                if (allow(x, y) == 0)
+                {
+                    shashka21.Location = new Point(x0, y0);
+                }
+                else
+                    DownPoint = new Point(); }
             else
                 shashka21.BringToFront();
         }
@@ -380,7 +476,12 @@ namespace Курсач
                 y = shashka22.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka22.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka22.Location = new Point(x0, y0);
+                }
+                else
+                    shashka22.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka22.BringToFront();
@@ -395,7 +496,12 @@ namespace Курсач
                 y = shashka23.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka23.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka23.Location = new Point(x0, y0);
+                }
+                else
+                    shashka23.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka23.BringToFront();
@@ -533,7 +639,12 @@ namespace Курсач
                 y = shashka24.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka24.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka24.Location = new Point(x0, y0);
+                }
+                else
+                    shashka24.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka24.BringToFront();
@@ -610,7 +721,12 @@ namespace Курсач
                 y = shashka13.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka13.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka13.Location = new Point(x0, y0);
+                }
+                else
+                    shashka13.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka13.BringToFront();
@@ -637,7 +753,12 @@ namespace Курсач
                 y = shashka11.Location.Y;
                 x = ((x + 29 - 17) / 58) * 58 + 17;
                 y = ((y + 29 - 31) / 58) * 58 + 31;
-                shashka11.Location = new Point(x, y);
+                if (allow(x, y) == 0)
+                {
+                    shashka11.Location = new Point(x0, y0);
+                }
+                else
+                    shashka11.Location = new Point(x, y);
                 DownPoint = new Point(); }
             else
                 shashka11.BringToFront();
