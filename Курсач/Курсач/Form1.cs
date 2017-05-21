@@ -15,7 +15,7 @@ namespace Курсач
     public partial class okno : Form
     {
         private int[] clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        private int[][] shah = new int[][] { 1, 1, 1, 1 };
+        //private int[][] shah = new int[][] { 1, 1, 1, 1 };
         Point DownPoint;
 
         public okno()
