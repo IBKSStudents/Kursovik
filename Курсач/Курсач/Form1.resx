@@ -121,7 +121,7 @@
   <data name="shashka1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6
-        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAA7BAAAOwQG4kWvtAAADwUlE
+        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAA6/AAAOvwE4BVMkAAADwUlE
         QVRoQ+2RS47UQBBE505sucbADVghseRzAtCcYM4BEuJ0jaOVYWWXX9lVdvV0C2bxFq7OzIinfjidTv8V
         +HgN/nx7/2ML2hsNPh6FZILTCot5un0UfNwDFCapHi7uUeYe8LGHn58fn1IxKn76/umxCdoNhonjYyup
         yKIkCfVANycOS+PjFg4O5kJUfAQ5Y2LOpm5b4OMaKXAuQSWvQc6c2CWNjzUcEoFY6iVwfnTpksZHwscj
@@ -146,7 +146,7 @@
     <value>Flat</value>
   </data>
   <data name="shashka1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 421</value>
+    <value>16, 437</value>
   </data>
   <data name="shashka1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -177,7 +177,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 421</value>
+    <value>132, 437</value>
   </data>
   <data name="shashka2.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -204,7 +204,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 421</value>
+    <value>248, 437</value>
   </data>
   <data name="shashka3.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -231,7 +231,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 421</value>
+    <value>364, 437</value>
   </data>
   <data name="shashka4.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -255,7 +255,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 363</value>
+    <value>422, 379</value>
   </data>
   <data name="shashka8.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -282,7 +282,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 363</value>
+    <value>306, 379</value>
   </data>
   <data name="shashka7.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -312,7 +312,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 363</value>
+    <value>74, 379</value>
   </data>
   <data name="shashka5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -339,7 +339,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 363</value>
+    <value>190, 379</value>
   </data>
   <data name="shashka6.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -366,7 +366,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 305</value>
+    <value>364, 321</value>
   </data>
   <data name="shashka12.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -393,7 +393,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 305</value>
+    <value>248, 321</value>
   </data>
   <data name="shashka11.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -423,7 +423,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 305</value>
+    <value>16, 321</value>
   </data>
   <data name="shashka9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -450,7 +450,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 305</value>
+    <value>132, 321</value>
   </data>
   <data name="shashka10.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -477,7 +477,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 15</value>
+    <value>422, 31</value>
   </data>
   <data name="shashka24.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -504,7 +504,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 15</value>
+    <value>306, 31</value>
   </data>
   <data name="shashka23.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -534,7 +534,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 15</value>
+    <value>75, 31</value>
   </data>
   <data name="shashka21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -561,7 +561,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 15</value>
+    <value>190, 31</value>
   </data>
   <data name="shashka22.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -588,7 +588,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 73</value>
+    <value>364, 89</value>
   </data>
   <data name="shashka20.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -615,7 +615,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 73</value>
+    <value>248, 89</value>
   </data>
   <data name="shashka19.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -645,7 +645,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 73</value>
+    <value>16, 89</value>
   </data>
   <data name="shashka17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -672,7 +672,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 73</value>
+    <value>132, 89</value>
   </data>
   <data name="shashka18.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -699,7 +699,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 131</value>
+    <value>422, 147</value>
   </data>
   <data name="shashka16.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -726,7 +726,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 131</value>
+    <value>306, 147</value>
   </data>
   <data name="shashka15.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -756,7 +756,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 131</value>
+    <value>74, 147</value>
   </data>
   <data name="shashka13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -783,7 +783,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 131</value>
+    <value>190, 147</value>
   </data>
   <data name="shashka14.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
@@ -806,6 +806,69 @@
   <data name="&gt;&gt;shashka14.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="менюToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 20</value>
+  </data>
+  <data name="менюToolStripMenuItem.Text" xml:space="preserve">
+    <value>Меню</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Белые</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Черные</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
+    <value>С другом</value>
+  </data>
+  <data name="новаяИграToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 20</value>
+  </data>
+  <data name="новаяИграToolStripMenuItem.Text" xml:space="preserve">
+    <value>Новая игра</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>506, 24</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Справка</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -816,13 +879,49 @@
     <value>None</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>506, 496</value>
+    <value>506, 512</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Шашки</value>
+  </data>
+  <data name="&gt;&gt;менюToolStripMenuItem.Name" xml:space="preserve">
+    <value>менюToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;менюToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;справкаToolStripMenuItem.Name" xml:space="preserve">
+    <value>справкаToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;справкаToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;новаяИграToolStripMenuItem.Name" xml:space="preserve">
+    <value>новаяИграToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;новаяИграToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;сДругомToolStripMenuItem.Name" xml:space="preserve">
+    <value>сДругомToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;сДругомToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;белыеToolStripMenuItem.Name" xml:space="preserve">
+    <value>белыеToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;белыеToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;черныеToolStripMenuItem.Name" xml:space="preserve">
+    <value>черныеToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;черныеToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>okno</value>
