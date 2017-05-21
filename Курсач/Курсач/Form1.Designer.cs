@@ -72,7 +72,6 @@
             resources.ApplyResources(this.shashka2, "shashka2");
             this.shashka2.Name = "shashka2";
             this.shashka2.UseVisualStyleBackColor = false;
-            this.shashka2.Click += new System.EventHandler(this.shashka2_Click);
             this.shashka2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseClick);
             this.shashka2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseDown);
             this.shashka2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseMove);
