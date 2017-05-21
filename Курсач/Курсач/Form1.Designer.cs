@@ -376,6 +376,7 @@
             // 
             this.черныеToolStripMenuItem.Name = "черныеToolStripMenuItem";
             resources.ApplyResources(this.черныеToolStripMenuItem, "черныеToolStripMenuItem");
+            this.черныеToolStripMenuItem.Click += new System.EventHandler(this.черныеToolStripMenuItem_Click);
             // 
             // okno
             // 

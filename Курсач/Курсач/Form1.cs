@@ -733,5 +733,33 @@ namespace Курсач
             starts(shashka23, 0);
             starts(shashka24, 0);
         }
+
+        private void черныеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            starts(shashka1, 0);
+            starts(shashka2, 0);
+            starts(shashka3, 0);
+            starts(shashka4, 0);
+            starts(shashka5, 0);
+            starts(shashka6, 0);
+            starts(shashka7, 0);
+            starts(shashka8, 0);
+            starts(shashka9, 0);
+            starts(shashka10, 0);
+            starts(shashka11, 0);
+            starts(shashka12, 0);
+            starts(shashka13, 1);
+            starts(shashka14, 1);
+            starts(shashka15, 1);
+            starts(shashka16, 1);
+            starts(shashka17, 1);
+            starts(shashka18, 1);
+            starts(shashka19, 1);
+            starts(shashka20, 1);
+            starts(shashka21, 1);
+            starts(shashka22, 1);
+            starts(shashka23, 1);
+            starts(shashka24, 1);
+        }
     }
 }
