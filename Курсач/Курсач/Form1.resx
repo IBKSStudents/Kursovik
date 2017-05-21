@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="shashka1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 421</value>
+    <value>17, 437</value>
   </data>
   <data name="shashka1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -151,16 +151,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 421</value>
+    <value>133, 437</value>
   </data>
   <data name="shashka2.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="shashka2.Text" xml:space="preserve">
-    <value>Шашка 2</value>
   </data>
   <data name="&gt;&gt;shashka2.Name" xml:space="preserve">
     <value>shashka2</value>
@@ -178,16 +175,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 421</value>
+    <value>249, 437</value>
   </data>
   <data name="shashka3.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="shashka3.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka3.Name" xml:space="preserve">
     <value>shashka3</value>
@@ -205,16 +199,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 421</value>
+    <value>365, 437</value>
   </data>
   <data name="shashka4.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="shashka4.Text" xml:space="preserve">
-    <value>Шашка 4</value>
   </data>
   <data name="&gt;&gt;shashka4.Name" xml:space="preserve">
     <value>shashka4</value>
@@ -232,16 +223,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 363</value>
+    <value>423, 379</value>
   </data>
   <data name="shashka8.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka8.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
-  </data>
-  <data name="shashka8.Text" xml:space="preserve">
-    <value>Шашка 4</value>
   </data>
   <data name="&gt;&gt;shashka8.Name" xml:space="preserve">
     <value>shashka8</value>
@@ -259,16 +247,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 363</value>
+    <value>307, 379</value>
   </data>
   <data name="shashka7.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka7.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
-  </data>
-  <data name="shashka7.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka7.Name" xml:space="preserve">
     <value>shashka7</value>
@@ -289,7 +274,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 363</value>
+    <value>75, 379</value>
   </data>
   <data name="shashka5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -316,16 +301,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 363</value>
+    <value>191, 379</value>
   </data>
   <data name="shashka6.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="shashka6.Text" xml:space="preserve">
-    <value>Шашка 2</value>
   </data>
   <data name="&gt;&gt;shashka6.Name" xml:space="preserve">
     <value>shashka6</value>
@@ -343,16 +325,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 305</value>
+    <value>365, 321</value>
   </data>
   <data name="shashka12.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka12.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
-  </data>
-  <data name="shashka12.Text" xml:space="preserve">
-    <value>Шашка 4</value>
   </data>
   <data name="&gt;&gt;shashka12.Name" xml:space="preserve">
     <value>shashka12</value>
@@ -370,16 +349,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 305</value>
+    <value>249, 321</value>
   </data>
   <data name="shashka11.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka11.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
-  </data>
-  <data name="shashka11.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka11.Name" xml:space="preserve">
     <value>shashka11</value>
@@ -400,7 +376,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 305</value>
+    <value>17, 321</value>
   </data>
   <data name="shashka9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -427,16 +403,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 305</value>
+    <value>133, 321</value>
   </data>
   <data name="shashka10.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka10.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
-  </data>
-  <data name="shashka10.Text" xml:space="preserve">
-    <value>Шашка 2</value>
   </data>
   <data name="&gt;&gt;shashka10.Name" xml:space="preserve">
     <value>shashka10</value>
@@ -454,16 +427,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 15</value>
+    <value>423, 31</value>
   </data>
   <data name="shashka24.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka24.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
-  </data>
-  <data name="shashka24.Text" xml:space="preserve">
-    <value>Шашка 4</value>
   </data>
   <data name="&gt;&gt;shashka24.Name" xml:space="preserve">
     <value>shashka24</value>
@@ -481,16 +451,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 15</value>
+    <value>307, 31</value>
   </data>
   <data name="shashka23.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka23.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
-  </data>
-  <data name="shashka23.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka23.Name" xml:space="preserve">
     <value>shashka23</value>
@@ -511,7 +478,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 15</value>
+    <value>75, 31</value>
   </data>
   <data name="shashka21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -538,16 +505,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 15</value>
+    <value>191, 31</value>
   </data>
   <data name="shashka22.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka22.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
-  </data>
-  <data name="shashka22.Text" xml:space="preserve">
-    <value>Шашка 2</value>
   </data>
   <data name="&gt;&gt;shashka22.Name" xml:space="preserve">
     <value>shashka22</value>
@@ -565,16 +529,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 73</value>
+    <value>365, 89</value>
   </data>
   <data name="shashka20.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka20.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
-  </data>
-  <data name="shashka20.Text" xml:space="preserve">
-    <value>Шашка 4</value>
   </data>
   <data name="&gt;&gt;shashka20.Name" xml:space="preserve">
     <value>shashka20</value>
@@ -592,16 +553,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 73</value>
+    <value>249, 89</value>
   </data>
   <data name="shashka19.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka19.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
-  </data>
-  <data name="shashka19.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka19.Name" xml:space="preserve">
     <value>shashka19</value>
@@ -622,7 +580,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 73</value>
+    <value>17, 89</value>
   </data>
   <data name="shashka17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -649,16 +607,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 73</value>
+    <value>133, 89</value>
   </data>
   <data name="shashka18.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka18.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
-  </data>
-  <data name="shashka18.Text" xml:space="preserve">
-    <value>Шашка 2</value>
   </data>
   <data name="&gt;&gt;shashka18.Name" xml:space="preserve">
     <value>shashka18</value>
@@ -676,16 +631,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 131</value>
+    <value>423, 147</value>
   </data>
   <data name="shashka16.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka16.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="shashka16.Text" xml:space="preserve">
-    <value>Шашка 4</value>
   </data>
   <data name="&gt;&gt;shashka16.Name" xml:space="preserve">
     <value>shashka16</value>
@@ -703,16 +655,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 131</value>
+    <value>307, 147</value>
   </data>
   <data name="shashka15.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka15.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
-  </data>
-  <data name="shashka15.Text" xml:space="preserve">
-    <value>Шашка 3</value>
   </data>
   <data name="&gt;&gt;shashka15.Name" xml:space="preserve">
     <value>shashka15</value>
@@ -733,7 +682,7 @@
     <value>NoControl</value>
   </data>
   <data name="shashka13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 131</value>
+    <value>75, 147</value>
   </data>
   <data name="shashka13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -760,16 +709,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 131</value>
+    <value>191, 147</value>
   </data>
   <data name="shashka14.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
   <data name="shashka14.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
-  </data>
-  <data name="shashka14.Text" xml:space="preserve">
-    <value>Шашка 2</value>
   </data>
   <data name="&gt;&gt;shashka14.Name" xml:space="preserve">
     <value>shashka14</value>
@@ -783,11 +729,550 @@
   <data name="&gt;&gt;shashka14.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="менюToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 20</value>
+  </data>
+  <data name="менюToolStripMenuItem.Text" xml:space="preserve">
+    <value>Меню</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Белые</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Черные</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
+    <value>С другом</value>
+  </data>
+  <data name="новаяИграToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 20</value>
+  </data>
+  <data name="новаяИграToolStripMenuItem.Text" xml:space="preserve">
+    <value>Новая игра</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>506, 24</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
+  </data>
+  <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcI
+        CQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwM
+        DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAH9AfMDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKM8UUAFFGaN1ABRRuo3UAFFG6jdQAUUbqN1ABRRuo3UAFF
+        G6jdQAUUbqN1ABRRuo3UAFFG6jdQAUUbqN1ABRRuo3UAFFG6jdQAUUbqN1ABRRuo3UAFFG6jdQAUUbqN
+        1ABRRuo3UAFFG6jdQAUUbqN1ABRRuo3UAFFG6jdQAUUbqN1ABRRuo3UAFFG6jdQAUUbqN1ABRRuo3UAF
+        FG6jdQAUUbqN1ABRRuozQAUUZo3c0AFFFFAEe3io3uVibaZFU+5pwciv55/+C3ob/h6F8Uc9d+lj/wAp
+        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
+        +RJRRRX2h8wf/9k=
+</value>
   </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -800,6 +1285,42 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Шашки</value>
+  </data>
+  <data name="&gt;&gt;менюToolStripMenuItem.Name" xml:space="preserve">
+    <value>менюToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;менюToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;справкаToolStripMenuItem.Name" xml:space="preserve">
+    <value>справкаToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;справкаToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;новаяИграToolStripMenuItem.Name" xml:space="preserve">
+    <value>новаяИграToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;новаяИграToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;сДругомToolStripMenuItem.Name" xml:space="preserve">
+    <value>сДругомToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;сДругомToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;белыеToolStripMenuItem.Name" xml:space="preserve">
+    <value>белыеToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;белыеToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;черныеToolStripMenuItem.Name" xml:space="preserve">
+    <value>черныеToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;черныеToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>okno</value>
