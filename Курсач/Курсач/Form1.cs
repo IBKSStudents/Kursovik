@@ -15,7 +15,7 @@ namespace Курсач
     public partial class okno : Form
     {
         private int[] clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        //private int[][] shah = new int[][] { 1, 1, 1, 1 };
+        private int[,] shah = new int[4, 8];
         Point DownPoint;
 
         public okno()
@@ -49,6 +49,13 @@ namespace Курсач
             starts(shashka22, 0);
             starts(shashka23, 0);
             starts(shashka24, 0);
+            for (int j = 0; j < 3; j++) {
+                for (int i = 0; i < 4; i++)
+                {
+                    shah[i, j] = 1;
+                    shah[i, 7-j] = 1;
+                }
+            }
         }
 
         private void shashka1_Click(object sender, EventArgs e)
