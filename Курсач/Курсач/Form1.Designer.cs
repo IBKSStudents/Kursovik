@@ -57,7 +57,7 @@
             // 
             // shashka1
             // 
-            this.shashka1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.shashka1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             resources.ApplyResources(this.shashka1, "shashka1");
             this.shashka1.Name = "shashka1";
             this.shashka1.TabStop = false;

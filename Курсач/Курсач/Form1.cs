@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 
 namespace Курсач
-{ 
+{
     public partial class okno : Form
     {
-       private int[] clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        private int[] clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         Point DownPoint;
 
         public okno()
@@ -29,7 +29,15 @@ namespace Курсач
         private void shashka1_Click(object sender, EventArgs e)
         {
            clicks[0] = (clicks[0] + 1) % 2;
-            if (clicks[0] == 0) { DownPoint = new Point(); }
+            if (clicks[0] == 0) {
+                int x, y;
+                x = ((DownPoint.X - 17) / 58);
+                x = (x * 58) + 17;
+                y = ((DownPoint.Y -15) / 58);
+                y = (x * 58) + 15;
+                shashka1.Location = new Point(x, y);
+                DownPoint = new Point();
+            }
             else
                 shashka1.BringToFront();
         }
