@@ -14,15 +14,19 @@ namespace Курсач
 {
     public partial class okno : Form
     {
-        // Kondrat pidr delay kursach suka!!!! (c)Davlveek
         private int[] clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        private int[,] shah = new int[8, 8] { { 0, 1, 0, 1, 0, 1, 0, 1 }, { 1, 0, 1, 0, 1, 0, 1, 0 }, { 0, 1, 0, 1, 0, 1, 0, 1 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 1, 0, 1, 0, 1, 0 }, { 0, 1, 0, 1, 0, 1, 0, 1 }, { 1, 0, 1, 0, 1, 0, 1, 0 } };
-        private int x0, y0;
+        private int[,] shah = new int[8, 8] { { 0, 21, 0, 22, 0, 23, 0, 24 }, { 17, 0, 18, 0, 19, 0, 20, 0 }, { 0, 13, 0, 14, 0, 15, 0, 16 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 9, 0, 10, 0, 11, 0, 12, 0 }, { 0, 5, 0, 6, 0, 7, 0, 8 }, { 1, 0, 2, 0, 3, 0, 4, 0 } };
+        private int x0, y0,
+            blackCount = 12,    // Count of black shashkas
+            whiteCount = 12;    // Count of white shashkas
         Point DownPoint;
 
         private int allow(int x, int y)
         {
             return 1;
+            /*
+             if(((shah[nx, ny]<13)&&(shah[nX, nY]>12)&&(shah[nx, ny]!=0))||((shah[nx, ny]>12)&&(shah[nX, nY]<13)&&(shah[nX, nY]!=0)))
+             */
         }
 
         public okno()
