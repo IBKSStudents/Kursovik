@@ -132,6 +132,11 @@ namespace Курсач
              
         }
 
+        private void gameover()
+        {
+            //TODO Дописать окончание игры
+        }
+
         public okno()
         {
             InitializeComponent();
@@ -456,6 +461,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka1.Location = new Point(x, y);
@@ -468,7 +474,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -493,7 +502,6 @@ namespace Курсач
 
         }
 
-
         private void shashka2_Click(object sender, EventArgs e)
 
         {
@@ -515,19 +523,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka2.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 2;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -552,7 +564,6 @@ namespace Курсач
 
         }
 
-
         private void shashka3_Click(object sender, EventArgs e)
 
         {
@@ -574,19 +585,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka3.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 3;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -611,7 +626,6 @@ namespace Курсач
 
         }
 
-
         private void shashka4_Click(object sender, EventArgs e)
 
         {
@@ -633,19 +647,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka4.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 4;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -670,7 +688,6 @@ namespace Курсач
 
         }
 
-
         private void shashka5_Click(object sender, EventArgs e)
 
         {
@@ -692,19 +709,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka5.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 5;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -729,7 +750,6 @@ namespace Курсач
 
         }
 
-
         private void shashka6_Click(object sender, EventArgs e)
 
         {
@@ -751,19 +771,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka6.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 6;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -788,7 +812,6 @@ namespace Курсач
 
         }
 
-
         private void shashka7_Click(object sender, EventArgs e)
 
         {
@@ -810,19 +833,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka7.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 7;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -847,7 +874,6 @@ namespace Курсач
 
         }
 
-
         private void shashka8_Click(object sender, EventArgs e)
 
         {
@@ -869,19 +895,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka8.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 8;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -906,7 +936,6 @@ namespace Курсач
 
         }
 
-
         private void shashka9_Click(object sender, EventArgs e)
 
         {
@@ -928,19 +957,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka9.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 9;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -965,7 +998,6 @@ namespace Курсач
 
         }
 
-
         private void shashka10_Click(object sender, EventArgs e)
 
         {
@@ -987,19 +1019,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka10.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 10;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1024,7 +1060,6 @@ namespace Курсач
 
         }
 
-
         private void shashka11_Click(object sender, EventArgs e)
 
         {
@@ -1046,19 +1081,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka11.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 11;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1083,7 +1122,6 @@ namespace Курсач
 
         }
 
-
         private void shashka12_Click(object sender, EventArgs e)
 
         {
@@ -1105,19 +1143,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka12.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 12;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1142,7 +1184,6 @@ namespace Курсач
 
         }
 
-
         private void shashka13_Click(object sender, EventArgs e)
 
         {
@@ -1164,19 +1205,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka13.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 13;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1201,7 +1246,6 @@ namespace Курсач
 
         }
 
-
         private void shashka14_Click(object sender, EventArgs e)
 
         {
@@ -1223,19 +1267,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka14.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 14;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1260,7 +1308,6 @@ namespace Курсач
 
         }
 
-
         private void shashka15_Click(object sender, EventArgs e)
 
         {
@@ -1282,19 +1329,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka15.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 15;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1319,7 +1370,6 @@ namespace Курсач
 
         }
 
-
         private void shashka16_Click(object sender, EventArgs e)
 
         {
@@ -1341,19 +1391,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka16.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 16;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1378,7 +1432,6 @@ namespace Курсач
 
         }
 
-
         private void shashka17_Click(object sender, EventArgs e)
 
         {
@@ -1400,19 +1453,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka17.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 17;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1437,7 +1494,6 @@ namespace Курсач
 
         }
 
-
         private void shashka18_Click(object sender, EventArgs e)
 
         {
@@ -1459,19 +1515,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka18.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 18;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1496,7 +1556,6 @@ namespace Курсач
 
         }
 
-
         private void shashka19_Click(object sender, EventArgs e)
 
         {
@@ -1518,19 +1577,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka19.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 19;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1555,7 +1618,6 @@ namespace Курсач
 
         }
 
-
         private void shashka20_Click(object sender, EventArgs e)
 
         {
@@ -1577,19 +1639,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka20.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 20;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1614,7 +1680,6 @@ namespace Курсач
 
         }
 
-
         private void shashka21_Click(object sender, EventArgs e)
 
         {
@@ -1636,19 +1701,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka21.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 21;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1673,7 +1742,6 @@ namespace Курсач
 
         }
 
-
         private void shashka22_Click(object sender, EventArgs e)
 
         {
@@ -1695,19 +1763,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka22.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 22;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1732,7 +1804,6 @@ namespace Курсач
 
         }
 
-
         private void shashka23_Click(object sender, EventArgs e)
 
         {
@@ -1754,19 +1825,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka23.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 23;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1791,7 +1866,6 @@ namespace Курсач
 
         }
 
-
         private void shashka24_Click(object sender, EventArgs e)
 
         {
@@ -1813,19 +1887,23 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka24.Location = new Point(x, y);
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 24;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
