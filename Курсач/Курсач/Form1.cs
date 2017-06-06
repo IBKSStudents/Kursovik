@@ -23,36 +23,73 @@ namespace Курсач
             turn = 0;           // Turns
         Point DownPoint;
 
+        private void deleteShashka(int j, int i)
+        {
+            if (shah[i, j] == 1) shashka1.Visible = false;
+            if (shah[i, j] == 2) shashka2.Visible = false;
+            if (shah[i, j] == 3) shashka3.Visible = false;
+            if (shah[i, j] == 4) shashka4.Visible = false;
+            if (shah[i, j] == 5) shashka5.Visible = false;
+            if (shah[i, j] == 6) shashka6.Visible = false;
+            if (shah[i, j] == 7) shashka7.Visible = false;
+            if (shah[i, j] == 8) shashka8.Visible = false;
+            if (shah[i, j] == 9) shashka9.Visible = false;
+            if (shah[i, j] == 10) shashka10.Visible = false;
+            if (shah[i, j] == 11) shashka11.Visible = false;
+            if (shah[i, j] == 12) shashka12.Visible = false;
+            if (shah[i, j] == 13) shashka13.Visible = false;
+            if (shah[i, j] == 14) shashka14.Visible = false;
+            if (shah[i, j] == 15) shashka15.Visible = false;
+            if (shah[i, j] == 16) shashka16.Visible = false;
+            if (shah[i, j] == 17) shashka17.Visible = false;
+            if (shah[i, j] == 18) shashka18.Visible = false;
+            if (shah[i, j] == 19) shashka19.Visible = false;
+            if (shah[i, j] == 20) shashka20.Visible = false;
+            if (shah[i, j] == 21) shashka21.Visible = false;
+            if (shah[i, j] == 22) shashka22.Visible = false;
+            if (shah[i, j] == 23) shashka23.Visible = false;
+            if (shah[i, j] == 24) shashka24.Visible = false;
+        }
+
         private int allow(int x, int y)
         {
             //if(((shah[nx, ny]<13)&&(shah[nX, nY]>12)&&(shah[nx, ny]!=0))||((shah[nx, ny]>12)&&(shah[nX, nY]<13)&&(shah[nX, nY]!=0)))
             int nx = (x - 17) / 58,
                 ny = (y - 31) / 58,
                 nX = (x0 - 17) / 58,
-                nY = (y0 - 31) / 58;
-
-            for(int i = 0; i < 8; i++)
-            {
-                for(int j = 0; j < 8; j++)
-                {
-                    Console.Write(shah[i, j]);
-                    Console.Write(" ");
-                }
-                Console.WriteLine();
-            }
+                nY = (y0 - 31) / 58,
+                midx = (nx + nX) / 2,
+                midy = (ny + nY) / 2;
 
             if (turn == 0) {
                 if (direction == 0)
                 {
                     if (shah[nY, nX] > 12) return 0;
                     if ((nx == nX) || (ny == nY)) return 0;
+                    if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
+                    {
+                        if (shah[midy, midx] > 12)
+                        {
+                            deleteShashka(midx, midy);
+                            blackCount--;
+                            return 1;
+                        }
+                    }
                     if ((nY - ny != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                     if (shah[ny, nx] != 0) return 0;
                 }
                 else
                 {
                     if (shah[nY, nX] < 13) return 0;
-                    if ((nx == nX) || (ny == nY)) return 0;
+                    if ((nx == nX) || (ny == nY)) return 0; if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
+                    {
+                        if (shah[midy, midx] < 13)
+                        {
+                            deleteShashka(midx, midy);
+                            whiteCount--;
+                            return 1;
+                        }
+                    }
                     if ((ny - nY != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                     if (shah[ny, nx] != 0) return 0;
                 }
@@ -62,6 +99,15 @@ namespace Курсач
                 {
                     if (shah[nY, nX] < 13) return 0;
                     if ((nx == nX) || (ny == nY)) return 0;
+                    if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
+                    {
+                        if (shah[midy, midx] < 13)
+                        {
+                            deleteShashka(midx, midy);
+                            whiteCount--;
+                            return 1;
+                        }
+                    }
                     if ((ny - nY != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                     if (shah[ny, nx] != 0) return 0;
                 }
@@ -69,6 +115,15 @@ namespace Курсач
                 {
                     if (shah[nY, nX] > 12) return 0;
                     if ((nx == nX) || (ny == nY)) return 0;
+                    if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
+                    {
+                        if (shah[midy, midx] > 12)
+                        {
+                            deleteShashka(midx, midy);
+                            blackCount--;
+                            return 1;
+                        }
+                    }
                     if ((nY - ny != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                     if (shah[ny, nx] != 0) return 0;
                 }
@@ -1811,6 +1866,83 @@ namespace Курсач
             o.FlatAppearance.BorderSize = 0;
             o.FlatAppearance.MouseDownBackColor = Color.Transparent;
             o.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
+        private void setShahPosition()
+        {
+            shashka1.Location = new Point(17, 31);
+
+
+            shashka2.Location = new Point(17, 31);
+
+
+            shashka3.Location = new Point(17, 31);
+
+
+            shashka4.Location = new Point(17, 31);
+
+
+            shashka5.Location = new Point(17, 31);
+
+
+            shashka6.Location = new Point(17, 31);
+
+
+            shashka7.Location = new Point(17, 31);
+
+
+            shashka8.Location = new Point(17, 31);
+
+
+            shashka9.Location = new Point(17, 31);
+
+
+            shashka10.Location = new Point(17, 31);
+
+
+            shashka11.Location = new Point(17, 31);
+
+
+            shashka12.Location = new Point(17, 31);
+
+
+            shashka13.Location = new Point(17, 31);
+
+
+            shashka14.Location = new Point(17, 31);
+
+
+            shashka15.Location = new Point(17, 31);
+
+
+            shashka16.Location = new Point(17, 31);
+
+
+            shashka17.Location = new Point(17, 31);
+
+
+            shashka18.Location = new Point(17, 31);
+
+
+            shashka19.Location = new Point(17, 31);
+
+
+            shashka20.Location = new Point(17, 31);
+
+
+            shashka21.Location = new Point(17, 31);
+
+
+            shashka22.Location = new Point(17, 31);
+
+
+            shashka23.Location = new Point(17, 31);
+
+
+            shashka24.Location = new Point(17, 31);
+
+
+
         }
 
         private void белыеToolStripMenuItem_Click(object sender, EventArgs e)
