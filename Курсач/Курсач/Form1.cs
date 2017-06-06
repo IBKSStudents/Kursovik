@@ -71,6 +71,7 @@ namespace Курсач
                         if (shah[midy, midx] > 12)
                         {
                             deleteShashka(midx, midy);
+                            shah[midy, midx] = 0;
                             blackCount--;
                             return 1;
                         }
@@ -86,6 +87,7 @@ namespace Курсач
                         if (shah[midy, midx] < 13)
                         {
                             deleteShashka(midx, midy);
+                            shah[midy, midx] = 0;
                             whiteCount--;
                             return 1;
                         }
@@ -104,6 +106,7 @@ namespace Курсач
                         if (shah[midy, midx] < 13)
                         {
                             deleteShashka(midx, midy);
+                            shah[midy, midx] = 0;
                             whiteCount--;
                             return 1;
                         }
@@ -120,6 +123,7 @@ namespace Курсач
                         if (shah[midy, midx] > 12)
                         {
                             deleteShashka(midx, midy);
+                            shah[midy, midx] = 0;
                             blackCount--;
                             return 1;
                         }
@@ -140,6 +144,7 @@ namespace Курсач
         public okno()
         {
             InitializeComponent();
+            setShahPosition();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -530,7 +535,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 2;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -592,7 +597,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 3;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -654,7 +659,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 4;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -716,7 +721,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 5;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -778,7 +783,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 6;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -840,7 +845,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 7;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -902,7 +907,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 8;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -964,7 +969,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 9;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1026,7 +1031,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 10;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1088,7 +1093,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 11;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1150,7 +1155,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 12;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1212,7 +1217,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 13;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1274,7 +1279,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 14;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1336,7 +1341,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 15;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1398,7 +1403,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 16;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1460,7 +1465,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 17;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1522,7 +1527,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 18;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1584,7 +1589,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 19;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1646,7 +1651,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 20;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1708,7 +1713,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 21;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1770,7 +1775,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 22;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1832,7 +1837,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 23;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1894,7 +1899,7 @@ namespace Курсач
 
                     DownPoint = new Point();
 
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 24;
 
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
 
@@ -1927,7 +1932,6 @@ namespace Курсач
             }
 
         }
-
         //------------------------------END-CLICKS--------------------------------------------
 
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1948,83 +1952,113 @@ namespace Курсач
 
         private void setShahPosition()
         {
-            shashka1.Location = new Point(17, 31);
+            shashka1.Location = new Point(17, 437);
 
 
-            shashka2.Location = new Point(17, 31);
+            shashka2.Location = new Point(133, 437);
 
 
-            shashka3.Location = new Point(17, 31);
+            shashka3.Location = new Point(249, 437);
 
 
-            shashka4.Location = new Point(17, 31);
+            shashka4.Location = new Point(365, 427);
 
 
-            shashka5.Location = new Point(17, 31);
+            shashka5.Location = new Point(75, 379);
 
 
-            shashka6.Location = new Point(17, 31);
+            shashka6.Location = new Point(191, 379);
 
 
-            shashka7.Location = new Point(17, 31);
+            shashka7.Location = new Point(307, 379);
 
 
-            shashka8.Location = new Point(17, 31);
+            shashka8.Location = new Point(423, 379);
 
 
-            shashka9.Location = new Point(17, 31);
+            shashka9.Location = new Point(17, 321);
 
 
-            shashka10.Location = new Point(17, 31);
+            shashka10.Location = new Point(133, 321);
 
 
-            shashka11.Location = new Point(17, 31);
+            shashka11.Location = new Point(249, 321);
 
 
-            shashka12.Location = new Point(17, 31);
+            shashka12.Location = new Point(365, 321);
 
 
-            shashka13.Location = new Point(17, 31);
+            shashka13.Location = new Point(75, 147);
 
 
-            shashka14.Location = new Point(17, 31);
+            shashka14.Location = new Point(191, 147);
 
 
-            shashka15.Location = new Point(17, 31);
+            shashka15.Location = new Point(307, 147);
 
 
-            shashka16.Location = new Point(17, 31);
+            shashka16.Location = new Point(423, 147);
 
 
-            shashka17.Location = new Point(17, 31);
+            shashka17.Location = new Point(17, 89);
 
 
-            shashka18.Location = new Point(17, 31);
+            shashka18.Location = new Point(133, 89);
 
 
-            shashka19.Location = new Point(17, 31);
+            shashka19.Location = new Point(249, 89);
 
 
-            shashka20.Location = new Point(17, 31);
+            shashka20.Location = new Point(365, 89);
 
 
-            shashka21.Location = new Point(17, 31);
+            shashka21.Location = new Point(75, 31);
 
 
-            shashka22.Location = new Point(17, 31);
+            shashka22.Location = new Point(191, 31);
 
 
-            shashka23.Location = new Point(17, 31);
+            shashka23.Location = new Point(307, 31);
 
 
-            shashka24.Location = new Point(17, 31);
+            shashka24.Location = new Point(423, 31);
 
+            shashka1.Visible = true;
+            shashka2.Visible = true;
+            shashka3.Visible = true;
+            shashka4.Visible = true;
+            shashka5.Visible = true;
+            shashka6.Visible = true;
+            shashka7.Visible = true;
+            shashka8.Visible = true;
+            shashka9.Visible = true;
+            shashka10.Visible = true;
+            shashka11.Visible = true;
+            shashka12.Visible = true;
+            shashka13.Visible = true;
+            shashka14.Visible = true;
+            shashka15.Visible = true;
+            shashka16.Visible = true;
+            shashka17.Visible = true;
+            shashka18.Visible = true;
+            shashka19.Visible = true;
+            shashka20.Visible = true;
+            shashka21.Visible = true;
+            shashka22.Visible = true;
+            shashka23.Visible = true;
+            shashka24.Visible = true;
 
-
+            clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            shah = new int[8, 8] { { 0, 21, 0, 22, 0, 23, 0, 24 }, { 17, 0, 18, 0, 19, 0, 20, 0 }, { 0, 13, 0, 14, 0, 15, 0, 16 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 9, 0, 10, 0, 11, 0, 12, 0 }, { 0, 5, 0, 6, 0, 7, 0, 8 }, { 1, 0, 2, 0, 3, 0, 4, 0 } };
+            blackCount = 12;    // Count of black shashkas
+            whiteCount = 12;    // Count of white shashkas
+            direction = 0;      // Direction of turns
+            turn = 0;
         }
 
         private void белыеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            setShahPosition();
             starts(shashka1, 1);
             starts(shashka2, 1);
             starts(shashka3, 1);
@@ -2050,6 +2084,7 @@ namespace Курсач
             starts(shashka23, 0);
             starts(shashka24, 0);
             direction = 0;
+            turn = 0;
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -2059,6 +2094,7 @@ namespace Курсач
 
         private void черныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            setShahPosition();
             starts(shashka1, 0);
             starts(shashka2, 0);
             starts(shashka3, 0);
@@ -2084,6 +2120,7 @@ namespace Курсач
             starts(shashka23, 1);
             starts(shashka24, 1);
             direction = 1;
+            turn = 0;
         }
     }
 }
