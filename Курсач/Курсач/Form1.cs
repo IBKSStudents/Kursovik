@@ -175,6 +175,8 @@ namespace Курсач
             starts(shashka24, 0);
         }
 
+        // Moves and MouseDowns here
+        //--------------------------------Moves----------------------------
         private void shashka1_MouseDown(object sender, MouseEventArgs e)
         {
             DownPoint = e.Location;
@@ -443,7 +445,9 @@ namespace Курсач
             if (clicks[2] == 1) { Point dp = new Point(e.Location.X - DownPoint.X, e.Location.Y - DownPoint.Y); shashka3.Location = new Point(shashka3.Location.X + dp.X, shashka3.Location.Y + dp.Y); }
 
         }
+        //----------------------------END-Moves----------------------------
 
+        // Clicks here
         //-----------------------------CLICKS------------------------------------
         private void shashka1_Click(object sender, EventArgs e)
 
