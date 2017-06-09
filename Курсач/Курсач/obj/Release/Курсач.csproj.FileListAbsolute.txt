@@ -22,3 +22,5 @@ C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Relea
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Release\Курсач.csproj.GenerateResource.Cache
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Release\ru-RU\Курсач.resources.dll
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Release\Курсач.gameover.resources
+C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\Release\Курсач.csprojResolveAssemblyReference.cache
+C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\Release\Курсач.gameover.resources

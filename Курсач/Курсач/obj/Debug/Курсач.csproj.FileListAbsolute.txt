@@ -25,3 +25,4 @@ C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Курсач.exe.config
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.exe
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.pdb
+C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.gameover.resources
