@@ -136,6 +136,11 @@ namespace Курсач
              
         }
 
+        private int rubl(int mode)
+        {
+
+        }
+
         private void gameover()
         {
             //TODO Дописать окончание игры
@@ -176,7 +181,7 @@ namespace Курсач
         }
 
         // Moves and MouseDowns here
-        //--------------------------------Moves----------------------------
+                //--------------------------------Moves----------------------------
         private void shashka1_MouseDown(object sender, MouseEventArgs e)
         {
             DownPoint = e.Location;
