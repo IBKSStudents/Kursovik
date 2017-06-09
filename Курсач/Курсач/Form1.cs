@@ -16,9 +16,9 @@ namespace Курсач
     {
         private int[] clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         private int[] damka  = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        private int[] rub =     new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        private int[,] shah = new int[8, 8] { { 0, 21, 0, 22, 0, 23, 0, 24 }, { 17, 0, 18, 0, 19, 0, 20, 0 }, { 0, 13, 0, 14, 0, 15, 0, 16 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 9, 0, 10, 0, 11, 0, 12, 0 }, { 0, 5, 0, 6, 0, 7, 0, 8 }, { 1, 0, 2, 0, 3, 0, 4, 0 } };
-        private int x0, y0,
+        private int[] rub =    new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        private int[,] shah =  new int[8, 8] { { 0, 21, 0, 22, 0, 23, 0, 24 }, { 17, 0, 18, 0, 19, 0, 20, 0 }, { 0, 13, 0, 14, 0, 15, 0, 16 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 9, 0, 10, 0, 11, 0, 12, 0 }, { 0, 5, 0, 6, 0, 7, 0, 8 }, { 1, 0, 2, 0, 3, 0, 4, 0 } };
+        private int x0, y0, rubly = 0,
             blackCount = 12,    // Count of black shashkas
             whiteCount = 12,    // Count of white shashkas
             direction = 0,      // Direction of turns
@@ -3873,17 +3873,6 @@ namespace Курсач
 
         private int allow(int x, int y)
         {
-            rubl();
-            for (int i = 0; i < 8; i++)
-            {
-                for (int j = 0; j < 8; j++)
-                {
-                    if (shah[i, j] != 0) Console.Write(rub[shah[i, j] - 1]); else Console.Write(0);
-                    Console.Write(" ");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine("--------------------------");
 
             int nx = (x - 17) / 58,
                 ny = (y - 31) / 58,
@@ -3897,6 +3886,11 @@ namespace Курсач
             if (turn == 0) {
                 if (direction == 0)
                 {
+                    if (rubly == 1) { if (rub[shah[nY, nX] - 1] == 0) return 0; else
+                        {
+                            if ((midx == nx) || (midx == nX) || (midy == ny) || (midy == nY)) return 0;
+                        }
+                    }
                     if (shah[nY, nX] > 12) return 0;
                     if ((nx == nX) || (ny == nY)) return 0;
                     if (shah[ny, nx] != 0) return 0;
@@ -3914,6 +3908,14 @@ namespace Курсач
                 }
                 else
                 {
+                    if (rubly == 1)
+                    {
+                        if (rub[shah[nY, nX] - 1] == 0) return 0;
+                        else
+                        {
+                            if ((midx == nx) || (midx == nX) || (midy == ny) || (midy == nY)) return 0;
+                        }
+                    }
                     if (shah[nY, nX] < 13) return 0;
                     if ((nx == nX) || (ny == nY)) return 0;
                     if (shah[ny, nx] != 0) return 0;
@@ -3934,6 +3936,14 @@ namespace Курсач
             {
                 if (direction == 0)
                 {
+                    if (rubly == 1)
+                    {
+                        if (rub[shah[nY, nX] - 1] == 0) return 0;
+                        else
+                        {
+                            if ((midx == nx) || (midx == nX) || (midy == ny) || (midy == nY)) return 0;
+                        }
+                    }
                     if (shah[nY, nX] < 13) return 0;
                     if ((nx == nX) || (ny == nY)) return 0;
                     if (shah[ny, nx] != 0) return 0;
@@ -3951,6 +3961,14 @@ namespace Курсач
                 }
                 else
                 {
+                    if (rubly == 1)
+                    {
+                        if (rub[shah[nY, nX] - 1] == 0) return 0;
+                        else
+                        {
+                            if ((midx == nx) || (midx == nX) || (midy == ny) || (midy == nY)) return 0;
+                        }
+                    }
                     if (shah[nY, nX] > 12) return 0;
                     if ((nx == nX) || (ny == nY)) return 0;
                     if (shah[ny, nx] != 0) return 0;
@@ -4304,6 +4322,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4335,6 +4354,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4366,6 +4386,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4397,6 +4418,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4428,6 +4450,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4459,6 +4482,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4490,6 +4514,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4521,6 +4546,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4552,6 +4578,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4583,6 +4610,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4614,6 +4642,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4645,6 +4674,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4676,6 +4706,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4707,6 +4738,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4738,6 +4770,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4769,6 +4802,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4800,6 +4834,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4831,6 +4866,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4862,6 +4898,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4893,6 +4930,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4924,6 +4962,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4955,6 +4994,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -4986,6 +5026,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
@@ -5017,6 +5058,7 @@ namespace Курсач
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                    rubly = rubl();
                 }
                 else
                 {
