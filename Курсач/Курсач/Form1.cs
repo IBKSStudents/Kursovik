@@ -1940,7 +1940,7 @@ namespace Курсач
 
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("Readme.txt");
+            Process.Start("bin\\Readme.txt");
         }
 
         //1 - белый, иначе - черный
