@@ -23,36 +23,75 @@ namespace Курсач
             turn = 0;           // Turns
         Point DownPoint;
 
+        private void deleteShashka(int j, int i)
+        {
+            if (shah[i, j] == 1) shashka1.Visible = false;
+            if (shah[i, j] == 2) shashka2.Visible = false;
+            if (shah[i, j] == 3) shashka3.Visible = false;
+            if (shah[i, j] == 4) shashka4.Visible = false;
+            if (shah[i, j] == 5) shashka5.Visible = false;
+            if (shah[i, j] == 6) shashka6.Visible = false;
+            if (shah[i, j] == 7) shashka7.Visible = false;
+            if (shah[i, j] == 8) shashka8.Visible = false;
+            if (shah[i, j] == 9) shashka9.Visible = false;
+            if (shah[i, j] == 10) shashka10.Visible = false;
+            if (shah[i, j] == 11) shashka11.Visible = false;
+            if (shah[i, j] == 12) shashka12.Visible = false;
+            if (shah[i, j] == 13) shashka13.Visible = false;
+            if (shah[i, j] == 14) shashka14.Visible = false;
+            if (shah[i, j] == 15) shashka15.Visible = false;
+            if (shah[i, j] == 16) shashka16.Visible = false;
+            if (shah[i, j] == 17) shashka17.Visible = false;
+            if (shah[i, j] == 18) shashka18.Visible = false;
+            if (shah[i, j] == 19) shashka19.Visible = false;
+            if (shah[i, j] == 20) shashka20.Visible = false;
+            if (shah[i, j] == 21) shashka21.Visible = false;
+            if (shah[i, j] == 22) shashka22.Visible = false;
+            if (shah[i, j] == 23) shashka23.Visible = false;
+            if (shah[i, j] == 24) shashka24.Visible = false;
+        }
+
         private int allow(int x, int y)
         {
             //if(((shah[nx, ny]<13)&&(shah[nX, nY]>12)&&(shah[nx, ny]!=0))||((shah[nx, ny]>12)&&(shah[nX, nY]<13)&&(shah[nX, nY]!=0)))
             int nx = (x - 17) / 58,
                 ny = (y - 31) / 58,
                 nX = (x0 - 17) / 58,
-                nY = (y0 - 31) / 58;
-
-            for(int i = 0; i < 8; i++)
-            {
-                for(int j = 0; j < 8; j++)
-                {
-                    Console.Write(shah[i, j]);
-                    Console.Write(" ");
-                }
-                Console.WriteLine();
-            }
+                nY = (y0 - 31) / 58,
+                midx = (nx + nX) / 2,
+                midy = (ny + nY) / 2;
 
             if (turn == 0) {
                 if (direction == 0)
                 {
                     if (shah[nY, nX] > 12) return 0;
                     if ((nx == nX) || (ny == nY)) return 0;
+                    if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
+                    {
+                        if (shah[midy, midx] > 12)
+                        {
+                            deleteShashka(midx, midy);
+                            shah[midy, midx] = 0;
+                            blackCount--;
+                            return 1;
+                        }
+                    }
                     if ((nY - ny != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                     if (shah[ny, nx] != 0) return 0;
                 }
                 else
                 {
                     if (shah[nY, nX] < 13) return 0;
-                    if ((nx == nX) || (ny == nY)) return 0;
+                    if ((nx == nX) || (ny == nY)) return 0; if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
+                    {
+                        if (shah[midy, midx] < 13)
+                        {
+                            deleteShashka(midx, midy);
+                            shah[midy, midx] = 0;
+                            whiteCount--;
+                            return 1;
+                        }
+                    }
                     if ((ny - nY != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                     if (shah[ny, nx] != 0) return 0;
                 }
@@ -62,6 +101,16 @@ namespace Курсач
                 {
                     if (shah[nY, nX] < 13) return 0;
                     if ((nx == nX) || (ny == nY)) return 0;
+                    if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
+                    {
+                        if (shah[midy, midx] < 13)
+                        {
+                            deleteShashka(midx, midy);
+                            shah[midy, midx] = 0;
+                            whiteCount--;
+                            return 1;
+                        }
+                    }
                     if ((ny - nY != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                     if (shah[ny, nx] != 0) return 0;
                 }
@@ -69,6 +118,16 @@ namespace Курсач
                 {
                     if (shah[nY, nX] > 12) return 0;
                     if ((nx == nX) || (ny == nY)) return 0;
+                    if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
+                    {
+                        if (shah[midy, midx] > 12)
+                        {
+                            deleteShashka(midx, midy);
+                            shah[midy, midx] = 0;
+                            blackCount--;
+                            return 1;
+                        }
+                    }
                     if ((nY - ny != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                     if (shah[ny, nx] != 0) return 0;
                 }
@@ -77,9 +136,15 @@ namespace Курсач
              
         }
 
+        private void gameover()
+        {
+            //TODO Дописать окончание игры
+        }
+
         public okno()
         {
             InitializeComponent();
+            setShahPosition();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -110,6 +175,8 @@ namespace Курсач
             starts(shashka24, 0);
         }
 
+        // Moves and MouseDowns here
+        //--------------------------------Moves----------------------------
         private void shashka1_MouseDown(object sender, MouseEventArgs e)
         {
             DownPoint = e.Location;
@@ -378,7 +445,9 @@ namespace Курсач
             if (clicks[2] == 1) { Point dp = new Point(e.Location.X - DownPoint.X, e.Location.Y - DownPoint.Y); shashka3.Location = new Point(shashka3.Location.X + dp.X, shashka3.Location.Y + dp.Y); }
 
         }
+        //----------------------------END-Moves----------------------------
 
+        // Clicks here
         //-----------------------------CLICKS------------------------------------
         private void shashka1_Click(object sender, EventArgs e)
 
@@ -401,6 +470,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka1.Location = new Point(x, y);
@@ -413,7 +483,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -438,7 +511,6 @@ namespace Курсач
 
         }
 
-
         private void shashka2_Click(object sender, EventArgs e)
 
         {
@@ -460,6 +532,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka2.Location = new Point(x, y);
@@ -472,7 +545,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -497,7 +573,6 @@ namespace Курсач
 
         }
 
-
         private void shashka3_Click(object sender, EventArgs e)
 
         {
@@ -519,6 +594,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka3.Location = new Point(x, y);
@@ -531,7 +607,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -556,7 +635,6 @@ namespace Курсач
 
         }
 
-
         private void shashka4_Click(object sender, EventArgs e)
 
         {
@@ -578,6 +656,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka4.Location = new Point(x, y);
@@ -590,7 +669,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -615,7 +697,6 @@ namespace Курсач
 
         }
 
-
         private void shashka5_Click(object sender, EventArgs e)
 
         {
@@ -637,6 +718,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka5.Location = new Point(x, y);
@@ -649,7 +731,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -674,7 +759,6 @@ namespace Курсач
 
         }
 
-
         private void shashka6_Click(object sender, EventArgs e)
 
         {
@@ -696,6 +780,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka6.Location = new Point(x, y);
@@ -708,7 +793,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -733,7 +821,6 @@ namespace Курсач
 
         }
 
-
         private void shashka7_Click(object sender, EventArgs e)
 
         {
@@ -755,6 +842,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka7.Location = new Point(x, y);
@@ -767,7 +855,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -792,7 +883,6 @@ namespace Курсач
 
         }
 
-
         private void shashka8_Click(object sender, EventArgs e)
 
         {
@@ -814,6 +904,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka8.Location = new Point(x, y);
@@ -826,7 +917,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -851,7 +945,6 @@ namespace Курсач
 
         }
 
-
         private void shashka9_Click(object sender, EventArgs e)
 
         {
@@ -873,6 +966,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka9.Location = new Point(x, y);
@@ -885,7 +979,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -910,7 +1007,6 @@ namespace Курсач
 
         }
 
-
         private void shashka10_Click(object sender, EventArgs e)
 
         {
@@ -932,6 +1028,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka10.Location = new Point(x, y);
@@ -944,7 +1041,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -969,7 +1069,6 @@ namespace Курсач
 
         }
 
-
         private void shashka11_Click(object sender, EventArgs e)
 
         {
@@ -991,6 +1090,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka11.Location = new Point(x, y);
@@ -1003,7 +1103,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1028,7 +1131,6 @@ namespace Курсач
 
         }
 
-
         private void shashka12_Click(object sender, EventArgs e)
 
         {
@@ -1050,6 +1152,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka12.Location = new Point(x, y);
@@ -1062,7 +1165,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1087,7 +1193,6 @@ namespace Курсач
 
         }
 
-
         private void shashka13_Click(object sender, EventArgs e)
 
         {
@@ -1109,6 +1214,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka13.Location = new Point(x, y);
@@ -1121,7 +1227,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1146,7 +1255,6 @@ namespace Курсач
 
         }
 
-
         private void shashka14_Click(object sender, EventArgs e)
 
         {
@@ -1168,6 +1276,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka14.Location = new Point(x, y);
@@ -1180,7 +1289,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1205,7 +1317,6 @@ namespace Курсач
 
         }
 
-
         private void shashka15_Click(object sender, EventArgs e)
 
         {
@@ -1227,6 +1338,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka15.Location = new Point(x, y);
@@ -1239,7 +1351,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1264,7 +1379,6 @@ namespace Курсач
 
         }
 
-
         private void shashka16_Click(object sender, EventArgs e)
 
         {
@@ -1286,6 +1400,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka16.Location = new Point(x, y);
@@ -1298,7 +1413,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1323,7 +1441,6 @@ namespace Курсач
 
         }
 
-
         private void shashka17_Click(object sender, EventArgs e)
 
         {
@@ -1345,6 +1462,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka17.Location = new Point(x, y);
@@ -1357,7 +1475,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1382,7 +1503,6 @@ namespace Курсач
 
         }
 
-
         private void shashka18_Click(object sender, EventArgs e)
 
         {
@@ -1404,6 +1524,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka18.Location = new Point(x, y);
@@ -1416,7 +1537,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1441,7 +1565,6 @@ namespace Курсач
 
         }
 
-
         private void shashka19_Click(object sender, EventArgs e)
 
         {
@@ -1463,6 +1586,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka19.Location = new Point(x, y);
@@ -1475,7 +1599,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1500,7 +1627,6 @@ namespace Курсач
 
         }
 
-
         private void shashka20_Click(object sender, EventArgs e)
 
         {
@@ -1522,6 +1648,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka20.Location = new Point(x, y);
@@ -1534,7 +1661,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1559,7 +1689,6 @@ namespace Курсач
 
         }
 
-
         private void shashka21_Click(object sender, EventArgs e)
 
         {
@@ -1581,6 +1710,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka21.Location = new Point(x, y);
@@ -1593,7 +1723,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1618,7 +1751,6 @@ namespace Курсач
 
         }
 
-
         private void shashka22_Click(object sender, EventArgs e)
 
         {
@@ -1640,6 +1772,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka22.Location = new Point(x, y);
@@ -1652,7 +1785,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1677,7 +1813,6 @@ namespace Курсач
 
         }
 
-
         private void shashka23_Click(object sender, EventArgs e)
 
         {
@@ -1699,6 +1834,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka23.Location = new Point(x, y);
@@ -1711,7 +1847,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1736,7 +1875,6 @@ namespace Курсач
 
         }
 
-
         private void shashka24_Click(object sender, EventArgs e)
 
         {
@@ -1758,6 +1896,7 @@ namespace Курсач
                 y = ((y + 29 - 31) / 58) * 58 + 31;
 
                 if (allow(x, y) == 1)
+
                 {
 
                     shashka24.Location = new Point(x, y);
@@ -1770,7 +1909,10 @@ namespace Курсач
 
                     turn = (turn + 1) % 2;
 
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+
                 }
+
                 else
 
                 {
@@ -1794,7 +1936,6 @@ namespace Курсач
             }
 
         }
-
         //------------------------------END-CLICKS--------------------------------------------
 
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1813,8 +1954,115 @@ namespace Курсач
             o.FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
 
+        private void setShahPosition()
+        {
+            shashka1.Location = new Point(17, 437);
+
+
+            shashka2.Location = new Point(133, 437);
+
+
+            shashka3.Location = new Point(249, 437);
+
+
+            shashka4.Location = new Point(365, 427);
+
+
+            shashka5.Location = new Point(75, 379);
+
+
+            shashka6.Location = new Point(191, 379);
+
+
+            shashka7.Location = new Point(307, 379);
+
+
+            shashka8.Location = new Point(423, 379);
+
+
+            shashka9.Location = new Point(17, 321);
+
+
+            shashka10.Location = new Point(133, 321);
+
+
+            shashka11.Location = new Point(249, 321);
+
+
+            shashka12.Location = new Point(365, 321);
+
+
+            shashka13.Location = new Point(75, 147);
+
+
+            shashka14.Location = new Point(191, 147);
+
+
+            shashka15.Location = new Point(307, 147);
+
+
+            shashka16.Location = new Point(423, 147);
+
+
+            shashka17.Location = new Point(17, 89);
+
+
+            shashka18.Location = new Point(133, 89);
+
+
+            shashka19.Location = new Point(249, 89);
+
+
+            shashka20.Location = new Point(365, 89);
+
+
+            shashka21.Location = new Point(75, 31);
+
+
+            shashka22.Location = new Point(191, 31);
+
+
+            shashka23.Location = new Point(307, 31);
+
+
+            shashka24.Location = new Point(423, 31);
+
+            shashka1.Visible = true;
+            shashka2.Visible = true;
+            shashka3.Visible = true;
+            shashka4.Visible = true;
+            shashka5.Visible = true;
+            shashka6.Visible = true;
+            shashka7.Visible = true;
+            shashka8.Visible = true;
+            shashka9.Visible = true;
+            shashka10.Visible = true;
+            shashka11.Visible = true;
+            shashka12.Visible = true;
+            shashka13.Visible = true;
+            shashka14.Visible = true;
+            shashka15.Visible = true;
+            shashka16.Visible = true;
+            shashka17.Visible = true;
+            shashka18.Visible = true;
+            shashka19.Visible = true;
+            shashka20.Visible = true;
+            shashka21.Visible = true;
+            shashka22.Visible = true;
+            shashka23.Visible = true;
+            shashka24.Visible = true;
+
+            clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            shah = new int[8, 8] { { 0, 21, 0, 22, 0, 23, 0, 24 }, { 17, 0, 18, 0, 19, 0, 20, 0 }, { 0, 13, 0, 14, 0, 15, 0, 16 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 9, 0, 10, 0, 11, 0, 12, 0 }, { 0, 5, 0, 6, 0, 7, 0, 8 }, { 1, 0, 2, 0, 3, 0, 4, 0 } };
+            blackCount = 12;    // Count of black shashkas
+            whiteCount = 12;    // Count of white shashkas
+            direction = 0;      // Direction of turns
+            turn = 0;
+        }
+
         private void белыеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            setShahPosition();
             starts(shashka1, 1);
             starts(shashka2, 1);
             starts(shashka3, 1);
@@ -1840,6 +2088,7 @@ namespace Курсач
             starts(shashka23, 0);
             starts(shashka24, 0);
             direction = 0;
+            turn = 0;
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -1849,6 +2098,7 @@ namespace Курсач
 
         private void черныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            setShahPosition();
             starts(shashka1, 0);
             starts(shashka2, 0);
             starts(shashka3, 0);
@@ -1874,6 +2124,7 @@ namespace Курсач
             starts(shashka23, 1);
             starts(shashka24, 1);
             direction = 1;
+            turn = 0;
         }
     }
 }
