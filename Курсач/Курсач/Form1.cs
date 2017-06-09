@@ -15,6 +15,7 @@ namespace Курсач
     public partial class okno : Form
     {
         private int[] clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        private int[] rub = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         private int[,] shah = new int[8, 8] { { 0, 21, 0, 22, 0, 23, 0, 24 }, { 17, 0, 18, 0, 19, 0, 20, 0 }, { 0, 13, 0, 14, 0, 15, 0, 16 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 9, 0, 10, 0, 11, 0, 12, 0 }, { 0, 5, 0, 6, 0, 7, 0, 8 }, { 1, 0, 2, 0, 3, 0, 4, 0 } };
         private int x0, y0,
             blackCount = 12,    // Count of black shashkas
@@ -136,9 +137,118 @@ namespace Курсач
              
         }
 
-        private int rubl(int mode)
+        private int rubl()
         {
-
+            int r = 0;
+            for(int i=0; i < 24; i++)
+            {
+                rub[i] = 0;
+            }
+            if (turn == 0)
+            {
+                if (direction == 0)
+                {
+                    // Белые 1-12
+                    int x = shashka1.Location.X,
+                        y = shashka1.Location.Y,
+                        nx = (x - 17) / 58,
+                        ny = (y - 31) / 58;
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+                    {
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+                        {
+                            if (  (shah[ny + 1, nx + 1] > 12) && (shah[ny + 2, nx + 2] == 0)  )
+                            {
+                                rub[1] = 1;
+                                r = 1;
+                            }
+                        }
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+                        {
+                            if ((shah[ny - 1, nx - 1] > 12) && (shah[ny - 2, nx - 2] == 0))
+                            {
+                                rub[1] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((nx == 7) && (ny == 0))
+                        {
+                            if ((shah[ny + 1, nx - 1] > 12) && (shah[ny + 2, nx - 2] == 0))
+                            {
+                                rub[1] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((nx == 0) && (ny == 7))
+                        {
+                            if ((shah[ny - 1, nx + 1] > 12) && (shah[ny - 2, nx + 2] == 0))
+                            {
+                                rub[1] = 1;
+                                r = 1;
+                            }
+                        }
+                        if (r == 0)
+                        {
+                            if ((nx == 0) || (nx == 1))
+                            {
+                                if ( ((shah[ny - 1, nx + 1] > 12) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] > 12) && (shah[ny + 2, nx + 2] == 0)) )
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((nx == 6) || (nx == 7))
+                            {
+                                if (((shah[ny - 1, nx - 1] > 12) && (shah[ny - 2, nx - 2] == 0))  || ((shah[ny + 1, nx - 1] > 12) && (shah[ny + 2, nx - 2] == 0)))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((ny == 0) || (ny == 1))
+                            {
+                                if (((shah[ny + 1, nx + 1] > 12) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] > 12) && (shah[ny + 2, nx - 2] == 0)))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((ny == 6) || (ny == 7))
+                            {
+                                if (((shah[ny - 1, nx + 1] > 12) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] > 12) && (shah[ny - 2, nx - 2] == 0)))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (((shah[ny - 1, nx - 1] > 12) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] > 12) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] > 12) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] > 12) && (shah[ny + 2, nx - 2] == 0)))
+                        {
+                            rub[1] = 1;
+                            r = 1;
+                        }
+                    }
+                }
+                else
+                {
+                    // Белые 13-24
+                }
+            }
+            else
+            {
+                if (direction == 0)
+                {
+                    // Черные 13-24
+                }
+                else
+                {
+                   // Черные 1-12
+                }
+            }
+            return r;
         }
 
         private void gameover()
