@@ -1,0 +1,31 @@
+private void shashka#_Click(object sender, EventArgs e)
+        {
+            clicks[@] = (clicks[@] + 1) % 2;
+            if (clicks[@] == 0)
+            {
+                int x, y;
+                x = shashka#.Location.X;
+                y = shashka#.Location.Y;
+                x = ((x + 29 - 17) / 58) * 58 + 17;
+                y = ((y + 29 - 31) / 58) * 58 + 31;
+                if (allow(x, y) == 1)
+                {
+                    shashka#.Location = new Point(x, y);
+                    DownPoint = new Point();
+                    shah[(y - 31) / 58, (x - 17) / 58] = #;
+                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                    turn = (turn + 1) % 2;
+                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                }
+                else
+                {
+                    shashka#.Location = new Point(x0, y0);
+                }
+            }
+            else
+            {
+                x0 = shashka#.Location.X;
+                y0 = shashka#.Location.Y;
+                shashka#.BringToFront();
+            }
+        }

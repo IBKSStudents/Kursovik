@@ -54,20 +54,8455 @@ namespace Курсач
 
         private int rubl()
         {
-            return 1;
+           int r = 0, x, y, nx, ny;
+              for(int i=0; i < 24; i++)
+              {
+                  rub[i] = 0;
+              }
+              if (turn == 0)
+              {
+                if (direction == 0)
+                {
+                    // Белые 1-12                   
+                    x = shashka1.Location.X;
+
+                    y = shashka1.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[0] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[0] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[0] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[0] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[0] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[0] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[0] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[0] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[0] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka2.Location.X;
+
+                    y = shashka2.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[1] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[1] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[1] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[1] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[1] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[1] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[1] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[1] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[1] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka3.Location.X;
+
+                    y = shashka3.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[2] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[2] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[2] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[2] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[2] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[2] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[2] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[2] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[2] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka4.Location.X;
+
+                    y = shashka4.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[3] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[3] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[3] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[3] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[3] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[3] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[3] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[3] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[3] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka5.Location.X;
+
+                    y = shashka5.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[4] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[4] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[4] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[4] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[4] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[4] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[4] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[4] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[4] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka6.Location.X;
+
+                    y = shashka6.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[5] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[5] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[5] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[5] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[5] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[5] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[5] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[5] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[5] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka7.Location.X;
+
+                    y = shashka7.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[6] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[6] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[6] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[6] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[6] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[6] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[6] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[6] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[6] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka8.Location.X;
+
+                    y = shashka8.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[7] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[7] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[7] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[7] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[7] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[7] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[7] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[7] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[7] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka9.Location.X;
+
+                    y = shashka9.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[8] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[8] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[8] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[8] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[8] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[8] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[8] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[8] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[8] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka10.Location.X;
+
+                    y = shashka10.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[9] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[9] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[9] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[9] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[9] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[9] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[9] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[9] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[9] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka11.Location.X;
+
+                    y = shashka11.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[10] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[10] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[10] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[10] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[10] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[10] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[10] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[10] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[10] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka12.Location.X;
+
+                    y = shashka12.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[11] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[11] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[11] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[11] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[11] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[11] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[11] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[11] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[11] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+
+                }
+                  else
+                  {
+                    // Белые 13-24
+                    x = shashka13.Location.X;
+
+                    y = shashka13.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[12] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[12] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[12] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[12] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[12] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[12] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[12] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[12] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[12] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka14.Location.X;
+
+                    y = shashka14.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[13] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[13] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[13] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[13] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[13] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[13] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[13] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[13] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[13] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka15.Location.X;
+
+                    y = shashka15.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[14] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[14] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[14] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[14] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[14] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[14] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[14] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[14] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[14] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka16.Location.X;
+
+                    y = shashka16.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[15] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[15] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[15] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[15] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[15] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[15] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[15] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[15] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[15] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka17.Location.X;
+
+                    y = shashka17.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[16] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[16] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[16] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[16] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[16] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[16] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[16] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[16] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[16] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka18.Location.X;
+
+                    y = shashka18.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[17] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[17] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[17] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[17] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[17] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[17] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[17] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[17] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[17] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka19.Location.X;
+
+                    y = shashka19.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[18] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[18] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[18] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[18] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[18] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[18] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[18] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[18] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[18] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka20.Location.X;
+
+                    y = shashka20.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[19] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[19] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[19] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[19] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[19] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[19] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[19] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[19] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[19] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka21.Location.X;
+
+                    y = shashka21.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[20] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[20] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[20] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[20] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[20] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[20] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[20] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[20] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[20] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka22.Location.X;
+
+                    y = shashka22.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[21] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[21] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[21] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[21] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[21] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[21] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[21] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[21] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[21] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka23.Location.X;
+
+                    y = shashka23.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[22] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[22] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[22] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[22] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[22] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[22] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[22] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[22] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[22] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka24.Location.X;
+
+                    y = shashka24.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[23] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[23] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[23] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[23] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[23] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[23] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[23] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[23] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[23] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                }
+              }
+              else
+              {
+                  if (direction == 0)
+                  {
+                    // Черные 13-24
+                    x = shashka13.Location.X;
+
+                    y = shashka13.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[12] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[12] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[12] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[12] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[12] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[12] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[12] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[12] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[12] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka14.Location.X;
+
+                    y = shashka14.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[13] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[13] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[13] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[13] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[13] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[13] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[13] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[13] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[13] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka15.Location.X;
+
+                    y = shashka15.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[14] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[14] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[14] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[14] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[14] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[14] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[14] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[14] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[14] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka16.Location.X;
+
+                    y = shashka16.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[15] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[15] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[15] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[15] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[15] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[15] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[15] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[15] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[15] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka17.Location.X;
+
+                    y = shashka17.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[16] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[16] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[16] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[16] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[16] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[16] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[16] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[16] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[16] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka18.Location.X;
+
+                    y = shashka18.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[17] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[17] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[17] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[17] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[17] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[17] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[17] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[17] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[17] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka19.Location.X;
+
+                    y = shashka19.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[18] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[18] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[18] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[18] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[18] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[18] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[18] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[18] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[18] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka20.Location.X;
+
+                    y = shashka20.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[19] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[19] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[19] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[19] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[19] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[19] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[19] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[19] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[19] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka21.Location.X;
+
+                    y = shashka21.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[20] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[20] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[20] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[20] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[20] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[20] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[20] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[20] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[20] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka22.Location.X;
+
+                    y = shashka22.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[21] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[21] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[21] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[21] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[21] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[21] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[21] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[21] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[21] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka23.Location.X;
+
+                    y = shashka23.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[22] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[22] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[22] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[22] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[22] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[22] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[22] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[22] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[22] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka24.Location.X;
+
+                    y = shashka24.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[23] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[23] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[23] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[23] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[23] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[23] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[23] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[23] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[23] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                }
+                  else
+                  {
+                    // Черные 1-12
+                    x = shashka1.Location.X;
+
+                    y = shashka1.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[0] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[0] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[0] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[0] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[0] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[0] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[0] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[0] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[0] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka2.Location.X;
+
+                    y = shashka2.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[1] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[1] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[1] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[1] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[1] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[1] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[1] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[1] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[1] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka3.Location.X;
+
+                    y = shashka3.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[2] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[2] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[2] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[2] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[2] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[2] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[2] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[2] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[2] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka4.Location.X;
+
+                    y = shashka4.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[3] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[3] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[3] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[3] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[3] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[3] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[3] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[3] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[3] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka5.Location.X;
+
+                    y = shashka5.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[4] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[4] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[4] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[4] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[4] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[4] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[4] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[4] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[4] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka6.Location.X;
+
+                    y = shashka6.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[5] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[5] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[5] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[5] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[5] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[5] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[5] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[5] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[5] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka7.Location.X;
+
+                    y = shashka7.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[6] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[6] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[6] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[6] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[6] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[6] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[6] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[6] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[6] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka8.Location.X;
+
+                    y = shashka8.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[7] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[7] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[7] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[7] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[7] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[7] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[7] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[7] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[7] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka9.Location.X;
+
+                    y = shashka9.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[8] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[8] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[8] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[8] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[8] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[8] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[8] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[8] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[8] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka10.Location.X;
+
+                    y = shashka10.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[9] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[9] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[9] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[9] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[9] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[9] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[9] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[9] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[9] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka11.Location.X;
+
+                    y = shashka11.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[10] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[10] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[10] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[10] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[10] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[10] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[10] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[10] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[10] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka12.Location.X;
+
+                    y = shashka12.Location.Y;
+
+                    nx = (x - 17) / 58;
+
+                    ny = (y - 31) / 58;
+
+                    if ((nx == 0) || (nx == 1) || (nx == 6) || (nx == 7) || (ny == 0) || (ny == 1) || (ny == 6) || (ny == 7))
+
+                    {
+
+                        if (((nx == 1) && (ny == 0)) || ((nx == 0) && (ny == 1)))
+
+                        {
+
+                            if ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0))
+
+                            {
+
+                                rub[11] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if (((nx == 7) && (ny == 6)) || ((nx == 6) && (ny == 7)))
+
+                        {
+
+                            if ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0))
+
+                            {
+
+                                rub[11] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+                        else
+
+                        if ((nx == 7) && (ny == 0))
+
+                        {
+
+                            if ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0))
+
+                            {
+
+                                rub[11] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if ((nx == 0) && (ny == 7))
+
+                        {
+
+                            if ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0))
+
+                            {
+
+                                rub[11] = 1;
+
+                                r = 1;
+
+                            }
+
+                        }
+
+                        else
+
+                        if (r == 0)
+
+                        {
+
+                            if ((nx == 0) || (nx == 1))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)))
+
+                                {
+
+                                    rub[11] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((nx == 6) || (nx == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[11] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 0) || (ny == 1))
+
+                            {
+
+                                if (((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[11] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                            else
+
+                            if ((ny == 6) || (ny == 7))
+
+                            {
+
+                                if (((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)))
+
+                                {
+
+                                    rub[11] = 1;
+
+                                    r = 1;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    else
+
+                    {
+
+                        if (((shah[ny - 1, nx - 1] < 13) && (shah[ny - 1, nx - 1] > 0) && (shah[ny - 2, nx - 2] == 0)) || ((shah[ny - 1, nx + 1] < 13) && (shah[ny - 1, nx + 1] > 0) && (shah[ny - 2, nx + 2] == 0)) || ((shah[ny + 1, nx + 1] < 13) && (shah[ny + 1, nx + 1] > 0) && (shah[ny + 2, nx + 2] == 0)) || ((shah[ny + 1, nx - 1] < 13) && (shah[ny + 1, nx - 1] > 0) && (shah[ny + 2, nx - 2] == 0)))
+
+                        {
+
+                            rub[11] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                }
+              }
+              return r;
         }
 
         private int allow(int x, int y)
         {
             rubl();
-            for (int i = 0; i < 24; i++)
+            for (int i = 0; i < 8; i++)
             {
-                Console.Write(rub[i]);
-                Console.Write(" ");
-                if (i % 4 == 3) Console.WriteLine();
+                for (int j = 0; j < 8; j++)
+                {
+                    if (shah[i, j] != 0) Console.Write(rub[shah[i, j] - 1]); else Console.Write(0);
+                    Console.Write(" ");
+                }
+                Console.WriteLine();
             }
+            Console.WriteLine("--------------------------");
 
-            //if(((shah[nx, ny]<13)&&(shah[nX, nY]>12)&&(shah[nx, ny]!=0))||((shah[nx, ny]>12)&&(shah[nX, nY]<13)&&(shah[nX, nY]!=0)))
             int nx = (x - 17) / 58,
                 ny = (y - 31) / 58,
                 nX = (x0 - 17) / 58,
@@ -152,7 +8587,6 @@ namespace Курсач
 
         private void gameover()
         {
-            //TODO Дописать окончание игры
             Form game = new gameover();
             if(whiteCount==0)
                 game.BackgroundImage = Image.FromFile("bin\\images\\blackWin.png");
