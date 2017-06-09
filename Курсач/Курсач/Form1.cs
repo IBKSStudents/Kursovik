@@ -55,7 +55,3820 @@ namespace Курсач
 
         private int rubl()
         {
-            return 1;
+            int r = 0, x, y, x0, y0, x1l, x2l, y1l, y2l, x1r, x2r, y1r, y2r;
+            for (int i = 0; i < 24; i++) rub[i] = 0;
+
+            if (turn == 0)
+            {
+                if (direction == 0)
+                {
+                    x = shashka1.Location.X;
+
+                    y = shashka1.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[0] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[0] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[0] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka2.Location.X;
+
+                    y = shashka2.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[1] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[1] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[1] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka3.Location.X;
+
+                    y = shashka3.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[2] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[2] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[2] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka4.Location.X;
+
+                    y = shashka4.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[3] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[3] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[3] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka5.Location.X;
+
+                    y = shashka5.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[4] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[4] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[4] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka6.Location.X;
+
+                    y = shashka6.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[5] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[5] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[5] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka7.Location.X;
+
+                    y = shashka7.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[6] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[6] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[6] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka8.Location.X;
+
+                    y = shashka8.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[7] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[7] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[7] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka9.Location.X;
+
+                    y = shashka9.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[8] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[8] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[8] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka10.Location.X;
+
+                    y = shashka10.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[9] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[9] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[9] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka11.Location.X;
+
+                    y = shashka11.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[10] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[10] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[10] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka12.Location.X;
+
+                    y = shashka12.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 - 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 - 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 - 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 - 2;
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[11] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[11] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[11] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                }
+                else
+                {
+                    x = shashka13.Location.X;
+
+                    y = shashka13.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[12] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[12] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[12] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka14.Location.X;
+
+                    y = shashka14.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[13] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[13] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[13] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka15.Location.X;
+
+                    y = shashka15.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[14] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[14] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[14] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka16.Location.X;
+
+                    y = shashka16.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[15] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[15] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[15] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka17.Location.X;
+
+                    y = shashka17.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[16] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[16] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[16] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka18.Location.X;
+
+                    y = shashka18.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[17] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[17] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[17] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka19.Location.X;
+
+                    y = shashka19.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[18] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[18] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[18] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka20.Location.X;
+
+                    y = shashka20.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[19] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[19] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[19] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka21.Location.X;
+
+                    y = shashka21.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[20] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[20] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[20] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka22.Location.X;
+
+                    y = shashka22.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[21] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[21] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[21] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka23.Location.X;
+
+                    y = shashka23.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[22] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[22] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[22] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                    x = shashka24.Location.X;
+
+                    y = shashka24.Location.Y;
+
+                    x0 = (x - 17) / 58;
+
+                    y0 = (y - 31) / 58;
+
+                    x1l = x0 - 1;
+
+                    y1l = y0 + 1;
+
+                    x1r = x0 + 1;
+
+                    y1r = y0 + 1;
+
+                    x2l = x0 - 2;
+
+                    y2l = y0 + 2;
+
+                    x2r = x0 + 2;
+
+                    y2r = y0 + 2;
+
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+
+                    {
+
+                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+
+                        {
+
+                            rub[23] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2l < 0) && (y2r <= 7))
+
+                    {
+
+                        if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+
+                        {
+
+                            rub[23] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+
+                    if ((x2r > 7) && (y2l <= 7))
+
+                    {
+
+                        if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+
+                        {
+
+                            rub[23] = 1;
+
+                            r = 1;
+
+                        }
+
+                    }
+                }
+            }
+            else
+            {
+                if (direction == 0)
+                {
+                    x = shashka13.Location.X;
+                    y = shashka13.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[12] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[12] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[12] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka14.Location.X;
+                    y = shashka14.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[13] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[13] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[13] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka15.Location.X;
+                    y = shashka15.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[14] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[14] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[14] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka16.Location.X;
+                    y = shashka16.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[15] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[15] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[15] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka17.Location.X;
+                    y = shashka17.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[16] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[16] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[16] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka18.Location.X;
+                    y = shashka18.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[17] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[17] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[17] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka19.Location.X;
+                    y = shashka19.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[18] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[18] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[18] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka20.Location.X;
+                    y = shashka20.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[19] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[19] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[19] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka21.Location.X;
+                    y = shashka21.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[20] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[20] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[20] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka22.Location.X;
+                    y = shashka22.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[21] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[21] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[21] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka23.Location.X;
+                    y = shashka23.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[22] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[22] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[22] = 1;
+                            r = 1;
+                        }
+                    }
+                    x = shashka24.Location.X;
+                    y = shashka24.Location.Y;
+                    x0 = (x - 17) / 58;
+                    y0 = (y - 31) / 58;
+                    x1l = x0 - 1;
+                    y1l = y0 + 1;
+                    x1r = x0 + 1;
+                    y1r = y0 + 1;
+                    x2l = x0 - 2;
+                    y2l = y0 + 2;
+                    x2r = x0 + 2;
+                    y2r = y0 + 2;
+                    if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                    {
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                        {
+                            rub[23] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2l < 0) && (y2r <= 7))
+                    {
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                        {
+                            rub[23] = 1;
+                            r = 1;
+                        }
+                    }
+                    if ((x2r > 7) && (y2l <= 7))
+                    {
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                        {
+                            rub[23] = 1;
+                            r = 1;
+                        }
+                    }
+                }
+                else
+                {
+                    x = shashka1.Location.X;
+
+
+
+                    y = shashka1.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[0] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[0] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[0] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka2.Location.X;
+
+
+
+                    y = shashka2.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[1] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[1] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[1] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka3.Location.X;
+
+
+
+                    y = shashka3.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[2] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[2] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[2] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka4.Location.X;
+
+
+
+                    y = shashka4.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[3] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[3] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[3] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka5.Location.X;
+
+
+
+                    y = shashka5.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[4] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[4] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[4] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka6.Location.X;
+
+
+
+                    y = shashka6.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[5] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[5] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[5] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka7.Location.X;
+
+
+
+                    y = shashka7.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[6] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[6] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[6] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka8.Location.X;
+
+
+
+                    y = shashka8.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[7] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[7] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[7] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka9.Location.X;
+
+
+
+                    y = shashka9.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[8] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[8] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[8] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka10.Location.X;
+
+
+
+                    y = shashka10.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[9] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[9] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[9] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka11.Location.X;
+
+
+
+                    y = shashka11.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[10] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[10] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[10] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                    x = shashka12.Location.X;
+
+
+
+                    y = shashka12.Location.Y;
+
+
+
+                    x0 = (x - 17) / 58;
+
+
+
+                    y0 = (y - 31) / 58;
+
+
+
+                    x1l = x0 - 1;
+
+
+
+                    y1l = y0 - 1;
+
+
+
+                    x1r = x0 + 1;
+
+
+
+                    y1r = y0 - 1;
+
+
+
+                    x2l = x0 - 2;
+
+
+
+                    y2l = y0 - 2;
+
+
+
+                    x2r = x0 + 2;
+
+
+
+                    y2r = y0 - 2;
+
+
+
+                    if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+
+                    {
+
+
+
+                        if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+
+
+
+                        {
+
+
+
+                            rub[11] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2l < 0) && (y2r >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+
+
+
+                        {
+
+
+
+                            rub[11] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+                    if ((x2r > 7) && (y2l >= 0))
+
+
+
+                    {
+
+
+
+                        if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+
+
+
+                        {
+
+
+
+                            rub[11] = 1;
+
+
+
+                            r = 1;
+
+
+
+                        }
+
+
+
+                    }
+                }
+            }
+            return r;
         }
 
         private int allow(int x, int y)
