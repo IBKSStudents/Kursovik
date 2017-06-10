@@ -1004,7 +1004,7 @@ namespace Курсач
 
                     {
 
-                        if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
 
                         {
 
@@ -3139,735 +3139,271 @@ namespace Курсач
 
 
                     }
-
-
-
                     if ((x2r > 7) && (y2l >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-
-
-
                         {
-
-
-
                             rub[6] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
                     x = shashka8.Location.X;
-
-
-
                     y = shashka8.Location.Y;
-
-
-
                     x0 = (x - 17) / 58;
-
-
-
                     y0 = (y - 31) / 58;
-
-
-
                     x1l = x0 - 1;
-
-
-
                     y1l = y0 - 1;
-
-
-
                     x1r = x0 + 1;
-
-
-
                     y1r = y0 - 1;
-
-
-
                     x2l = x0 - 2;
-
-
-
                     y2l = y0 - 2;
-
-
-
                     x2r = x0 + 2;
-
-
-
                     y2r = y0 - 2;
-
-
-
                     if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
-
                     {
-
-
-
                         if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
-
-
-
                         {
-
-
-
                             rub[7] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
-
-
-
                     if ((x2l < 0) && (y2r >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-
-
-
                         {
-
-
-
                             rub[7] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
-
-
-
                     if ((x2r > 7) && (y2l >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-
-
-
                         {
-
-
-
                             rub[7] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
                     x = shashka9.Location.X;
-
-
-
                     y = shashka9.Location.Y;
-
-
-
                     x0 = (x - 17) / 58;
-
-
-
                     y0 = (y - 31) / 58;
-
-
-
                     x1l = x0 - 1;
-
-
-
                     y1l = y0 - 1;
-
-
-
                     x1r = x0 + 1;
-
-
-
                     y1r = y0 - 1;
-
-
-
                     x2l = x0 - 2;
-
-
-
                     y2l = y0 - 2;
-
-
-
                     x2r = x0 + 2;
-
-
-
                     y2r = y0 - 2;
-
-
-
                     if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
-
                     {
-
-
-
                         if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
-
-
-
                         {
-
-
-
                             rub[8] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
-
-
-
                     if ((x2l < 0) && (y2r >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-
-
-
                         {
-
-
-
                             rub[8] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
-
-
-
                     if ((x2r > 7) && (y2l >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-
-
-
                         {
-
-
-
                             rub[8] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
                     x = shashka10.Location.X;
-
-
-
                     y = shashka10.Location.Y;
-
-
-
                     x0 = (x - 17) / 58;
-
-
-
                     y0 = (y - 31) / 58;
-
-
-
                     x1l = x0 - 1;
-
-
-
                     y1l = y0 - 1;
-
-
-
                     x1r = x0 + 1;
-
-
-
                     y1r = y0 - 1;
-
-
-
                     x2l = x0 - 2;
-
-
-
                     y2l = y0 - 2;
-
-
-
                     x2r = x0 + 2;
-
-
-
                     y2r = y0 - 2;
-
-
-
                     if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
-
                     {
-
-
-
                         if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
-
-
-
                         {
-
-
-
                             rub[9] = 1;
-
-
-
-                            r = 1;
-
-
-
+                            r = 1;       
                         }
-
-
-
                     }
-
-
-
                     if ((x2l < 0) && (y2r >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-
-
-
                         {
-
-
-
                             rub[9] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
-
-
-
                     if ((x2r > 7) && (y2l >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-
-
-
                         {
-
-
-
                             rub[9] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
                     x = shashka11.Location.X;
-
-
-
                     y = shashka11.Location.Y;
-
-
-
                     x0 = (x - 17) / 58;
-
-
-
                     y0 = (y - 31) / 58;
-
-
-
                     x1l = x0 - 1;
-
-
-
                     y1l = y0 - 1;
-
-
-
                     x1r = x0 + 1;
-
-
-
                     y1r = y0 - 1;
-
-
-
                     x2l = x0 - 2;
-
-
-
                     y2l = y0 - 2;
-
-
-
                     x2r = x0 + 2;
-
-
-
                     y2r = y0 - 2;
-
-
-
                     if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
-
                     {
-
-
-
                         if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
-
-
-
                         {
-
-
-
                             rub[10] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
-
-
-
                     if ((x2l < 0) && (y2r >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-
-
-
                         {
-
-
-
                             rub[10] = 1;
-
-
-
-                            r = 1;
-
-
-
+                            r = 1;                            
                         }
-
-
-
                     }
-
-
-
                     if ((x2r > 7) && (y2l >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-
-
-
                         {
-
-
-
                             rub[10] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
                     x = shashka12.Location.X;
-
-
-
                     y = shashka12.Location.Y;
-
-
-
                     x0 = (x - 17) / 58;
-
-
-
                     y0 = (y - 31) / 58;
-
-
-
                     x1l = x0 - 1;
-
-
-
                     y1l = y0 - 1;
-
-
-
                     x1r = x0 + 1;
-
-
-
                     y1r = y0 - 1;
-
-
-
                     x2l = x0 - 2;
-
-
-
                     y2l = y0 - 2;
-
-
-
                     x2r = x0 + 2;
-
-
-
                     y2r = y0 - 2;
-
-
-
                     if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
-
                     {
-
-
-
                         if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
-
-
-
                         {
-
-
-
                             rub[11] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
-
-
-
                     if ((x2l < 0) && (y2r >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-
-
-
                         {
-
-
-
                             rub[11] = 1;
-
-
-
                             r = 1;
-
-
-
                         }
-
-
-
                     }
-
-
-
                     if ((x2r > 7) && (y2l >= 0))
-
-
-
                     {
-
-
-
                         if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-
-
-
                         {
-
-
-
                             rub[11] = 1;
-
-
-
                             r = 1;
-
-
-
-                        }
-
-
-
+                        }                        
                     }
                 }
             }
+
+            if (r == 1)
+            {
+                for(int i = 0; i < 24; i++)
+                {
+                    if (rub[i] == 1) {
+                        for (int ii = 0; ii < 8; ii++)
+                        {
+                            for (int j = 0; j < 8; j++)
+                            {
+                                if (shah[ii, j] != 0) Console.Write(rub[shah[ii, j] - 1]); else Console.Write(0);
+                                Console.Write(" ");
+                            }
+                            Console.WriteLine();
+                        }
+                        Console.WriteLine();
+                        for (int k = 0; k < 24; k++) Console.Write(rub[k]);
+                        Console.WriteLine();
+                        Console.Write(r);
+                        Console.Write(" ");
+                        Console.Write(turn);
+                        Console.Write(" ");
+                        Console.Write(whiteCount);
+                        Console.Write(" ");
+                        Console.Write(blackCount);
+                        Console.WriteLine();
+                        Console.WriteLine("--------------------------");
+                        return r;
+                    }
+                }
+                r = 0;
+                for (int ii = 0; ii < 8; ii++)
+                {
+                    for (int j = 0; j < 8; j++)
+                    {
+                        if (shah[ii, j] != 0) Console.Write(rub[shah[ii, j] - 1]); else Console.Write(0);
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+                for (int k = 0; k < 24; k++) Console.Write(rub[k]);
+                Console.WriteLine();
+                Console.Write(r);
+                Console.Write(" ");
+                Console.Write(turn);
+                Console.Write(" ");
+                Console.Write(whiteCount);
+                Console.Write(" ");
+                Console.Write(blackCount);
+                Console.WriteLine();
+                Console.WriteLine("--------------------------");
+                return r;
+            }
+            for (int ii = 0; ii < 8; ii++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if (shah[ii, j] != 0) Console.Write(rub[shah[ii, j] - 1]); else Console.Write(0);
+                    Console.Write(" ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            for (int k = 0; k < 24; k++) Console.Write(rub[k]);
+            Console.WriteLine();
+            Console.Write(r);
+            Console.Write(" ");
+            Console.Write(turn);
+            Console.Write(" ");
+            Console.Write(whiteCount);
+            Console.Write(" ");
+            Console.Write(blackCount);
+            Console.WriteLine();
+            Console.WriteLine("--------------------------");
             return r;
         }
 
@@ -5228,6 +4764,8 @@ namespace Курсач
             whiteCount = 12;
             direction = 0;
             turn = 0;
+            rubly = 0;
+            for (int i = 0; i < 24; i++) rub[i] = 0;
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -5266,6 +4804,8 @@ namespace Курсач
             whiteCount = 12;
             direction = 1;
             turn = 0;
+            rubly = 0;
+            for (int i = 0; i < 24; i++) rub[i] = 0;
         }
     }
 }
