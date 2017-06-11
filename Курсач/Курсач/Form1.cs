@@ -2085,7 +2085,7 @@ namespace Курсач
                         {
                             deleteShashka(midx, midy);
                             shah[midy, midx] = 0;
-                            blackCount--;
+                            whiteCount--;
                             return 1;
                         }
                     }
