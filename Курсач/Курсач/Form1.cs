@@ -2544,6 +2544,11 @@ namespace Курсач
                     shashka1.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka1.Location.X;
+                y0 = shashka1.Location.Y;
+            }
         }
         private void shashka2_Click(object sender, EventArgs e)
         {
@@ -2570,6 +2575,11 @@ namespace Курсач
                 {
                     shashka2.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka2.Location.X;
+                y0 = shashka2.Location.Y;
             }
         }
         private void shashka3_Click(object sender, EventArgs e)
@@ -2598,6 +2608,11 @@ namespace Курсач
                     shashka3.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka3.Location.X;
+                y0 = shashka3.Location.Y;
+            }
         }
         private void shashka4_Click(object sender, EventArgs e)
         {
@@ -2624,6 +2639,11 @@ namespace Курсач
                 {
                     shashka4.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka4.Location.X;
+                y0 = shashka4.Location.Y;
             }
         }
         private void shashka5_Click(object sender, EventArgs e)
@@ -2652,6 +2672,11 @@ namespace Курсач
                     shashka5.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka5.Location.X;
+                y0 = shashka5.Location.Y;
+            }
         }
         private void shashka6_Click(object sender, EventArgs e)
         {
@@ -2678,6 +2703,11 @@ namespace Курсач
                 {
                     shashka6.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka6.Location.X;
+                y0 = shashka6.Location.Y;
             }
         }
         private void shashka7_Click(object sender, EventArgs e)
@@ -2706,6 +2736,11 @@ namespace Курсач
                     shashka7.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka7.Location.X;
+                y0 = shashka7.Location.Y;
+            }
         }
         private void shashka8_Click(object sender, EventArgs e)
         {
@@ -2732,6 +2767,11 @@ namespace Курсач
                 {
                     shashka8.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka8.Location.X;
+                y0 = shashka8.Location.Y;
             }
         }
         private void shashka9_Click(object sender, EventArgs e)
@@ -2760,6 +2800,11 @@ namespace Курсач
                     shashka9.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka9.Location.X;
+                y0 = shashka9.Location.Y;
+            }
         }
         private void shashka10_Click(object sender, EventArgs e)
         {
@@ -2786,6 +2831,11 @@ namespace Курсач
                 {
                     shashka10.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka10.Location.X;
+                y0 = shashka10.Location.Y;
             }
         }
         private void shashka11_Click(object sender, EventArgs e)
@@ -2814,6 +2864,11 @@ namespace Курсач
                     shashka11.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka11.Location.X;
+                y0 = shashka11.Location.Y;
+            }
         }
         private void shashka12_Click(object sender, EventArgs e)
         {
@@ -2840,6 +2895,11 @@ namespace Курсач
                 {
                     shashka12.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka12.Location.X;
+                y0 = shashka12.Location.Y;
             }
         }
         private void shashka13_Click(object sender, EventArgs e)
@@ -2868,6 +2928,11 @@ namespace Курсач
                     shashka13.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka13.Location.X;
+                y0 = shashka13.Location.Y;
+            }
         }
         private void shashka14_Click(object sender, EventArgs e)
         {
@@ -2894,6 +2959,11 @@ namespace Курсач
                 {
                     shashka14.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka14.Location.X;
+                y0 = shashka14.Location.Y;
             }
         }
         private void shashka15_Click(object sender, EventArgs e)
@@ -2922,6 +2992,11 @@ namespace Курсач
                     shashka15.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka15.Location.X;
+                y0 = shashka15.Location.Y;
+            }
         }
         private void shashka16_Click(object sender, EventArgs e)
         {
@@ -2948,6 +3023,11 @@ namespace Курсач
                 {
                     shashka16.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka16.Location.X;
+                y0 = shashka16.Location.Y;
             }
         }
         private void shashka17_Click(object sender, EventArgs e)
@@ -2976,6 +3056,11 @@ namespace Курсач
                     shashka17.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka17.Location.X;
+                y0 = shashka17.Location.Y;
+            }
         }
         private void shashka18_Click(object sender, EventArgs e)
         {
@@ -3002,6 +3087,11 @@ namespace Курсач
                 {
                     shashka18.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka18.Location.X;
+                y0 = shashka18.Location.Y;
             }
         }
         private void shashka19_Click(object sender, EventArgs e)
@@ -3030,6 +3120,11 @@ namespace Курсач
                     shashka19.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka19.Location.X;
+                y0 = shashka19.Location.Y;
+            }
         }
         private void shashka20_Click(object sender, EventArgs e)
         {
@@ -3056,6 +3151,11 @@ namespace Курсач
                 {
                     shashka20.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka20.Location.X;
+                y0 = shashka20.Location.Y;
             }
         }
         private void shashka21_Click(object sender, EventArgs e)
@@ -3084,6 +3184,11 @@ namespace Курсач
                     shashka21.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka21.Location.X;
+                y0 = shashka21.Location.Y;
+            }
         }
         private void shashka22_Click(object sender, EventArgs e)
         {
@@ -3110,6 +3215,11 @@ namespace Курсач
                 {
                     shashka22.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka22.Location.X;
+                y0 = shashka22.Location.Y;
             }
         }
         private void shashka23_Click(object sender, EventArgs e)
@@ -3138,6 +3248,11 @@ namespace Курсач
                     shashka23.Location = new Point(x0, y0);
                 }
             }
+            else
+            {
+                x0 = shashka23.Location.X;
+                y0 = shashka23.Location.Y;
+            }
         }
         private void shashka24_Click(object sender, EventArgs e)
         {
@@ -3164,6 +3279,11 @@ namespace Курсач
                 {
                     shashka24.Location = new Point(x0, y0);
                 }
+            }
+            else
+            {
+                x0 = shashka24.Location.X;
+                y0 = shashka24.Location.Y;
             }
         }
         //------------------------------END-CLICKS--------------------------------------------
