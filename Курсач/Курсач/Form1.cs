@@ -23,7 +23,7 @@ namespace Курсач
             whiteCount = 12,    // Count of white shashkas
             direction = 0,      // Direction of turns
             turn = 0;           // Turns
-        Point DownPoint;
+        Point DownPoint; 
 
         private void deleteShashka(int j, int i)
         {
