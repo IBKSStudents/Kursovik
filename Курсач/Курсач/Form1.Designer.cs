@@ -58,8 +58,6 @@
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новаяИграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сДругомToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.белыеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.черныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -340,23 +338,9 @@
             // 
             // сДругомToolStripMenuItem
             // 
-            this.сДругомToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.белыеToolStripMenuItem,
-            this.черныеToolStripMenuItem});
             this.сДругомToolStripMenuItem.Name = "сДругомToolStripMenuItem";
             resources.ApplyResources(this.сДругомToolStripMenuItem, "сДругомToolStripMenuItem");
-            // 
-            // белыеToolStripMenuItem
-            // 
-            this.белыеToolStripMenuItem.Name = "белыеToolStripMenuItem";
-            resources.ApplyResources(this.белыеToolStripMenuItem, "белыеToolStripMenuItem");
-            this.белыеToolStripMenuItem.Click += new System.EventHandler(this.белыеToolStripMenuItem_Click);
-            // 
-            // черныеToolStripMenuItem
-            // 
-            this.черныеToolStripMenuItem.Name = "черныеToolStripMenuItem";
-            resources.ApplyResources(this.черныеToolStripMenuItem, "черныеToolStripMenuItem");
-            this.черныеToolStripMenuItem.Click += new System.EventHandler(this.черныеToolStripMenuItem_Click);
+            this.сДругомToolStripMenuItem.Click += new System.EventHandler(this.сДругомToolStripMenuItem_Click);
             // 
             // okno
             // 
@@ -431,8 +415,6 @@
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem новаяИграToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сДругомToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem белыеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem черныеToolStripMenuItem;
     }
 }
 
