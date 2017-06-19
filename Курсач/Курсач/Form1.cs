@@ -24,7 +24,7 @@ namespace Курсач
             whiteCount = 12,    // Count of white shashkas
             direction = 0,      // Direction of turns
             turn = 0,           // Turns
-            computer = 1;       // Game with computer or no
+            computer = 0;       // Game with computer or no
         Point DownPoint; 
 
         private void deleteShashka(int j, int i)
@@ -255,7 +255,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -294,7 +294,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -333,7 +333,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -372,7 +372,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -411,7 +411,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -450,7 +450,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -489,7 +489,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -528,7 +528,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -567,7 +567,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -606,7 +606,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -645,7 +645,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -684,7 +684,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -727,7 +727,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -766,7 +766,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -805,7 +805,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -844,7 +844,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -883,7 +883,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -922,7 +922,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -961,7 +961,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1000,7 +1000,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1039,7 +1039,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1078,7 +1078,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1117,7 +1117,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1156,7 +1156,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1202,7 +1202,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1241,7 +1241,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1280,7 +1280,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1319,7 +1319,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1358,7 +1358,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1397,7 +1397,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1436,7 +1436,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1475,7 +1475,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1514,7 +1514,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1553,7 +1553,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1592,7 +1592,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1631,7 +1631,7 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
@@ -1674,7 +1674,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -1713,7 +1713,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -1752,7 +1752,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -1791,7 +1791,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -1830,7 +1830,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -1869,7 +1869,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -1908,7 +1908,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -1947,7 +1947,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -1986,7 +1986,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -2025,7 +2025,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -2064,7 +2064,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -2103,7 +2103,7 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        if ((x2l >= 0) && (y2l >= 0)&& (y2l <= 7) && (y2r >= 0)&& (y2r <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
@@ -3554,6 +3554,43 @@ namespace Курсач
                 shashka23.BringToFront();
             }
         }
+
+        private void сДругомToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setShahPosition();
+            starts(shashka1, 1);
+            starts(shashka2, 1);
+            starts(shashka3, 1);
+            starts(shashka4, 1);
+            starts(shashka5, 1);
+            starts(shashka6, 1);
+            starts(shashka7, 1);
+            starts(shashka8, 1);
+            starts(shashka9, 1);
+            starts(shashka10, 1);
+            starts(shashka11, 1);
+            starts(shashka12, 1);
+            starts(shashka13, 0);
+            starts(shashka14, 0);
+            starts(shashka15, 0);
+            starts(shashka16, 0);
+            starts(shashka17, 0);
+            starts(shashka18, 0);
+            starts(shashka19, 0);
+            starts(shashka20, 0);
+            starts(shashka21, 0);
+            starts(shashka22, 0);
+            starts(shashka23, 0);
+            starts(shashka24, 0);
+            blackCount = 12;
+            whiteCount = 12;
+            direction = 0;
+            turn = 0;
+            rubly = 0;
+            for (int i = 0; i < 24; i++) rub[i] = 0;
+            computer = 0;
+        }
+
         private void shashka24_Click(object sender, EventArgs e)
         {
             clicks[23] = (clicks[23] + 1) % 2;
