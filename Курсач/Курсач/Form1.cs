@@ -15,6 +15,7 @@ namespace Курсач
     public partial class okno : Form
     {
         private int[] clicks = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        private Button[] shahOb = new Button[24];
         private int[] damka  = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         private int[] rub =    new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         private int[,] shah =  new int[8, 8] { { 0, 21, 0, 22, 0, 23, 0, 24 }, { 17, 0, 18, 0, 19, 0, 20, 0 }, { 0, 13, 0, 14, 0, 15, 0, 16 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 9, 0, 10, 0, 11, 0, 12, 0 }, { 0, 5, 0, 6, 0, 7, 0, 8 }, { 1, 0, 2, 0, 3, 0, 4, 0 } };
@@ -22,7 +23,8 @@ namespace Курсач
             blackCount = 12,    // Count of black shashkas
             whiteCount = 12,    // Count of white shashkas
             direction = 0,      // Direction of turns
-            turn = 0;           // Turns
+            turn = 0,           // Turns
+            computer = 1;       // Game with computer or no
         Point DownPoint; 
 
         private void deleteShashka(int j, int i)
@@ -53,7 +55,7 @@ namespace Курсач
             if (shah[i, j] == 24) shashka24.Visible = false;
         }
 
-        private void setDamka(int j, int i)
+        private void setDamka(int i, int j)
         {
             if (shah[i, j] == 1)
             {
@@ -180,16 +182,37 @@ namespace Курсач
         
         private void checkDamka(int j, int i)
         {
-            if(turn == 0)
+            Console.WriteLine("=========================================================");
+            for (int ii = 0; ii < 8; ii++)
+            {
+                for (int jj = 0; jj < 8; jj++)
+                {
+                    Console.Write("{0, 2} ", shah[ii, jj]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("=========================================================");
+            Console.WriteLine("damki");
+            for (int ii = 0; ii < 8; ii++)
+            {
+                for (int jj = 0; jj < 8; jj++)
+                {
+                    if(shah[ii, jj]>0) Console.Write("{0, 2} ", damka[shah[ii, jj]-1]); else Console.Write("{0, 2} ", shah[ii, jj]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+
+            if (turn == 0)
             {
                 if (direction == 0)
                 {
-                    if (j == 0) setDamka(j, i);
+                    if ((j == 0) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
                     return;
                 }
                 else
                 {
-                    if (j == 7) setDamka(j, i);
+                    if ((j == 7) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
                     return;
                 }
             }
@@ -197,12 +220,12 @@ namespace Курсач
             {
                 if (direction == 0)
                 {
-                    if (j == 7) setDamka(j, i);
+                    if ((j == 7) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
                     return;
                 }
                 else
                 {
-                    if (j == 0) setDamka(j, i);
+                    if ((j == 0) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
                     return;
                 }
             }
@@ -2143,6 +2166,7 @@ namespace Курсач
                 midx = (nx + nX) / 2,
                 midy = (ny + nY) / 2;
 
+
             if ((nx < 0) || (nx > 7) || (ny < 0) || (ny > 7)) return 0;
 
             if (turn == 0)
@@ -2164,13 +2188,13 @@ namespace Курсач
                     {
                         if (shah[midy, midx] > 12)
                         {
-                            deleteShashka(midx, midy);
-                            shah[midy, midx] = 0;
-                            blackCount--;
+                                deleteShashka(midx, midy);
+                                shah[midy, midx] = 0;
+                                blackCount--;
                             return 1;
                         }
                     }
-                    if ((nY - ny != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
+                    if (((nY - ny != 1) && (damka[shah[nY, nX] - 1] == 0)) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                 }
                 else
                 {
@@ -2189,13 +2213,13 @@ namespace Курсач
                     {
                         if (shah[midy, midx] < 13)
                         {
-                            deleteShashka(midx, midy);
-                            shah[midy, midx] = 0;
-                            blackCount--;
+                                deleteShashka(midx, midy);
+                                shah[midy, midx] = 0;
+                                blackCount--;
                             return 1;
                         }
                     }
-                    if ((ny - nY != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
+                    if (((ny - nY != 1) && (damka[shah[nY, nX] - 1] == 0)) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                 }
             }
             else
@@ -2217,13 +2241,13 @@ namespace Курсач
                     {
                         if (shah[midy, midx] < 13)
                         {
-                            deleteShashka(midx, midy);
-                            shah[midy, midx] = 0;
-                            whiteCount--;
+                                deleteShashka(midx, midy);
+                                shah[midy, midx] = 0;
+                                whiteCount--;
                             return 1;
                         }
                     }
-                    if ((ny - nY != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
+                    if (((ny - nY != 1) && (damka[shah[nY, nX] - 1] == 0)) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                 }
                 else
                 {
@@ -2242,18 +2266,223 @@ namespace Курсач
                     {
                         if (shah[midy, midx] > 12)
                         {
-                            deleteShashka(midx, midy);
-                            shah[midy, midx] = 0;
-                            whiteCount--;
+                                deleteShashka(midx, midy);
+                                shah[midy, midx] = 0;
+                                whiteCount--;
                             return 1;
                         }
                     }
-                    if ((nY - ny != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
+                    if (((nY - ny != 1) && (damka[shah[nY, nX] - 1] == 0)) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                 }
             }
             return 1;
 
         }
+
+        private int cAllow(Button s)
+        {
+            int x = (s.Location.X - 17) / 58,
+                y = (s.Location.Y - 31) / 58;
+
+            if (turn == 0)
+            {
+                if (direction == 0)
+                {
+                    int ret = 0;
+                    for (int i = -1; i < 2; i++)
+                    {
+                        if (i == 0) continue;
+                        for (int j = -1; j < 2; j++)
+                        {
+                            if (j == 0) continue;
+                            if (((x+i) < 0) || ((x+i) > 7) || ((y+j) < 0) || ((y+j) > 7)) {ret++; continue;}
+                            if (rubly == 1)
+                            {
+                                if (rub[shah[y, x] - 1] == 0) {ret++; continue;}
+                                else
+                                {
+                                    if ((((x+(x+i))/2) == (x+i)) || (((x+(x+i))/2) == x) || (((y+(y+j))/2) == (y+j)) || (((y+(y+j))/2) == y)) {ret++; continue;}
+                                }
+                            }
+                            if (shah[y, x] > 12) {ret++; continue;}
+                            if (((x+i) == x) || ((y+j) == y)) {ret++; continue;}
+                            if (shah[(y+j), (x+i)] != 0) {ret++; continue;}
+                            if (((((x+(x+i))/2) != (x+i)) && (((x+(x+i))/2) != x) && (((y+(y+j))/2) != (y+j)) && (((y+(y+j))/2) != y)) && ((((y+j) < y) && (damka[shah[y, x] - 1] == 0)) || (damka[shah[y, x] - 1] == 1)))
+                            {
+                                if (shah[((y+(y+j))/2), ((x+(x+i))/2)] > 12)
+                                {
+                                    continue;
+                                }
+                            }
+                            if (((y - (y+j) != 1) && (damka[shah[y, x] - 1] == 0)) || (x - (x+i) > 1) || ((x+i) - x > 1)) {ret++; continue;}
+                        }
+                    }
+                    if (ret == 4) return 0; else return 1;
+                }
+                else
+                {
+                    int ret = 0;
+                    for (int i = -1; i < 2; i++)
+                    {
+                        if (i == 0) continue;
+                        for (int j = -1; j < 2; j++)
+                        {
+                            if (j == 0) continue;
+                            if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
+                            if (rubly == 1)
+                            {
+                                if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
+                                else
+                                {
+                                    if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
+                                }
+                            }
+                            if (shah[y, x] > 12) { ret++; continue; }
+                            if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
+                            if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
+                            if (((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y)) && ((((y + j) < y) && (damka[shah[y, x] - 1] == 0)) || (damka[shah[y, x] - 1] == 1)))
+                            {
+                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] > 12)
+                                {
+                                    continue;
+                                }
+                            }
+                            if (((y - (y + j) != -1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
+                        }
+                    }
+                    if (ret == 4) return 0; else return 1;
+                }
+            }
+            else
+            {
+                if (direction == 0)
+                {
+                    int ret = 0;
+                    for (int i = -1; i < 2; i++)
+                    {
+                        if (i == 0) continue;
+                        for (int j = -1; j < 2; j++)
+                        {
+                            if (j == 0) continue;
+                            if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
+                            if (rubly == 1)
+                            {
+                                if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
+                                else
+                                {
+                                    if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
+                                }
+                            }
+                            if (shah[y, x] < 13) { ret++; continue; }
+                            if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
+                            if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
+                            if (((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y)) && ((((y + j) < y) && (damka[shah[y, x] - 1] == 0)) || (damka[shah[y, x] - 1] == 1)))
+                            {
+                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] < 13)
+                                {
+                                    continue;
+                                }
+                            }
+                            if (((y - (y + j) != -1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
+                        }
+                    }
+                    if (ret == 4) return 0; else return 1;
+                }
+                else
+                {
+                    int ret = 0;
+                    for (int i = -1; i < 2; i++)
+                    {
+                        if (i == 0) continue;
+                        for (int j = -1; j < 2; j++)
+                        {
+                            if (j == 0) continue;
+                            if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
+                            if (rubly == 1)
+                            {
+                                if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
+                                else
+                                {
+                                    if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
+                                }
+                            }
+                            if (shah[y, x] < 13) { ret++; continue; }
+                            if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
+                            if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
+                            if (((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y)) && ((((y + j) < y) && (damka[shah[y, x] - 1] == 0)) || (damka[shah[y, x] - 1] == 1)))
+                            {
+                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] < 13)
+                                {
+                                    continue;
+                                }
+                            }
+                            if (((y - (y + j) != 1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
+                        }
+                    }
+                    if (ret == 4) return 0; else return 1;
+                }
+            }
+        }
+
+        private void comp()
+        {
+            int[] shashki = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            int index = 0;
+            for (int i = 1; i < 25; i++)
+            {
+                for (int ii = 0; ii < 8; ii++)
+                {
+                    for (int jj = 0; jj < 8; jj++)
+                    {
+                        if (shah[ii, jj] == i)
+                        {
+                            if (cAllow(shahOb[shah[ii, jj] - 1]) == 1) shashki[index++] = shah[ii, jj];
+                            goto next;
+                        }
+                    }
+                }
+                next:;
+            }
+
+
+            Console.WriteLine("####################################################");
+            for (int i = 0; i < 12; i++)
+            {
+                Console.Write("{0, 2} ", shashki[i]);
+            }
+            Console.WriteLine();
+            Console.WriteLine("####################################################");
+
+        }
+
+        /*
+        for (int i = 13; i < 25; i++)
+                    {
+                        for (int ii = 0; ii < 8; ii++)
+                        {
+                            for (int jj = 0; jj < 8; jj++)
+                            {
+                                if (shah[ii, jj] == i)
+                                {
+                                    if (allow(shahOb[shah[ii, jj] - 1].Location.X, shahOb[shah[ii, jj] - 1].Location.Y) == 1) shashki[index++] = shah[ii, jj];
+                                }
+                            }
+                        }
+                    }
+
+            
+            int[] shashki = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+            int index = 0;
+       
+            Console.WriteLine("####################################################");
+                for (int i = 0; i < 12; i++)
+                {
+                    Console.Write("{0, 2} ", shashki[i]);
+                }
+                Console.WriteLine();
+            Console.WriteLine("####################################################");
+        */
+
 
         private void gameover()
         {
@@ -2268,6 +2497,31 @@ namespace Курсач
         {
             InitializeComponent();
             setShahPosition();
+            shahOb[0] = shashka1;
+            shahOb[1] = shashka2;
+            shahOb[2] = shashka3;
+            shahOb[3] = shashka4;
+            shahOb[4] = shashka5;
+            shahOb[5] = shashka6;
+            shahOb[6] = shashka7;
+            shahOb[7] = shashka8;
+            shahOb[8] = shashka9;
+            shahOb[9] = shashka10;
+            shahOb[10] = shashka11;
+            shahOb[11] = shashka12;
+            shahOb[12] = shashka13;
+            shahOb[13] = shashka14;
+            shahOb[14] = shashka15;
+            shahOb[15] = shashka16;
+            shahOb[16] = shashka17;
+            shahOb[17] = shashka18;
+            shahOb[18] = shashka19;
+            shahOb[19] = shashka20;
+            shahOb[20] = shashka21;
+            shahOb[21] = shashka22;
+            shahOb[22] = shashka23;
+            shahOb[23] = shashka24;
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -2538,6 +2792,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2565,12 +2820,13 @@ namespace Курсач
                 {
                     shashka2.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 2;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2598,12 +2854,13 @@ namespace Курсач
                 {
                     shashka3.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 3;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2631,12 +2888,13 @@ namespace Курсач
                 {
                     shashka4.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 4;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2664,12 +2922,13 @@ namespace Курсач
                 {
                     shashka5.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 5;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2697,12 +2956,13 @@ namespace Курсач
                 {
                     shashka6.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 6;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2730,12 +2990,13 @@ namespace Курсач
                 {
                     shashka7.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 7;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2763,12 +3024,13 @@ namespace Курсач
                 {
                     shashka8.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 8;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2796,12 +3058,13 @@ namespace Курсач
                 {
                     shashka9.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 9;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2829,12 +3092,13 @@ namespace Курсач
                 {
                     shashka10.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 10;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2862,12 +3126,13 @@ namespace Курсач
                 {
                     shashka11.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 11;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2895,12 +3160,13 @@ namespace Курсач
                 {
                     shashka12.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 12;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2928,12 +3194,13 @@ namespace Курсач
                 {
                     shashka13.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 13;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2961,12 +3228,13 @@ namespace Курсач
                 {
                     shashka14.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 14;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -2994,12 +3262,13 @@ namespace Курсач
                 {
                     shashka15.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 15;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -3027,12 +3296,13 @@ namespace Курсач
                 {
                     shashka16.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 16;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -3060,12 +3330,13 @@ namespace Курсач
                 {
                     shashka17.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 17;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -3093,12 +3364,13 @@ namespace Курсач
                 {
                     shashka18.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 18;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -3126,12 +3398,13 @@ namespace Курсач
                 {
                     shashka19.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 19;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -3159,12 +3432,13 @@ namespace Курсач
                 {
                     shashka20.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 20;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -3192,12 +3466,13 @@ namespace Курсач
                 {
                     shashka21.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 21;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -3225,12 +3500,13 @@ namespace Курсач
                 {
                     shashka22.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 22;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -3258,12 +3534,13 @@ namespace Курсач
                 {
                     shashka23.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 23;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
@@ -3291,12 +3568,13 @@ namespace Курсач
                 {
                     shashka24.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 24;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
+                    if (computer == 1) comp();
                 }
                 else
                 {
