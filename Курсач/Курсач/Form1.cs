@@ -53,7 +53,7 @@ namespace Курсач
             if (shah[i, j] == 24) shashka24.Visible = false;
         }
 
-        private void setDamka(int j, int i)
+        private void setDamka(int i, int j)
         {
             if (shah[i, j] == 1)
             {
@@ -180,16 +180,37 @@ namespace Курсач
         
         private void checkDamka(int j, int i)
         {
-            if(turn == 0)
+            Console.WriteLine("=========================================================");
+            for (int ii = 0; ii < 8; ii++)
+            {
+                for (int jj = 0; jj < 8; jj++)
+                {
+                    Console.Write("{0, 2} ", shah[ii, jj]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("=========================================================");
+            Console.WriteLine("damki");
+            for (int ii = 0; ii < 8; ii++)
+            {
+                for (int jj = 0; jj < 8; jj++)
+                {
+                    if(shah[ii, jj]>0) Console.Write("{0, 2} ", damka[shah[ii, jj]-1]); else Console.Write("{0, 2} ", shah[ii, jj]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+
+            if (turn == 0)
             {
                 if (direction == 0)
                 {
-                    if (j == 0) setDamka(j, i);
+                    if ((j == 0) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
                     return;
                 }
                 else
                 {
-                    if (j == 7) setDamka(j, i);
+                    if ((j == 7) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
                     return;
                 }
             }
@@ -197,12 +218,12 @@ namespace Курсач
             {
                 if (direction == 0)
                 {
-                    if (j == 7) setDamka(j, i);
+                    if ((j == 7) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
                     return;
                 }
                 else
                 {
-                    if (j == 0) setDamka(j, i);
+                    if ((j == 0) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
                     return;
                 }
             }
@@ -2143,6 +2164,7 @@ namespace Курсач
                 midx = (nx + nX) / 2,
                 midy = (ny + nY) / 2;
 
+
             if ((nx < 0) || (nx > 7) || (ny < 0) || (ny > 7)) return 0;
 
             if (turn == 0)
@@ -2170,7 +2192,7 @@ namespace Курсач
                             return 1;
                         }
                     }
-                    if ((nY - ny != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
+                    if (((nY - ny != 1) && (damka[shah[nY, nX] - 1] == 0)) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                 }
                 else
                 {
@@ -2195,7 +2217,7 @@ namespace Курсач
                             return 1;
                         }
                     }
-                    if ((ny - nY != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
+                    if (((ny - nY != 1) && (damka[shah[nY, nX] - 1] == 0)) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                 }
             }
             else
@@ -2223,7 +2245,7 @@ namespace Курсач
                             return 1;
                         }
                     }
-                    if ((ny - nY != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
+                    if (((ny - nY != 1) && (damka[shah[nY, nX] - 1] == 0)) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                 }
                 else
                 {
@@ -2248,13 +2270,13 @@ namespace Курсач
                             return 1;
                         }
                     }
-                    if ((nY - ny != 1) || (nX - nx > 1) || (nx - nX > 1)) return 0;
+                    if (((nY - ny != 1) && (damka[shah[nY, nX] - 1] == 0)) || (nX - nx > 1) || (nx - nX > 1)) return 0;
                 }
             }
             return 1;
 
         }
-
+    
         private void gameover()
         {
             Form game = new gameover();
@@ -2268,6 +2290,7 @@ namespace Курсач
         {
             InitializeComponent();
             setShahPosition();
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -2565,7 +2588,7 @@ namespace Курсач
                 {
                     shashka2.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 2;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2598,7 +2621,7 @@ namespace Курсач
                 {
                     shashka3.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 3;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2631,7 +2654,7 @@ namespace Курсач
                 {
                     shashka4.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 4;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2664,7 +2687,7 @@ namespace Курсач
                 {
                     shashka5.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 5;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2697,7 +2720,7 @@ namespace Курсач
                 {
                     shashka6.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 6;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2730,7 +2753,7 @@ namespace Курсач
                 {
                     shashka7.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 7;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2763,7 +2786,7 @@ namespace Курсач
                 {
                     shashka8.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 8;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2796,7 +2819,7 @@ namespace Курсач
                 {
                     shashka9.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 9;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2829,7 +2852,7 @@ namespace Курсач
                 {
                     shashka10.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 10;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2862,7 +2885,7 @@ namespace Курсач
                 {
                     shashka11.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 11;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2895,7 +2918,7 @@ namespace Курсач
                 {
                     shashka12.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 12;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2928,7 +2951,7 @@ namespace Курсач
                 {
                     shashka13.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 13;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2961,7 +2984,7 @@ namespace Курсач
                 {
                     shashka14.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 14;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -2994,7 +3017,7 @@ namespace Курсач
                 {
                     shashka15.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 15;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -3027,7 +3050,7 @@ namespace Курсач
                 {
                     shashka16.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 16;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -3060,7 +3083,7 @@ namespace Курсач
                 {
                     shashka17.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 17;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -3093,7 +3116,7 @@ namespace Курсач
                 {
                     shashka18.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 18;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -3126,7 +3149,7 @@ namespace Курсач
                 {
                     shashka19.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 19;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -3159,7 +3182,7 @@ namespace Курсач
                 {
                     shashka20.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 20;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -3192,7 +3215,7 @@ namespace Курсач
                 {
                     shashka21.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 21;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -3225,7 +3248,7 @@ namespace Курсач
                 {
                     shashka22.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 22;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -3258,7 +3281,7 @@ namespace Курсач
                 {
                     shashka23.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 23;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
@@ -3291,7 +3314,7 @@ namespace Курсач
                 {
                     shashka24.Location = new Point(x, y);
                     DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                    shah[(y - 31) / 58, (x - 17) / 58] = 24;
                     shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
                     checkDamka((y - 31) / 58, (x - 17) / 58);
                     turn = (turn + 1) % 2;
