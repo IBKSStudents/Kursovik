@@ -325,7 +325,7 @@ namespace Курсач
                                 rub[0] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[0] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -341,7 +341,7 @@ namespace Курсач
                                 rub[0] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[0] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -357,7 +357,7 @@ namespace Курсач
                                 rub[0] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[0] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -424,7 +424,7 @@ namespace Курсач
                                 rub[1] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[1] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -440,7 +440,7 @@ namespace Курсач
                                 rub[1] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[1] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -456,7 +456,7 @@ namespace Курсач
                                 rub[1] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[1] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -523,7 +523,7 @@ namespace Курсач
                                 rub[2] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[2] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -539,7 +539,7 @@ namespace Курсач
                                 rub[2] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[2] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -555,7 +555,7 @@ namespace Курсач
                                 rub[2] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[2] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -622,7 +622,7 @@ namespace Курсач
                                 rub[3] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[3] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -638,7 +638,7 @@ namespace Курсач
                                 rub[3] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[3] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -654,7 +654,7 @@ namespace Курсач
                                 rub[3] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[3] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -820,7 +820,7 @@ namespace Курсач
                                 rub[5] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[5] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -836,7 +836,7 @@ namespace Курсач
                                 rub[5] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[5] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -852,7 +852,7 @@ namespace Курсач
                                 rub[5] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[5] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -919,7 +919,7 @@ namespace Курсач
                                 rub[6] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[6] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -935,7 +935,7 @@ namespace Курсач
                                 rub[6] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[6] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -951,7 +951,7 @@ namespace Курсач
                                 rub[6] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[6] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -1018,7 +1018,7 @@ namespace Курсач
                                 rub[7] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[7] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -1034,7 +1034,7 @@ namespace Курсач
                                 rub[7] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[7] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -1050,7 +1050,7 @@ namespace Курсач
                                 rub[7] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[7] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -1117,7 +1117,7 @@ namespace Курсач
                                 rub[8] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[8] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -1133,7 +1133,7 @@ namespace Курсач
                                 rub[8] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[8] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -1149,7 +1149,7 @@ namespace Курсач
                                 rub[8] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[8] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -1216,7 +1216,7 @@ namespace Курсач
                                 rub[9] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[9] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -1232,7 +1232,7 @@ namespace Курсач
                                 rub[9] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[9] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -1248,7 +1248,7 @@ namespace Курсач
                                 rub[9] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[9] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -1315,7 +1315,7 @@ namespace Курсач
                                 rub[10] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[10] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -1331,7 +1331,7 @@ namespace Курсач
                                 rub[10] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[10] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -1347,7 +1347,7 @@ namespace Курсач
                                 rub[10] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[10] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -1414,7 +1414,7 @@ namespace Курсач
                                 rub[11] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[11] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -1430,7 +1430,7 @@ namespace Курсач
                                 rub[11] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[11] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -1446,7 +1446,7 @@ namespace Курсач
                                 rub[11] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[11] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -1489,6 +1489,7 @@ namespace Курсач
                         }
                     }
                 }
+
                 else
                 {
                     // White 13-24
@@ -1517,7 +1518,7 @@ namespace Курсач
                                 rub[12] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[12] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -1533,7 +1534,7 @@ namespace Курсач
                                 rub[12] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[12] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -1549,7 +1550,7 @@ namespace Курсач
                                 rub[12] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[12] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -1616,7 +1617,7 @@ namespace Курсач
                                 rub[13] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[13] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -1632,7 +1633,7 @@ namespace Курсач
                                 rub[13] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[13] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -1648,7 +1649,7 @@ namespace Курсач
                                 rub[13] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[13] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -1715,7 +1716,7 @@ namespace Курсач
                                 rub[14] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[14] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -1731,7 +1732,7 @@ namespace Курсач
                                 rub[14] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[14] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -1747,7 +1748,7 @@ namespace Курсач
                                 rub[14] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[14] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -1814,7 +1815,7 @@ namespace Курсач
                                 rub[15] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[15] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -1830,7 +1831,7 @@ namespace Курсач
                                 rub[15] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[15] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -1846,7 +1847,7 @@ namespace Курсач
                                 rub[15] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[15] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -1913,7 +1914,7 @@ namespace Курсач
                                 rub[16] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[16] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -1929,7 +1930,7 @@ namespace Курсач
                                 rub[16] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[16] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -1945,7 +1946,7 @@ namespace Курсач
                                 rub[16] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[16] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -2012,7 +2013,7 @@ namespace Курсач
                                 rub[17] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[17] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -2028,7 +2029,7 @@ namespace Курсач
                                 rub[17] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[17] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -2044,7 +2045,7 @@ namespace Курсач
                                 rub[17] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[17] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -2111,7 +2112,7 @@ namespace Курсач
                                 rub[18] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[18] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -2127,7 +2128,7 @@ namespace Курсач
                                 rub[18] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[18] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -2143,7 +2144,7 @@ namespace Курсач
                                 rub[18] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[18] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -2210,7 +2211,7 @@ namespace Курсач
                                 rub[19] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[19] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -2226,7 +2227,7 @@ namespace Курсач
                                 rub[19] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[19] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -2242,7 +2243,7 @@ namespace Курсач
                                 rub[19] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[19] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -2309,7 +2310,7 @@ namespace Курсач
                                 rub[20] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[20] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -2325,7 +2326,7 @@ namespace Курсач
                                 rub[20] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[20] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -2341,7 +2342,7 @@ namespace Курсач
                                 rub[20] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[20] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -2408,7 +2409,7 @@ namespace Курсач
                                 rub[21] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[21] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -2424,7 +2425,7 @@ namespace Курсач
                                 rub[21] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[21] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -2440,7 +2441,7 @@ namespace Курсач
                                 rub[21] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[21] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -2507,7 +2508,7 @@ namespace Курсач
                                 rub[22] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[22] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -2523,7 +2524,7 @@ namespace Курсач
                                 rub[22] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[22] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -2539,7 +2540,7 @@ namespace Курсач
                                 rub[22] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[22] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -2606,7 +2607,7 @@ namespace Курсач
                                 rub[23] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[23] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -2622,7 +2623,7 @@ namespace Курсач
                                 rub[23] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[23] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -2638,7 +2639,7 @@ namespace Курсач
                                 rub[23] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[23] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -2712,7 +2713,7 @@ namespace Курсач
                                 rub[12] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[12] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -2728,7 +2729,7 @@ namespace Курсач
                                 rub[12] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[12] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -2744,7 +2745,7 @@ namespace Курсач
                                 rub[12] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[12] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -2811,7 +2812,7 @@ namespace Курсач
                                 rub[13] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[13] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -2827,7 +2828,7 @@ namespace Курсач
                                 rub[13] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[13] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -2843,7 +2844,7 @@ namespace Курсач
                                 rub[13] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[13] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -2910,7 +2911,7 @@ namespace Курсач
                                 rub[14] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[14] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -2926,7 +2927,7 @@ namespace Курсач
                                 rub[14] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[14] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -2942,7 +2943,7 @@ namespace Курсач
                                 rub[14] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[14] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -3009,7 +3010,7 @@ namespace Курсач
                                 rub[15] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[15] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -3025,7 +3026,7 @@ namespace Курсач
                                 rub[15] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[15] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -3041,7 +3042,7 @@ namespace Курсач
                                 rub[15] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[15] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -3108,7 +3109,7 @@ namespace Курсач
                                 rub[16] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[16] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -3124,7 +3125,7 @@ namespace Курсач
                                 rub[16] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[16] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -3140,7 +3141,7 @@ namespace Курсач
                                 rub[16] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[16] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -3207,7 +3208,7 @@ namespace Курсач
                                 rub[17] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[17] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -3223,7 +3224,7 @@ namespace Курсач
                                 rub[17] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[17] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -3239,7 +3240,7 @@ namespace Курсач
                                 rub[17] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[17] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -3306,7 +3307,7 @@ namespace Курсач
                                 rub[18] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[18] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -3322,7 +3323,7 @@ namespace Курсач
                                 rub[18] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[18] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -3338,7 +3339,7 @@ namespace Курсач
                                 rub[18] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[18] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -3405,7 +3406,7 @@ namespace Курсач
                                 rub[19] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[19] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -3421,7 +3422,7 @@ namespace Курсач
                                 rub[19] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[19] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -3437,7 +3438,7 @@ namespace Курсач
                                 rub[19] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[19] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -3504,7 +3505,7 @@ namespace Курсач
                                 rub[20] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[20] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -3520,7 +3521,7 @@ namespace Курсач
                                 rub[20] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[20] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -3536,7 +3537,7 @@ namespace Курсач
                                 rub[20] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[20] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -3603,7 +3604,7 @@ namespace Курсач
                                 rub[21] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[21] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -3619,7 +3620,7 @@ namespace Курсач
                                 rub[21] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[21] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -3635,7 +3636,7 @@ namespace Курсач
                                 rub[21] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[21] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -3702,7 +3703,7 @@ namespace Курсач
                                 rub[22] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[22] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -3718,7 +3719,7 @@ namespace Курсач
                                 rub[22] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[22] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -3734,7 +3735,7 @@ namespace Курсач
                                 rub[22] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[22] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -3801,7 +3802,7 @@ namespace Курсач
                                 rub[23] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[23] == 1)
                             {
                                 if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
                                 {
@@ -3817,7 +3818,7 @@ namespace Курсач
                                 rub[23] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[23] == 1)
                             {
                                 if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
                                 {
@@ -3833,7 +3834,7 @@ namespace Курсач
                                 rub[23] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[23] == 1)
                             {
                                 if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
                                 {
@@ -3904,7 +3905,7 @@ namespace Курсач
                                 rub[0] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[0] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -3920,7 +3921,7 @@ namespace Курсач
                                 rub[0] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[0] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -3936,7 +3937,7 @@ namespace Курсач
                                 rub[0] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[0] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -4003,7 +4004,7 @@ namespace Курсач
                                 rub[1] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[1] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -4019,7 +4020,7 @@ namespace Курсач
                                 rub[1] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[1] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -4035,7 +4036,7 @@ namespace Курсач
                                 rub[1] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[1] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -4102,7 +4103,7 @@ namespace Курсач
                                 rub[2] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[2] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -4118,7 +4119,7 @@ namespace Курсач
                                 rub[2] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[2] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -4134,7 +4135,7 @@ namespace Курсач
                                 rub[2] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[2] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -4201,7 +4202,7 @@ namespace Курсач
                                 rub[3] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[3] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -4217,7 +4218,7 @@ namespace Курсач
                                 rub[3] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[3] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -4233,7 +4234,7 @@ namespace Курсач
                                 rub[3] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[3] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -4399,7 +4400,7 @@ namespace Курсач
                                 rub[5] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[5] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -4415,7 +4416,7 @@ namespace Курсач
                                 rub[5] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[5] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -4431,7 +4432,7 @@ namespace Курсач
                                 rub[5] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[5] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -4498,7 +4499,7 @@ namespace Курсач
                                 rub[6] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[6] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -4514,7 +4515,7 @@ namespace Курсач
                                 rub[6] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[6] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -4530,7 +4531,7 @@ namespace Курсач
                                 rub[6] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[6] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -4597,7 +4598,7 @@ namespace Курсач
                                 rub[7] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[7] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -4613,7 +4614,7 @@ namespace Курсач
                                 rub[7] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[7] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -4629,7 +4630,7 @@ namespace Курсач
                                 rub[7] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[7] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -4696,7 +4697,7 @@ namespace Курсач
                                 rub[8] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[8] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -4712,7 +4713,7 @@ namespace Курсач
                                 rub[8] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[8] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -4728,7 +4729,7 @@ namespace Курсач
                                 rub[8] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[8] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -4795,7 +4796,7 @@ namespace Курсач
                                 rub[9] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[9] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -4811,7 +4812,7 @@ namespace Курсач
                                 rub[9] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[9] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -4827,7 +4828,7 @@ namespace Курсач
                                 rub[9] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[9] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -4894,7 +4895,7 @@ namespace Курсач
                                 rub[10] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[10] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -4910,7 +4911,7 @@ namespace Курсач
                                 rub[10] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[10] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -4926,7 +4927,7 @@ namespace Курсач
                                 rub[10] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[10] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
@@ -4993,7 +4994,7 @@ namespace Курсач
                                 rub[11] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[11] == 1)
                             {
                                 if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
                                 {
@@ -5009,7 +5010,7 @@ namespace Курсач
                                 rub[11] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[11] == 1)
                             {
                                 if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
                                 {
@@ -5025,7 +5026,7 @@ namespace Курсач
                                 rub[11] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
+                            if (damka[11] == 1)
                             {
                                 if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
                                 {
