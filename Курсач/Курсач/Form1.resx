@@ -739,10 +739,28 @@
     <value>Меню</value>
   </data>
   <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>164, 22</value>
   </data>
   <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
     <value>С человеком</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Белые</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Черные</value>
+  </data>
+  <data name="сКомпьютеромToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="сКомпьютеромToolStripMenuItem.Text" xml:space="preserve">
+    <value>С компьютером</value>
   </data>
   <data name="новаяИграToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 20</value>
@@ -1372,6 +1390,24 @@
     <value>сДругомToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;сДругомToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;сКомпьютеромToolStripMenuItem.Name" xml:space="preserve">
+    <value>сКомпьютеромToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;сКомпьютеромToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;белыеToolStripMenuItem.Name" xml:space="preserve">
+    <value>белыеToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;белыеToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;черныеToolStripMenuItem.Name" xml:space="preserve">
+    <value>черныеToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;черныеToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
