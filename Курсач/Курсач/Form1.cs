@@ -292,6 +292,7 @@ namespace Курсач
 
         private int rubl()
         {
+            Console.WriteLine("Enter rubl.");
             int r = 0, x, y, x00, y00, x1l, x2l, y1l, y2l, x1r, x2r, y1r, y2r, d1r, d1l, d2r, d2l;
             for (int i = 0; i < 24; i++) rub[i] = 0;
 
@@ -5126,11 +5127,12 @@ namespace Курсач
                     if (shah[ny, nx] != 0) return 0;
                     if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
                     {
-                        if ((damka[shah[nY, nX] - 1] == 1) && (((nY - ny) > 2) || (((nY - ny) < 2)))) return 0;
+                        if ((damka[shah[nY, nX] - 1] == 1) && (((nY - ny) > 2) || (((nY - ny) < -2)))) return 0;
                         if ((damka[shah[nY, nX] - 1] == 0) && (ny > nY)) return 0;
                         if (shah[midy, midx] > 12)
                         {
                                 deleteShashka(midx, midy);
+                            damka[shah[midy, midx] - 1] = 0;
                                 shah[midy, midx] = 0;
                                 blackCount--;
                             return 1;
@@ -5153,12 +5155,13 @@ namespace Курсач
                     if (shah[ny, nx] != 0) return 0;
                     if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
                     {
-                        if ((damka[shah[nY, nX] - 1] == 1) && (((nY - ny) > 2) || (((nY - ny) < 2)))) return 0;
+                        if ((damka[shah[nY, nX] - 1] == 1) && (((nY - ny) > 2) || (((nY - ny) < -2)))) return 0;
                         if ((damka[shah[nY, nX] - 1] == 0) && (ny < nY)) return 0;
                         if (shah[midy, midx] < 13)
                         {
                                 deleteShashka(midx, midy);
-                                shah[midy, midx] = 0;
+                            damka[shah[midy, midx] - 1] = 0;
+                            shah[midy, midx] = 0;
                                 blackCount--;
                             return 1;
                         }
@@ -5183,12 +5186,13 @@ namespace Курсач
                     if (shah[ny, nx] != 0) return 0;
                     if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
                     {
+                            if ((damka[shah[nY, nX] - 1] == 1) && (((nY - ny) > 2) || (((nY - ny) < -2)))) return 0;
+                            if ((damka[shah[nY, nX] - 1] == 0) && (ny < nY)) return 0;
                         if (shah[midy, midx] < 13)
                         {
-                            if ((damka[shah[nY, nX] - 1] == 1) && (((nY - ny) > 2) || (((nY - ny) < 2)))) return 0;
-                            if ((damka[shah[nY, nX] - 1] == 0) && (ny < nY)) return 0;
                             deleteShashka(midx, midy);
-                                shah[midy, midx] = 0;
+                            damka[shah[midy, midx] - 1] = 0;
+                            shah[midy, midx] = 0;
                                 whiteCount--;
                             return 1;
                         }
@@ -5210,12 +5214,13 @@ namespace Курсач
                     if (shah[ny, nx] != 0) return 0;
                     if ((midx != nx) && (midx != nX) && (midy != ny) && (midy != nY))
                     {
-                            if ((damka[shah[nY, nX] - 1] == 1) && (((nY - ny) > 2) || (((nY - ny) < 2)))) return 0;
+                            if ((damka[shah[nY, nX] - 1] == 1) && (((nY - ny) > 2) || (((nY - ny) < -2)))) return 0;
                             if ((damka[shah[nY, nX] - 1] == 0) && (ny > nY)) return 0;
                         if (shah[midy, midx] > 12)
                         {
                             deleteShashka(midx, midy);
-                                shah[midy, midx] = 0;
+                            damka[shah[midy, midx] - 1] = 0;
+                            shah[midy, midx] = 0;
                                 whiteCount--;
                             return 1;
                         }
@@ -6506,43 +6511,6 @@ namespace Курсач
                 shashka23.BringToFront();
             }
         }
-
-        private void сДругомToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            setShahPosition();
-            starts(shashka1, 1);
-            starts(shashka2, 1);
-            starts(shashka3, 1);
-            starts(shashka4, 1);
-            starts(shashka5, 1);
-            starts(shashka6, 1);
-            starts(shashka7, 1);
-            starts(shashka8, 1);
-            starts(shashka9, 1);
-            starts(shashka10, 1);
-            starts(shashka11, 1);
-            starts(shashka12, 1);
-            starts(shashka13, 0);
-            starts(shashka14, 0);
-            starts(shashka15, 0);
-            starts(shashka16, 0);
-            starts(shashka17, 0);
-            starts(shashka18, 0);
-            starts(shashka19, 0);
-            starts(shashka20, 0);
-            starts(shashka21, 0);
-            starts(shashka22, 0);
-            starts(shashka23, 0);
-            starts(shashka24, 0);
-            blackCount = 12;
-            whiteCount = 12;
-            direction = 0;
-            turn = 0;
-            rubly = 0;
-            for (int i = 0; i < 24; i++) rub[i] = 0;
-            computer = 0;
-        }
-
         private void shashka24_Click(object sender, EventArgs e)
         {
             clicks[23] = (clicks[23] + 1) % 2;
@@ -6578,6 +6546,43 @@ namespace Курсач
             }
         }
         //------------------------------END-CLICKS--------------------------------------------
+
+        private void сДругомToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setShahPosition();
+            starts(shashka1, 1);
+            starts(shashka2, 1);
+            starts(shashka3, 1);
+            starts(shashka4, 1);
+            starts(shashka5, 1);
+            starts(shashka6, 1);
+            starts(shashka7, 1);
+            starts(shashka8, 1);
+            starts(shashka9, 1);
+            starts(shashka10, 1);
+            starts(shashka11, 1);
+            starts(shashka12, 1);
+            starts(shashka13, 0);
+            starts(shashka14, 0);
+            starts(shashka15, 0);
+            starts(shashka16, 0);
+            starts(shashka17, 0);
+            starts(shashka18, 0);
+            starts(shashka19, 0);
+            starts(shashka20, 0);
+            starts(shashka21, 0);
+            starts(shashka22, 0);
+            starts(shashka23, 0);
+            starts(shashka24, 0);
+            blackCount = 12;
+            whiteCount = 12;
+            direction = 0;
+            turn = 0;
+            rubly = 0;
+            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
+            computer = 0;
+        }
+
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("bin\\Readme.txt");
@@ -6729,7 +6734,7 @@ namespace Курсач
             direction = 0;
             turn = 0;
             rubly = 0;
-            for (int i = 0; i < 24; i++) rub[i] = 0;
+            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
         }
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -6767,7 +6772,7 @@ namespace Курсач
             direction = 1;
             turn = 0;
             rubly = 0;
-            for (int i = 0; i < 24; i++) rub[i] = 0;
+            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
         }
     }
 }
