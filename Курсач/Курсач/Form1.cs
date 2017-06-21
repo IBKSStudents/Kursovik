@@ -315,59 +315,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[0] = 1;
                                 r = 1;
                             }
-                            if (damka[0] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[0] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[0] = 1;
-                                r = 1;
-                            }
-                            if (damka[0] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[0] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[0] = 1;
-                                r = 1;
-                            }
-                            if (damka[0] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[0] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -375,7 +331,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -383,22 +339,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[0] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[0] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[0] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[0] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka2.Visible == true)
                     {
@@ -414,59 +391,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[1] = 1;
                                 r = 1;
                             }
-                            if (damka[1] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[1] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[1] = 1;
-                                r = 1;
-                            }
-                            if (damka[1] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[1] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[1] = 1;
-                                r = 1;
-                            }
-                            if (damka[1] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[1] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -474,7 +407,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -482,22 +415,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[1] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[1] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[1] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka3.Visible == true)
                     {
@@ -513,59 +467,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[2] = 1;
                                 r = 1;
                             }
-                            if (damka[2] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[2] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[2] = 1;
-                                r = 1;
-                            }
-                            if (damka[2] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[2] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[2] = 1;
-                                r = 1;
-                            }
-                            if (damka[2] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[2] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -573,7 +483,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -581,22 +491,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[2] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[2] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[2] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[2] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka4.Visible == true)
                     {
@@ -612,59 +543,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[3] = 1;
                                 r = 1;
                             }
-                            if (damka[3] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[3] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[3] = 1;
-                                r = 1;
-                            }
-                            if (damka[3] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[3] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[3] = 1;
-                                r = 1;
-                            }
-                            if (damka[3] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[3] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -672,7 +559,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -680,22 +567,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[3] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[3] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[3] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[3] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka5.Visible == true)
                     {
@@ -711,59 +619,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[4] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[4] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[4] = 1;
-                                r = 1;
-                            }
-                            if (damka[4] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[4] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[4] = 1;
-                                r = 1;
-                            }
-                            if (damka[4] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[4] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -771,7 +635,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -779,22 +643,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[4] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[4] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[4] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka6.Visible == true)
                     {
@@ -810,59 +695,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[5] = 1;
                                 r = 1;
                             }
-                            if (damka[5] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[5] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[5] = 1;
-                                r = 1;
-                            }
-                            if (damka[5] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[5] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[5] = 1;
-                                r = 1;
-                            }
-                            if (damka[5] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[5] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -870,7 +711,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -878,22 +719,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[5] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[5] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[5] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka7.Visible == true)
                     {
@@ -909,59 +771,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[6] = 1;
                                 r = 1;
                             }
-                            if (damka[6] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[6] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[6] = 1;
-                                r = 1;
-                            }
-                            if (damka[6] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[6] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[6] = 1;
-                                r = 1;
-                            }
-                            if (damka[6] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[6] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -969,7 +787,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -977,22 +795,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[6] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[6] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[6] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka8.Visible == true)
                     {
@@ -1008,59 +847,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[7] = 1;
                                 r = 1;
                             }
-                            if (damka[7] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[7] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[7] = 1;
-                                r = 1;
-                            }
-                            if (damka[7] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[7] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[7] = 1;
-                                r = 1;
-                            }
-                            if (damka[7] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[7] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -1068,7 +863,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -1076,22 +871,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[7] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[7] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[7] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka9.Visible == true)
                     {
@@ -1107,59 +923,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[8] = 1;
                                 r = 1;
                             }
-                            if (damka[8] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[8] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[8] = 1;
-                                r = 1;
-                            }
-                            if (damka[8] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[8] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[8] = 1;
-                                r = 1;
-                            }
-                            if (damka[8] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[8] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -1167,7 +939,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -1175,22 +947,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[8] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[8] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[8] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka10.Visible == true)
                     {
@@ -1206,59 +999,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[9] = 1;
                                 r = 1;
                             }
-                            if (damka[9] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[9] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[9] = 1;
-                                r = 1;
-                            }
-                            if (damka[9] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[9] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[9] = 1;
-                                r = 1;
-                            }
-                            if (damka[9] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[9] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -1266,7 +1015,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -1274,22 +1023,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[9] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[9] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[9] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka11.Visible == true)
                     {
@@ -1305,59 +1075,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[10] = 1;
                                 r = 1;
                             }
-                            if (damka[10] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[10] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[10] = 1;
-                                r = 1;
-                            }
-                            if (damka[10] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[10] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[10] = 1;
-                                r = 1;
-                            }
-                            if (damka[10] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[10] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -1365,7 +1091,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -1373,22 +1099,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[10] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[10] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[10] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka12.Visible == true)
                     {
@@ -1404,59 +1151,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[11] = 1;
                                 r = 1;
                             }
-                            if (damka[11] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[11] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[11] = 1;
-                                r = 1;
-                            }
-                            if (damka[11] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[11] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[11] = 1;
-                                r = 1;
-                            }
-                            if (damka[11] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[11] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -1464,7 +1167,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -1472,25 +1175,56 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[11] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[11] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[11] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                 }
-
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
                 else
                 {
                     // White 13-24
@@ -1508,59 +1242,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[12] = 1;
                                 r = 1;
                             }
-                            if (damka[12] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[12] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[12] = 1;
-                                r = 1;
-                            }
-                            if (damka[12] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[12] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[12] = 1;
-                                r = 1;
-                            }
-                            if (damka[12] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[12] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -1568,7 +1258,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -1576,21 +1266,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[12] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[12] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[12] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka14.Visible == true)
@@ -1607,59 +1319,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[13] = 1;
                                 r = 1;
                             }
-                            if (damka[13] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[13] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[13] = 1;
-                                r = 1;
-                            }
-                            if (damka[13] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[13] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[13] = 1;
-                                r = 1;
-                            }
-                            if (damka[13] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[13] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -1667,7 +1335,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -1675,21 +1343,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[13] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[13] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[13] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka15.Visible == true)
@@ -1706,59 +1396,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[14] = 1;
                                 r = 1;
                             }
-                            if (damka[14] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[14] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[14] = 1;
-                                r = 1;
-                            }
-                            if (damka[14] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[14] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[14] = 1;
-                                r = 1;
-                            }
-                            if (damka[14] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[14] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -1766,7 +1412,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -1774,21 +1420,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[14] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[14] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[14] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka16.Visible == true)
@@ -1805,59 +1473,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[15] = 1;
                                 r = 1;
                             }
-                            if (damka[15] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[15] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[15] = 1;
-                                r = 1;
-                            }
-                            if (damka[15] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[15] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[15] = 1;
-                                r = 1;
-                            }
-                            if (damka[15] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[15] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -1865,7 +1489,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -1873,21 +1497,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[15] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[15] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[15] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka17.Visible == true)
@@ -1904,59 +1550,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[16] = 1;
                                 r = 1;
                             }
-                            if (damka[16] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[16] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[16] = 1;
-                                r = 1;
-                            }
-                            if (damka[16] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[16] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[16] = 1;
-                                r = 1;
-                            }
-                            if (damka[16] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[16] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -1964,7 +1566,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -1972,21 +1574,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[16] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[16] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[16] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka18.Visible == true)
@@ -2003,59 +1627,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[17] = 1;
                                 r = 1;
                             }
-                            if (damka[17] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[17] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[17] = 1;
-                                r = 1;
-                            }
-                            if (damka[17] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[17] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[17] = 1;
-                                r = 1;
-                            }
-                            if (damka[17] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[17] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -2063,7 +1643,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -2071,21 +1651,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[17] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[17] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[17] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka19.Visible == true)
@@ -2102,59 +1704,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[18] = 1;
                                 r = 1;
                             }
-                            if (damka[18] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[18] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[18] = 1;
-                                r = 1;
-                            }
-                            if (damka[18] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[18] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[18] = 1;
-                                r = 1;
-                            }
-                            if (damka[18] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[18] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -2162,7 +1720,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -2170,21 +1728,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[18] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[18] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[18] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka20.Visible == true)
@@ -2201,59 +1781,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[19] = 1;
                                 r = 1;
                             }
-                            if (damka[19] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[19] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[19] = 1;
-                                r = 1;
-                            }
-                            if (damka[19] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[19] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[19] = 1;
-                                r = 1;
-                            }
-                            if (damka[19] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[19] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -2261,7 +1797,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -2269,21 +1805,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[19] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[19] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[19] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka21.Visible == true)
@@ -2300,59 +1858,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[20] = 1;
                                 r = 1;
                             }
-                            if (damka[20] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[20] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[20] = 1;
-                                r = 1;
-                            }
-                            if (damka[20] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[20] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[20] = 1;
-                                r = 1;
-                            }
-                            if (damka[20] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[20] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -2360,7 +1874,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -2368,21 +1882,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[20] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[20] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[20] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka22.Visible == true)
@@ -2399,59 +1935,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[21] = 1;
                                 r = 1;
                             }
-                            if (damka[21] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[21] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[21] = 1;
-                                r = 1;
-                            }
-                            if (damka[21] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[21] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[21] = 1;
-                                r = 1;
-                            }
-                            if (damka[21] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[21] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -2459,7 +1951,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -2467,21 +1959,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[21] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[21] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[21] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka23.Visible == true)
@@ -2498,59 +2012,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[22] = 1;
                                 r = 1;
                             }
-                            if (damka[22] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[22] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[22] = 1;
-                                r = 1;
-                            }
-                            if (damka[22] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[22] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[22] = 1;
-                                r = 1;
-                            }
-                            if (damka[22] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[22] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -2558,7 +2028,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -2566,21 +2036,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[22] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[22] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[22] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka24.Visible == true)
@@ -2597,59 +2089,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[23] = 1;
                                 r = 1;
                             }
-                            if (damka[23] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[23] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[23] = 1;
-                                r = 1;
-                            }
-                            if (damka[23] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[23] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[23] = 1;
-                                r = 1;
-                            }
-                            if (damka[23] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[23] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -2657,7 +2105,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -2665,24 +2113,58 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[23] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[23] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[23] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                 }
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+
             }
             else
             {
@@ -2703,59 +2185,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[12] = 1;
                                 r = 1;
                             }
-                            if (damka[12] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[12] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[12] = 1;
-                                r = 1;
-                            }
-                            if (damka[12] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[12] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[12] = 1;
-                                r = 1;
-                            }
-                            if (damka[12] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[12] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -2763,7 +2201,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -2771,21 +2209,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[12] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[12] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[12] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka14.Visible == true)
@@ -2802,59 +2262,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[13] = 1;
                                 r = 1;
                             }
-                            if (damka[13] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[13] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[13] = 1;
-                                r = 1;
-                            }
-                            if (damka[13] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[13] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[13] = 1;
-                                r = 1;
-                            }
-                            if (damka[13] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[13] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -2862,7 +2278,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -2870,21 +2286,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[13] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[13] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[13] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka15.Visible == true)
@@ -2901,59 +2339,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[14] = 1;
                                 r = 1;
                             }
-                            if (damka[14] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[14] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[14] = 1;
-                                r = 1;
-                            }
-                            if (damka[14] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[14] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[14] = 1;
-                                r = 1;
-                            }
-                            if (damka[14] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[14] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -2961,7 +2355,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -2969,21 +2363,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[14] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[14] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[14] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka16.Visible == true)
@@ -3000,59 +2416,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[15] = 1;
                                 r = 1;
                             }
-                            if (damka[15] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[15] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[15] = 1;
-                                r = 1;
-                            }
-                            if (damka[15] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[15] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[15] = 1;
-                                r = 1;
-                            }
-                            if (damka[15] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[15] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -3060,7 +2432,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -3068,21 +2440,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[15] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[15] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[15] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka17.Visible == true)
@@ -3099,59 +2493,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[16] = 1;
                                 r = 1;
                             }
-                            if (damka[16] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[16] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[16] = 1;
-                                r = 1;
-                            }
-                            if (damka[16] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[16] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[16] = 1;
-                                r = 1;
-                            }
-                            if (damka[16] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[16] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -3159,7 +2509,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -3167,21 +2517,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[16] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[16] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[16] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka18.Visible == true)
@@ -3198,59 +2570,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[17] = 1;
                                 r = 1;
                             }
-                            if (damka[17] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[17] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[17] = 1;
-                                r = 1;
-                            }
-                            if (damka[17] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[17] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[17] = 1;
-                                r = 1;
-                            }
-                            if (damka[17] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[17] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -3258,7 +2586,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -3266,21 +2594,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[17] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[17] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[17] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka19.Visible == true)
@@ -3297,59 +2647,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[18] = 1;
                                 r = 1;
                             }
-                            if (damka[18] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[18] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[18] = 1;
-                                r = 1;
-                            }
-                            if (damka[18] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[18] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[18] = 1;
-                                r = 1;
-                            }
-                            if (damka[18] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[18] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -3357,7 +2663,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -3365,21 +2671,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[18] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[18] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[18] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka20.Visible == true)
@@ -3396,59 +2724,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[19] = 1;
                                 r = 1;
                             }
-                            if (damka[19] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[19] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[19] = 1;
-                                r = 1;
-                            }
-                            if (damka[19] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[19] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[19] = 1;
-                                r = 1;
-                            }
-                            if (damka[19] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[19] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -3456,7 +2740,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -3464,21 +2748,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[19] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[19] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[19] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka21.Visible == true)
@@ -3495,59 +2801,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[20] = 1;
                                 r = 1;
                             }
-                            if (damka[20] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[20] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[20] = 1;
-                                r = 1;
-                            }
-                            if (damka[20] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[20] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[20] = 1;
-                                r = 1;
-                            }
-                            if (damka[20] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[20] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -3555,7 +2817,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -3563,21 +2825,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[20] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[20] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[20] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka22.Visible == true)
@@ -3594,59 +2878,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[21] = 1;
                                 r = 1;
                             }
-                            if (damka[21] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[21] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[21] = 1;
-                                r = 1;
-                            }
-                            if (damka[21] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[21] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[21] = 1;
-                                r = 1;
-                            }
-                            if (damka[21] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[21] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -3654,7 +2894,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -3662,21 +2902,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[21] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[21] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[21] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka23.Visible == true)
@@ -3693,59 +2955,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[22] = 1;
                                 r = 1;
                             }
-                            if (damka[22] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[22] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[22] = 1;
-                                r = 1;
-                            }
-                            if (damka[22] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[22] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[22] = 1;
-                                r = 1;
-                            }
-                            if (damka[22] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[22] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -3753,7 +2971,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -3761,21 +2979,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[22] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[22] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[22] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
                     if (shashka24.Visible == true)
@@ -3792,59 +3032,15 @@ namespace Курсач
                         y2l = y00 + 2;
                         x2r = x00 + 2;
                         y2r = y00 + 2;
-                        d1l = y00 - 1;
-                        d1r = y00 - 1;
-                        d2l = y00 - 2;
-                        d2r = y00 - 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[23] = 1;
                                 r = 1;
                             }
-                            if (damka[23] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[23] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[23] = 1;
-                                r = 1;
-                            }
-                            if (damka[23] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[23] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[23] = 1;
-                                r = 1;
-                            }
-                            if (damka[23] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[23] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r <= 7))
                         {
                             if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
                             {
@@ -3852,7 +3048,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l <= 7))
                         {
                             if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
                             {
@@ -3860,23 +3056,51 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+
+                        if (damka[23] == 1)
                         {
-                            if ((shah[d1r, x1r] < 13) && (shah[d1r, x1r] > 0) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                             {
-                                rub[23] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
                             }
-                        }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 13) && (shah[d1l, x1l] > 0) && (shah[d2l, x2l] == 0))
+                            if ((x2l < 0) && (y2r >= 0))
                             {
-                                rub[23] = 1;
-                                r = 1;
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
                             }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
+                            }
+
                         }
                     }
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
                 }
                 else
                 {
@@ -3895,59 +3119,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[0] = 1;
                                 r = 1;
                             }
-                            if (damka[0] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[0] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[0] = 1;
-                                r = 1;
-                            }
-                            if (damka[0] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[0] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[0] = 1;
-                                r = 1;
-                            }
-                            if (damka[0] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[0] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -3955,7 +3135,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -3963,22 +3143,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[0] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[0] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[0] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[0] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka2.Visible == true)
                     {
@@ -3994,59 +3195,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[1] = 1;
                                 r = 1;
                             }
-                            if (damka[1] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[1] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[1] = 1;
-                                r = 1;
-                            }
-                            if (damka[1] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[1] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[1] = 1;
-                                r = 1;
-                            }
-                            if (damka[1] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[1] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -4054,7 +3211,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -4062,22 +3219,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[1] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[1] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[1] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka3.Visible == true)
                     {
@@ -4093,59 +3271,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[2] = 1;
                                 r = 1;
                             }
-                            if (damka[2] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[2] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[2] = 1;
-                                r = 1;
-                            }
-                            if (damka[2] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[2] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[2] = 1;
-                                r = 1;
-                            }
-                            if (damka[2] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[2] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -4153,7 +3287,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -4161,22 +3295,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[2] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[2] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[2] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[2] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka4.Visible == true)
                     {
@@ -4192,59 +3347,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[3] = 1;
                                 r = 1;
                             }
-                            if (damka[3] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[3] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[3] = 1;
-                                r = 1;
-                            }
-                            if (damka[3] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[3] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[3] = 1;
-                                r = 1;
-                            }
-                            if (damka[3] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[3] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -4252,7 +3363,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -4260,22 +3371,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[3] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[3] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[3] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[3] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka5.Visible == true)
                     {
@@ -4291,59 +3423,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[4] = 1;
                                 r = 1;
                             }
-                            if (damka[4] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[4] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[4] = 1;
-                                r = 1;
-                            }
-                            if (damka[4] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[4] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[4] = 1;
-                                r = 1;
-                            }
-                            if (damka[4] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[4] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -4351,7 +3439,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -4359,22 +3447,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[4] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[4] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[4] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka6.Visible == true)
                     {
@@ -4390,59 +3499,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[5] = 1;
                                 r = 1;
                             }
-                            if (damka[5] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[5] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[5] = 1;
-                                r = 1;
-                            }
-                            if (damka[5] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[5] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[5] = 1;
-                                r = 1;
-                            }
-                            if (damka[5] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[5] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -4450,7 +3515,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -4458,22 +3523,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[5] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[5] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[5] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka7.Visible == true)
                     {
@@ -4489,59 +3575,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[6] = 1;
                                 r = 1;
                             }
-                            if (damka[6] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[6] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[6] = 1;
-                                r = 1;
-                            }
-                            if (damka[6] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[6] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[6] = 1;
-                                r = 1;
-                            }
-                            if (damka[6] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[6] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -4549,7 +3591,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -4557,22 +3599,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[6] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[6] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[6] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka8.Visible == true)
                     {
@@ -4588,59 +3651,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[7] = 1;
                                 r = 1;
                             }
-                            if (damka[7] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[7] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[7] = 1;
-                                r = 1;
-                            }
-                            if (damka[7] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[7] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[7] = 1;
-                                r = 1;
-                            }
-                            if (damka[7] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[7] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -4648,7 +3667,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -4656,22 +3675,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[7] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[7] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[7] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka9.Visible == true)
                     {
@@ -4687,59 +3727,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[8] = 1;
                                 r = 1;
                             }
-                            if (damka[8] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[8] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[8] = 1;
-                                r = 1;
-                            }
-                            if (damka[8] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[8] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[8] = 1;
-                                r = 1;
-                            }
-                            if (damka[8] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[8] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -4747,7 +3743,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -4755,22 +3751,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[8] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[8] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[8] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka10.Visible == true)
                     {
@@ -4786,59 +3803,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[9] = 1;
                                 r = 1;
                             }
-                            if (damka[9] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[9] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[9] = 1;
-                                r = 1;
-                            }
-                            if (damka[9] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[9] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[9] = 1;
-                                r = 1;
-                            }
-                            if (damka[9] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[9] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -4846,7 +3819,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -4854,22 +3827,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[9] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[9] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[9] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka11.Visible == true)
                     {
@@ -4885,59 +3879,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[10] = 1;
                                 r = 1;
                             }
-                            if (damka[10] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[10] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[10] = 1;
-                                r = 1;
-                            }
-                            if (damka[10] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[10] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[10] = 1;
-                                r = 1;
-                            }
-                            if (damka[10] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[10] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -4945,7 +3895,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -4953,22 +3903,43 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[10] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[10] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[10] = 1;
-                                r = 1;
-                            }
-                        }
+
                     }
                     if (shashka12.Visible == true)
                     {
@@ -4984,59 +3955,15 @@ namespace Курсач
                         y2l = y00 - 2;
                         x2r = x00 + 2;
                         y2r = y00 - 2;
-                        d1l = y00 + 1;
-                        d1r = y00 + 1;
-                        d2l = y00 + 2;
-                        d2r = y00 + 2;
-                        if (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 0) || (((x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)) && (damka[shah[y00, x00] - 1] == 1) && (d2l >= 0) && (d2l <= 7) && (d2r >= 0) && (d2r <= 7) && (x2l >= 0) && (y2l >= 0) && (y2l <= 7) && (y2r >= 0) && (y2r <= 7) && (x2r <= 7)))
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
                         {
                             if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
                             {
                                 rub[11] = 1;
                                 r = 1;
                             }
-                            if (damka[11] == 1)
-                            {
-                                if (((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0)) || ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0)))
-                                {
-                                    rub[11] = 1;
-                                    r = 1;
-                                }
-                            }
                         }
-                        if (((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && ((x2l < 0) && (d2r >= 0) && (x2l < 0) && (y2r >= 0))))
-                        {
-                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
-                            {
-                                rub[11] = 1;
-                                r = 1;
-                            }
-                            if (damka[11] == 1)
-                            {
-                                if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
-                                {
-                                    rub[11] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if (((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 0)) || ((damka[shah[y00, x00] - 1] == 1) && (x2r > 7) && (d2l >= 0) && (x2r > 7) && (y2l >= 0)))
-                        {
-                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
-                            {
-                                rub[11] = 1;
-                                r = 1;
-                            }
-                            if (damka[11] == 1)
-                            {
-                                if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                                {
-                                    rub[11] = 1;
-                                    r = 1;
-                                }
-                            }
-                        }
-                        if ((x2l < 0) && (y2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2l < 0) && (y2r >= 0))
                         {
                             if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
                             {
@@ -5044,7 +3971,7 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2r > 7) && (y2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
+                        if ((x2r > 7) && (y2l >= 0))
                         {
                             if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
                             {
@@ -5052,22 +3979,49 @@ namespace Курсач
                                 r = 1;
                             }
                         }
-                        if ((x2l < 0) && (d2r >= 0) && (damka[shah[y00, x00] - 1] == 1))
+
+                        if (damka[11] == 1)
                         {
-                            if ((shah[d1r, x1r] < 25) && (shah[d1r, x1r] > 12) && (shah[d2r, x2r] == 0))
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
                             {
-                                rub[11] = 1;
-                                r = 1;
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
                             }
                         }
-                        if ((x2r > 7) && (d2l >= 0) && (damka[shah[y00, x00] - 1] == 1))
-                        {
-                            if ((shah[d1l, x1l] < 25) && (shah[d1l, x1l] > 12) && (shah[d2l, x2l] == 0))
-                            {
-                                rub[11] = 1;
-                                r = 1;
-                            }
-                        }
+                        //=====================================================================================
+                        //=====================================================================================
+                        //=====================================================================================
+                        //=====================================================================================
+                        //=====================================================================================
+                        //=====================================================================================
+                        //=====================================================================================
                     }
                 }
             }
