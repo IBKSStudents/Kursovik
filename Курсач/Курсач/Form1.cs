@@ -5471,6 +5471,12 @@ namespace Курсач
             o.FlatAppearance.MouseDownBackColor = Color.Transparent;
             o.FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
+
+        private void правилаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("bin\\rools.txt");
+        }
+
         private void setShahPosition()
         {
             DamkaNoComp = 0;
