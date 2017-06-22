@@ -7,8 +7,8 @@
     <ProjectGuid>{85CBBF29-8F2F-4149-944A-4D1BDEB88AAA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Курсач</RootNamespace>
-    <AssemblyName>Курсач</AssemblyName>
+    <RootNamespace>VorAMix</RootNamespace>
+    <AssemblyName>VorAMix</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Иконка.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -97,6 +100,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="чёрная шашка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconka.ico" />
+    <Content Include="Иконка.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

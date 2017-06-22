@@ -733,7 +733,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>120, 22</value>
   </data>
   <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
     <value>Справка</value>
@@ -743,6 +743,12 @@
   </data>
   <data name="менюToolStripMenuItem.Text" xml:space="preserve">
     <value>Меню</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
+    <value>С человеком</value>
   </data>
   <data name="белыеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 22</value>
@@ -756,11 +762,11 @@
   <data name="черныеToolStripMenuItem.Text" xml:space="preserve">
     <value>Черные</value>
   </data>
-  <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+  <data name="сКомпьютеромToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
   </data>
-  <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
-    <value>С другом</value>
+  <data name="сКомпьютеромToolStripMenuItem.Text" xml:space="preserve">
+    <value>С компьютером</value>
   </data>
   <data name="новаяИграToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 20</value>
@@ -1280,11 +1286,87 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>506, 496</value>
   </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAD4CAAA+AgAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc4SfAHOEngBngakAeIejA2SAriFgfq8mYX2yJmF+
+        syZphbQmpqezILKwsB+wsLAfsrKyH7Kyshqzs7MCsrKyALKysgCysrIAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZ3DKAGdvzABdeLwAnJdrAWWBqxRkfrIvWXu4x1l7
+        t+JZebPgWXqy4WWBtOGrr7fbuLe32ra2ttqysrLcsrKyu7GwsCWxsbEPsrKyAbKysgCysrIAsrKyAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHJ/pwBtdroAZmHlAlp2whhefbM3WXu2xFd5
+        s95XebP7V3iv/1VylP9VcI//ZXyY/7zFx//N0dD/ys3M/7m5uf+1trb6tre217KysrexsbErsrKyErKy
+        sgGysrIAsrKyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABqgq0AboCrAP+yAABnerklWnm7wVh5
+        tedYeLD9V3KT/1Zwjv9WcI7/Vm+J/1VuiP9ke5L/v8nM/9DW1f/P1dT/zNLR/8rS0P/Izcz/t7i4/LS1
+        td6ysrKxsbGxG7SzswCysrIAsbGxAAAAAAAAAAAAAAAAAAAAAAAAAAAAaX6rAGh/rQBPYMUAYn2yLFt7
+        t8NWea/8VnGV/1Zwj/9Wb4r/Vm+J/1Zvif9Wb4n/VW6I/2R7kv+/ycv/z9bU/8/V1P/P1dT/ztbU/87V
+        1P/M0dD/yM3M/7e4uPmxsrK1sbGxI7KysgCxsbEAsrKyAAAAAAAAAAAAAAAAAGiBowBof6kAa3ypAmJ9
+        si9ae7bEVniw/1Zxk/9Wb4n/Vm+J/1Zvif9Wb4n/Vm+J/1Zvif9Wb4j/ZHyT/7/JzP/Q19X/z9XU/8/V
+        1P/P1dT/z9XU/8/V1P/O1dT/yM7N/7i5uf2ysrK4sbGxIr29vQCysrIAs7OzAAAAAAAAAAAAaYKjAHqO
+        fwFifLUwWXu40Fh4sP5WcpH/V2+J/1Zvif9Wb4n/Vm+J/1Zvif9XcIn/Vm+J/01qhP9bdY7/t8HE/8jP
+        zf/O1dT/0NbV/8/V1P/P1dT/z9XU/8/V1P/O1dT/yc/O/7i5uf2ysrK1srKyG7O0tAGzs7MAAAAAAGyA
+        qwBifqwAYH6sF1p6t8JYeK/+VnKT/1dvif9Wb4n/Vm+J/1Zvif9Wb4n/VW6I/01phf9CYoH/Ej9s/xtE
+        bv97gYb/kZKR/73Cwf/Hzcz/z9XU/8/V1P/P1dT/z9XU/8/V1P/O1dT/yM7N/7i5uPmysrKxsrKyErKy
+        sgCysrIAbYCqAHuBpwFhfLY2WHiy5Vdxkv9Wb4n/Vm+J/1Zvif9Wb4n/Vm+J/1Zvif9CYIH/ED1s/wo5
+        a/8IOmz/GURw/3qAhf+Kion/iIiI/5CSkv/AxMP/ztTT/8/V1P/P1dT/z9XU/8/V1P/O1dT/yM3M/7S1
+        td6xsbErs7OzAbKysgBnfrEAZHy3E1t7t8NXeK7+VXCN/1Zvif9Wb4n/Vm+J/1Zvif9Xb4n/RWOC/xE9
+        bP8GN2r/DT5x/zBhj/9HcZr/sri9/729vP+Pjo7/h4WF/46Pjv/AxMT/z9XU/8/V1P/P1dT/z9XU/8/V
+        1P/M0dD/t7i4/LKysreysbIPsrKyAH6MjQNifrUwWHqy3lZyk/9VcIj/Vm+J/1Zvif9Wb4n/Vm+I/0Zj
+        gv8WP27/D0Bw/y9hjf84ZpH/PmyV/094nf+5wcX/y8vL/8LDw/+4t7f/jo2N/5GSkv/AxMT/ztTT/8/V
+        1P/P1dT/z9XU/87V1P/Izcz/tre217CwsCWysrICYX6uIFl7t8dXeLP8VXCP/1Zvif9Wb4n/Vm+J/1Zv
+        if9GY4H/Ej1s/w49b/8wYo7/P26W/1FvjP9Tbor/YXuU/77Hy//P1dP/z9PT/8vMzP++u7z/jo2N/46O
+        jv/AxMP/z9XU/8/V1P/P1dT/ztbU/8rS0P+1trb5srGxurKyshpafLYlVnu44VZ4rv9WcI7/Vm+J/1Zv
+        if9Xb4n/TmqG/xVAbP8IN2n/LV6M/0Ftlf9Rb4z/Vm+J/1VuiP9ke5L/v8nL/9DW1P/P1dT/z9PS/8vL
+        y/+4t7f/h4WF/5CSkv/Hzcz/0NbV/8/V1P/P1dT/zNLR/7i5uf+ysrLcsrKyH1l8uCVWebPgVXKT/1Vv
+        if9Vboj/VW6J/1Vuif9EYIL/DDlq/w09cf83ZpH/UG+M/1Vuif9Vb4j/VG6I/2N7kv+/ycv/0NfV/9DW
+        1f/Q1tT/0NTT/8PEw/+Qj4//iYmI/77Dwv/O1tT/0NbV/9DW1P/Q1dT/ys3N/7a2ttqxsLAfYoC3JGCA
+        st9he5b/YnqQ/2J5kP9jepD/W3SN/yJHcf8XQm//PWuU/0x2nP9feZP/Y3mR/2J5kP9ieZD/bYOY/7bB
+        xf/DzM3/w8vN/8PLzf/Cysz/u8LF/66zt/98gYb/g4qO/7zExv/Dy83/w8vN/8PLzf/Bx8n/rbC326Wp
+        sh+iprAfqa222rvCx/+8x8r/vMfJ/73Hyv+1vsL/eH6H/3d+hP+vt7v/uL/E/7vFyf+8x8r/vMfK/73H
+        yv+zvsL/c4aa/2h9k/9ofZT/aH2U/2V9lv9Sep7/SnSa/x1Fcv8hRW7/X3eP/2l9lf9ofZT/aH2U/2h+
+        mf9mgrTfaIO2JLGvsB63t7fZzNHQ/9DW1f/P1tX/0NbW/8jNzf+Li4v/i4qJ/8XEw//Nzsz/0NXT/8/W
+        1f/P1tX/0NfW/8DKy/9je5L/VW2I/1Zuif9Wboj/UW6L/z5slv80ZpP/CDls/w05af9MaIX/Vm6J/1Zu
+        if9Vboj/VG+Q/1h5s+Befbcmr6+vHra3t9nL0ND/0NXU/8/V1P/P1dX/yM3N/5CSkf+KiYn/vLy8/8vL
+        y//Q1NP/z9XU/8/V1P/Q1tX/wMnK/2N8kf9Wbon/Vm+J/1Zvif9Ub4r/P2yW/zFhj/8JOmz/E0Bs/05q
+        hf9Xb4n/Vm+J/1Vvif9VcZD/WXqy4GB+tSawsLAetra22cjNzP/P1dT/z9XU/8/V1P/O1NP/vcLB/4eI
+        iP+Pjo7/w8PD/8/T0//P1dT/z9XU/9DW1f/Aycr/Y3yR/1Zuif9Wb4n/Vm+J/1Fvjf84ZpH/DT5x/wo5
+        a/9CYoH/Vm+J/1Zvif9Wb4n/Vm+J/1VylP9YebTgYH60JrGxsR6zsrLbubm5/8zS0f/P1dT/z9XU/8/W
+        1f/HzMv/jY+P/4aFhf+9urv/zM3M/87T0//P1dT/0NbV/8DJyv9jfJH/Vm6J/1Zvif9Rb4z/Pm6W/y9h
+        jf8GN2r/ED1s/01phf9XcIn/Vm+J/1Zvif9WcI7/WHiv/1l7uOJffrImsrKyGbKysrq1trb6zNHQ/8/V
+        1P/P1dT/z9XU/87U0/+8wcD/j4+P/5GQkP+9vb3/zM3M/8/T0//R1dT/wMjK/2F8k/9Sbov/UW+N/0Ft
+        lf8wYo7/D0Bw/xE9bP9CYIH/VW6I/1Zvif9Wb4n/Vm+J/1Zwjv9XebP7WHu4xmJ+sSCysrICsbGxJbW3
+        ttfJzcz/z9XU/8/V1P/P1dT/z9XU/8/V1P+/xMT/kZGR/5GQkP+9urv/w8PD/8zMzP+7wcb/UHmd/z1r
+        lv84Z5H/LV6M/w49b/8WP27/RWSC/1Zvif9Wb4n/Vm+J/1Zvif9Wb4r/VnKT/1d5s95jfbIueomhA7Oz
+        swCysrIPsrKyt7i6uvzM0tH/z9XU/8/V1P/P1dT/z9XU/8/V1P+/xcT/j46O/4aFhf+Pj4//vb29/7K4
+        vf9Hcpn/LmGP/w4+cf8IN2r/Ej5s/0Zjgv9Xb4n/Vm+J/1Zvif9Wb4n/Vm+J/1dwj/9ZeLD+WHu3w2J/
+        rBRlf6oAs7OzALW1tQGwsLArtre33snOzv/P1dT/z9XU/8/V1P/P1dT/z9XU/8/V1P+8wcD/jY+P/4iI
+        iP+LiYn/e3+G/xpDcP8JOWz/DDlq/xVBbP9GZIL/Vm+I/1Zvif9Wb4n/Vm+J/1Zvif9Wb4n/VnGV/1h5
+        tedefbM3lZRwAXKEngCzs7MAsbGxALGxsRGzs7O0trm4/MjOzf/P1dT/z9XU/8/V1P/P1dT/z9XU/87U
+        0//HzMv/vcLB/5GSkf97gIb/HkRt/xU+bf9EYYP/TmmG/1Zvif9Wb4n/Vm+J/1Zvif9Wb4n/V2+K/1Zx
+        lP9Wea/8Wnm7wVl2whhceLwAcYSeAAAAAACysrIAsrS0ALOxsiWysrLCtrm5/MnPzv/P1dT/z9XU/8/V
+        1P/P1dT/z9XU/8/W1f/O1NP/yc7N/7jBwv9bdo3/TmmG/1Zuif9Xb4n/Vm+J/1Zvif9Wb4n/Vm+J/1dv
+        if9WcZH/V3iw/1x7t8NmebklYl7jAmVtzAAAAAAAAAAAALKysgCysrIArrKxAbOxsiSzsrK3trm5/MjO
+        zf/P1dT/z9XU/8/V1P/P1dT/z9XU/8/V1P/Q1tX/wMrK/2N8kv9Wbon/Vm+J/1Zvif9Wb4n/Vm+J/1Zv
+        if9Wb4n/VnKT/1d4sP5Ze7bEYn2zLP/KAABrdboAZW7KAAAAAAAAAAAAAAAAALKysgCzsrIAqbGvALOx
+        siSysrLCtrm5/MnOzf/M0tH/z9XU/8/V1P/P1dT/z9XU/9DW1f/Aycr/Y3yR/1Zuif9Wb4n/Vm+J/1Zv
+        if9VcIn/VXCN/1dxk/9YeK//WXu3z2J9sS5YXrEAb4GsAHJ/pwAAAAAAAAAAAAAAAAAAAAAAAAAAALaz
+        swCzsrIAr7OzAbOxsiWzsrK0tbe33rm6uvzJzc3/zNHQ/8zS0f/P1dT/0dbV/8DKyv9jfJD/VW6I/1Zv
+        if9WcI7/VXCP/1ZylP9Wd67+WXez5Vp7tsJjfbIwaXqgAmiAqwBqhLAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAALKysgCysrIAsLKzALGxsRGwsLArsrKyt7W3t9e1t7b5ubm5/8jNzP/N0tD/vcXI/2N9
+        mP9VcI//VnKU/1Z4r/9YebT8WXqy3lx6ucNhe7k2YH6tF4GSigFpgKcAaX6nAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAALKysgCysrIAsbGxALKysgGysrIPsbCwJbKysruzsrLctra22ra4
+        t9qprrjbY4Cz31d6st9YerPfV3u44Fp8uMZkfbMuZ3u2E3uBpAFifq0AbISlAGyEpgAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACysrIAsrKyALKysgC1tLQCs7OzGrOz
+        sx+xsbEesrGxHqaluB9ugLUkXn23JFx+uCRcfbYkYn+tIHeJjwNofa8AbX+pAGx/qgAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/gAAf/gAAB/wAAAP4AAAB8AAAAOAAAABgAAAAQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA
+        AAGAAAABwAAAA+AAAAfwAAAP+AAAH/4AAH8=
+</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Шашки</value>
+    <value>VorAMix шашки</value>
   </data>
   <data name="&gt;&gt;менюToolStripMenuItem.Name" xml:space="preserve">
     <value>менюToolStripMenuItem</value>
@@ -1308,6 +1390,12 @@
     <value>сДругомToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;сДругомToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;сКомпьютеромToolStripMenuItem.Name" xml:space="preserve">
+    <value>сКомпьютеромToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;сКомпьютеромToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;белыеToolStripMenuItem.Name" xml:space="preserve">
