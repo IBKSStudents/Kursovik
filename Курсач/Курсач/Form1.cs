@@ -62,6 +62,7 @@ namespace Курсач
         private void setDamka(int i, int j)
         {
             DamkaNoComp = 1;
+
             if (shah[i, j] == 1)
             {
                 damka[0] = 1;
@@ -192,51 +193,11 @@ namespace Курсач
                 if (direction == 0)
                 {
                     if ((j == 0) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
-                    Console.WriteLine("=========================================================");
-                    for (int ii = 0; ii < 8; ii++)
-                    {
-                        for (int jj = 0; jj < 8; jj++)
-                        {
-                            Console.Write("{0, 2} ", shah[ii, jj]);
-                        }
-                        Console.WriteLine();
-                    }
-                    Console.WriteLine("=========================================================");
-                    Console.WriteLine("damki");
-                    for (int ii = 0; ii < 8; ii++)
-                    {
-                        for (int jj = 0; jj < 8; jj++)
-                        {
-                            if (shah[ii, jj] > 0) Console.Write("{0, 2} ", damka[shah[ii, jj] - 1]); else Console.Write("{0, 2} ", shah[ii, jj]);
-                        }
-                        Console.WriteLine();
-                    }
-                    Console.WriteLine();
                     return;
                 }
                 else
                 {
                     if ((j == 7) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
-                    Console.WriteLine("=========================================================");
-                    for (int ii = 0; ii < 8; ii++)
-                    {
-                        for (int jj = 0; jj < 8; jj++)
-                        {
-                            Console.Write("{0, 2} ", shah[ii, jj]);
-                        }
-                        Console.WriteLine();
-                    }
-                    Console.WriteLine("=========================================================");
-                    Console.WriteLine("damki");
-                    for (int ii = 0; ii < 8; ii++)
-                    {
-                        for (int jj = 0; jj < 8; jj++)
-                        {
-                            if (shah[ii, jj] > 0) Console.Write("{0, 2} ", damka[shah[ii, jj] - 1]); else Console.Write("{0, 2} ", shah[ii, jj]);
-                        }
-                        Console.WriteLine();
-                    }
-                    Console.WriteLine();
                     return;
                 }
             }
@@ -244,52 +205,12 @@ namespace Курсач
             {
                 if (direction == 0)
                 {
-                    if ((j == 7) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
-                    Console.WriteLine("=========================================================");
-                    for (int ii = 0; ii < 8; ii++)
-                    {
-                        for (int jj = 0; jj < 8; jj++)
-                        {
-                            Console.Write("{0, 2} ", shah[ii, jj]);
-                        }
-                        Console.WriteLine();
-                    }
-                    Console.WriteLine("=========================================================");
-                    Console.WriteLine("damki");
-                    for (int ii = 0; ii < 8; ii++)
-                    {
-                        for (int jj = 0; jj < 8; jj++)
-                        {
-                            if (shah[ii, jj] > 0) Console.Write("{0, 2} ", damka[shah[ii, jj] - 1]); else Console.Write("{0, 2} ", shah[ii, jj]);
-                        }
-                        Console.WriteLine();
-                    }
-                    Console.WriteLine();
+                    if ((j == 7) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);                   
                     return;
                 }
                 else
                 {
                     if ((j == 0) && (damka[shah[j, i] - 1] == 0)) setDamka(j, i);
-                    Console.WriteLine("=========================================================");
-                    for (int ii = 0; ii < 8; ii++)
-                    {
-                        for (int jj = 0; jj < 8; jj++)
-                        {
-                            Console.Write("{0, 2} ", shah[ii, jj]);
-                        }
-                        Console.WriteLine();
-                    }
-                    Console.WriteLine("=========================================================");
-                    Console.WriteLine("damki");
-                    for (int ii = 0; ii < 8; ii++)
-                    {
-                        for (int jj = 0; jj < 8; jj++)
-                        {
-                            if (shah[ii, jj] > 0) Console.Write("{0, 2} ", damka[shah[ii, jj] - 1]); else Console.Write("{0, 2} ", shah[ii, jj]);
-                        }
-                        Console.WriteLine();
-                    }
-                    Console.WriteLine();
                     return;
                 }
             }
@@ -297,7 +218,6 @@ namespace Курсач
 
         private int rubl()
         {
-            Console.WriteLine("Enter rubl.");
             int r = 0, x, y, x00, y00, x1l, x2l, y1l, y2l, x1r, x2r, y1r, y2r, d1r, d1l, d2r, d2l;
             for (int i = 0; i < 24; i++) rub[i] = 0;
 
@@ -4030,29 +3950,6 @@ namespace Курсач
                     }
                 }
             }
-
-
-            for (int i = 0; i < 8; i++)
-            {
-                for (int j = 0; j < 8; j++)
-                {
-                    if (shah[i, j] != 0) Console.Write(rub[shah[i, j] - 1]); else Console.Write(0);
-                    Console.Write(" ");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine();
-            for (int k = 0; k < 24; k++) Console.Write(rub[k]);
-            Console.WriteLine();
-            Console.Write(r);
-            Console.Write(" ");
-            Console.Write(turn);
-            Console.Write(" ");
-            Console.Write(whiteCount);
-            Console.Write(" ");
-            Console.Write(blackCount);
-            Console.WriteLine();
-            Console.WriteLine("--------------------------");
             return r;
         }
 
@@ -4403,6 +4300,10 @@ namespace Курсач
                 DamkaNoComp = 0;
                 return;
             }
+            if (DamkaNoComp == 2)
+            {
+                DamkaNoComp = 0;
+            }
             DoWork();
             int[] shashki = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             int index = 0;
@@ -4423,14 +4324,6 @@ namespace Курсач
                 }
             }
 
-            Console.WriteLine("####################################################");
-            for (int i = 0; i < 12; i++)
-            {
-                Console.Write("{0, 2} ", shashki[i]);
-            }
-            Console.WriteLine();
-            Console.WriteLine("####################################################");
-
             int num, hod;
             num = rnd.Next(0, index - 1);
             int[,] hodi = new int[8, 2] { { -2, -2 }, { -1, -1 }, { 2, 2 }, { 1, 1 }, { 2, -2 }, { -2, 2 }, { -1, 1 }, { 1, -1 } };
@@ -4440,8 +4333,8 @@ namespace Курсач
             do
             {
                 hod = rnd.Next(0, 7);
-                x = x0 + 58 * hodi[hod, 0] + 1;
-                y = y0 + 58 * hodi[hod, 1] + 1;
+                x = x0 + 58 * hodi[hod, 0];
+                y = y0 + 58 * hodi[hod, 1];
                 if ((x < 17) || (x > 480) || (y < 31) || (y > 494)) continue;
             } while (allow(x, y) != 1);
             shahOb[shashki[num] - 1].Location = new Point(x, y);
@@ -4456,7 +4349,7 @@ namespace Курсач
             checkAbility();
             if (DamkaNoComp == 1)
             {
-                turn = (turn + 1) % 2;
+                DamkaNoComp = 2;
                 comp();
             }
         }
@@ -4770,7 +4663,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -4804,7 +4697,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -4838,7 +4731,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -4872,7 +4765,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -4906,7 +4799,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -4940,7 +4833,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -4974,7 +4867,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5008,7 +4901,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5042,7 +4935,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5076,7 +4969,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5110,7 +5003,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5144,7 +5037,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5178,7 +5071,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5212,7 +5105,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5246,7 +5139,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5280,7 +5173,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5314,7 +5207,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5348,7 +5241,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5382,7 +5275,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5416,7 +5309,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5450,7 +5343,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5484,7 +5377,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5518,7 +5411,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
@@ -5552,7 +5445,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp(); checkAbility();
+                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
                 }
                 else
                 {
