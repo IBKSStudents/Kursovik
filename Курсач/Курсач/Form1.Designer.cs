@@ -61,7 +61,6 @@
             this.сКомпьютеромToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.белыеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.черныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.компьютерКомпьютерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -337,8 +336,7 @@
             // 
             this.новаяИграToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.сДругомToolStripMenuItem,
-            this.сКомпьютеромToolStripMenuItem,
-            this.компьютерКомпьютерToolStripMenuItem});
+            this.сКомпьютеромToolStripMenuItem});
             this.новаяИграToolStripMenuItem.Name = "новаяИграToolStripMenuItem";
             resources.ApplyResources(this.новаяИграToolStripMenuItem, "новаяИграToolStripMenuItem");
             // 
@@ -367,12 +365,6 @@
             this.черныеToolStripMenuItem.Name = "черныеToolStripMenuItem";
             resources.ApplyResources(this.черныеToolStripMenuItem, "черныеToolStripMenuItem");
             this.черныеToolStripMenuItem.Click += new System.EventHandler(this.черныеToolStripMenuItem_Click_1);
-            // 
-            // компьютерКомпьютерToolStripMenuItem
-            // 
-            this.компьютерКомпьютерToolStripMenuItem.Name = "компьютерКомпьютерToolStripMenuItem";
-            resources.ApplyResources(this.компьютерКомпьютерToolStripMenuItem, "компьютерКомпьютерToolStripMenuItem");
-            this.компьютерКомпьютерToolStripMenuItem.Click += new System.EventHandler(this.компьютерКомпьютерToolStripMenuItem_Click);
             // 
             // okno
             // 
@@ -450,7 +442,6 @@
         private System.Windows.Forms.ToolStripMenuItem сКомпьютеромToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem белыеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem черныеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem компьютерКомпьютерToolStripMenuItem;
     }
 }
 

@@ -25,8 +25,9 @@ namespace Курсач
             whiteCount = 12,    // Count of white shashkas
             direction = 0,      // Direction of turns
             turn = 0,           // Turns
-            computer = 1,       // Game with computer or no
-            GameIsOver = 0;     // When gameover
+            computer = 0,       // Game with computer or no
+            GameIsOver = 0,     // When gameover
+            DamkaNoComp = 0;
         Point DownPoint; 
         private Random rnd = new Random();
 
@@ -60,6 +61,7 @@ namespace Курсач
 
         private void setDamka(int i, int j)
         {
+            DamkaNoComp = 1;
             if (shah[i, j] == 1)
             {
                 damka[0] = 1;
@@ -4355,9 +4357,53 @@ namespace Курсач
             }
         }
 
+        private void checkAbility()
+        {
+            int allows = 0;
+            for (int i = 1; i < 25; i++)
+            {
+                for (int ii = 0; ii < 8; ii++)
+                {
+                    for (int jj = 0; jj < 8; jj++)
+                    {
+                        if (shah[ii, jj] == i)
+                        {
+                            if (cAllow(shahOb[shah[ii, jj] - 1]) == 1)
+                            {
+                                allows = 1;
+                            }
+                        }
+                    }
+                }
+            }
+            if (allows == 1)
+            {
+                if(turn==0)
+                {
+                    whiteCount = 0;
+                    gameover();
+                }
+                else
+                {
+                    blackCount = 0;
+                    gameover();
+                }
+            }
+        }
+
+        private void DoWork()
+        {           
+            Thread.Sleep(1000);
+        }
+
         private void comp()
         {
-            Thread.Sleep(1000);
+            if(DamkaNoComp == 1)
+            {
+                DamkaNoComp = 0;
+                return;
+            }
+            DoWork();
             int[] shashki = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             int index = 0;
             for (int i = 1; i < 25; i++)
@@ -4390,14 +4436,12 @@ namespace Курсач
             int[,] hodi = new int[8,2] { { -2, -2}, { -1, -1}, { 2, 2}, { 1, 1}, { 2, -2}, { -2, 2}, { -1, 1}, { 1, -1} };
             x0 = shahOb[shashki[num] - 1].Location.X;
             y0 = shahOb[shashki[num] - 1].Location.Y;
-            int x, y, xx, yy;
-            xx = shahOb[shashki[num] - 1].Location.X;
-            yy = shahOb[shashki[num] - 1].Location.Y;
+            int x, y;
             do
             {
                 hod = rnd.Next(0, 7);
-                x = xx + 58 * hodi[hod, 0];
-                y = yy + 58 * hodi[hod, 1];
+                x = x0 + 58 * hodi[hod, 0] + 1;
+                y = y0 + 58 * hodi[hod, 1] + 1;
                 if ((x < 17) || (x > 480) || (y < 31) || (y > 494)) continue;
             } while (allow(x, y) != 1);
             shahOb[shashki[num] - 1].Location = new Point(x, y);
@@ -4409,37 +4453,10 @@ namespace Курсач
             if ((blackCount == 0) || (whiteCount == 0)) gameover();
             rubly = rubl();
             shahOb[shashki[num] - 1].BringToFront();
+            if (DamkaNoComp == 1) comp();
+            checkAbility();
         }
-
-        /*
-        for (int i = 13; i < 25; i++)
-                    {
-                        for (int ii = 0; ii < 8; ii++)
-                        {
-                            for (int jj = 0; jj < 8; jj++)
-                            {
-                                if (shah[ii, jj] == i)
-                                {
-                                    if (allow(shahOb[shah[ii, jj] - 1].Location.X, shahOb[shah[ii, jj] - 1].Location.Y) == 1) shashki[index++] = shah[ii, jj];
-                                }
-                            }
-                        }
-                    }
-
-            
-            int[] shashki = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-            int index = 0;
-       
-            Console.WriteLine("####################################################");
-                for (int i = 0; i < 12; i++)
-                {
-                    Console.Write("{0, 2} ", shashki[i]);
-                }
-                Console.WriteLine();
-            Console.WriteLine("####################################################");
-        */
-
-
+        
         private void gameover()
         {
             GameIsOver = 1;
@@ -4749,7 +4766,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -4783,7 +4800,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -4817,7 +4834,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -4851,7 +4868,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -4885,7 +4902,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -4919,7 +4936,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -4953,7 +4970,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -4987,7 +5004,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5021,7 +5038,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5055,7 +5072,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5089,7 +5106,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5123,7 +5140,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5157,7 +5174,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5191,7 +5208,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5225,7 +5242,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5259,7 +5276,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5293,7 +5310,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5327,7 +5344,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5361,7 +5378,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5395,7 +5412,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5429,7 +5446,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5463,7 +5480,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5497,7 +5514,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5531,7 +5548,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if (computer == 1) comp();
+                    if (computer == 1) comp(); checkAbility();
                 }
                 else
                 {
@@ -5545,166 +5562,8 @@ namespace Курсач
                 shashka24.BringToFront();
             }
         }
-        //------------------------------END-CLICKS--------------------------------------------
+        /*------------------------------END-CLICKS--------------------------------------------*/
 
-        private void белыеToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            GameIsOver = 0;
-            setShahPosition();
-            starts(shashka1, 1);
-            starts(shashka2, 1);
-            starts(shashka3, 1);
-            starts(shashka4, 1);
-            starts(shashka5, 1);
-            starts(shashka6, 1);
-            starts(shashka7, 1);
-            starts(shashka8, 1);
-            starts(shashka9, 1);
-            starts(shashka10, 1);
-            starts(shashka11, 1);
-            starts(shashka12, 1);
-            starts(shashka13, 0);
-            starts(shashka14, 0);
-            starts(shashka15, 0);
-            starts(shashka16, 0);
-            starts(shashka17, 0);
-            starts(shashka18, 0);
-            starts(shashka19, 0);
-            starts(shashka20, 0);
-            starts(shashka21, 0);
-            starts(shashka22, 0);
-            starts(shashka23, 0);
-            starts(shashka24, 0);
-            blackCount = 12;
-            whiteCount = 12;
-            direction = 0;
-            turn = 0;
-            rubly = 0;
-            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
-            computer = 1;
-        }
-
-        private void компьютерКомпьютерToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GameIsOver = 0;
-            setShahPosition();
-            starts(shashka1, 1);
-            starts(shashka2, 1);
-            starts(shashka3, 1);
-            starts(shashka4, 1);
-            starts(shashka5, 1);
-            starts(shashka6, 1);
-            starts(shashka7, 1);
-            starts(shashka8, 1);
-            starts(shashka9, 1);
-            starts(shashka10, 1);
-            starts(shashka11, 1);
-            starts(shashka12, 1);
-            starts(shashka13, 0);
-            starts(shashka14, 0);
-            starts(shashka15, 0);
-            starts(shashka16, 0);
-            starts(shashka17, 0);
-            starts(shashka18, 0);
-            starts(shashka19, 0);
-            starts(shashka20, 0);
-            starts(shashka21, 0);
-            starts(shashka22, 0);
-            starts(shashka23, 0);
-            starts(shashka24, 0);
-            blackCount = 12;
-            whiteCount = 12;
-            direction = 0;
-            turn = 0;
-            rubly = 0;
-            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
-            computer = 1;
-            while (GameIsOver != 1)
-            {
-                comp();
-            }
-        }
-
-        private void черныеToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            GameIsOver = 0;
-            setShahPosition();
-            starts(shashka1, 0);
-            starts(shashka2, 0);
-            starts(shashka3, 0);
-            starts(shashka4, 0);
-            starts(shashka5, 0);
-            starts(shashka6, 0);
-            starts(shashka7, 0);
-            starts(shashka8, 0);
-            starts(shashka9, 0);
-            starts(shashka10, 0);
-            starts(shashka11, 0);
-            starts(shashka12, 0);
-            starts(shashka13, 1);
-            starts(shashka14, 1);
-            starts(shashka15, 1);
-            starts(shashka16, 1);
-            starts(shashka17, 1);
-            starts(shashka18, 1);
-            starts(shashka19, 1);
-            starts(shashka20, 1);
-            starts(shashka21, 1);
-            starts(shashka22, 1);
-            starts(shashka23, 1);
-            starts(shashka24, 1);
-            blackCount = 12;
-            whiteCount = 12;
-            direction = 1;
-            turn = 0;
-            rubly = 0;
-            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
-            computer = 1;
-            rubl();
-            comp();
-        }
-
-        private void сДругомToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GameIsOver = 0;
-            setShahPosition();
-            starts(shashka1, 1);
-            starts(shashka2, 1);
-            starts(shashka3, 1);
-            starts(shashka4, 1);
-            starts(shashka5, 1);
-            starts(shashka6, 1);
-            starts(shashka7, 1);
-            starts(shashka8, 1);
-            starts(shashka9, 1);
-            starts(shashka10, 1);
-            starts(shashka11, 1);
-            starts(shashka12, 1);
-            starts(shashka13, 0);
-            starts(shashka14, 0);
-            starts(shashka15, 0);
-            starts(shashka16, 0);
-            starts(shashka17, 0);
-            starts(shashka18, 0);
-            starts(shashka19, 0);
-            starts(shashka20, 0);
-            starts(shashka21, 0);
-            starts(shashka22, 0);
-            starts(shashka23, 0);
-            starts(shashka24, 0);
-            blackCount = 12;
-            whiteCount = 12;
-            direction = 0;
-            turn = 0;
-            rubly = 0;
-            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
-            computer = 0;
-        }
-
-        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("bin\\Readme.txt");
-        }
         //1 - белый, иначе - черный
         private void starts(Button o, int cl)
         {
@@ -5717,6 +5576,7 @@ namespace Курсач
         }
         private void setShahPosition()
         {
+            DamkaNoComp = 0;
             shashka1.Location = new Point(17, 437);
 
 
@@ -5819,6 +5679,166 @@ namespace Курсач
             whiteCount = 12;    // Count of white shashkas
             direction = 0;      // Direction of turns
             turn = 0;
+        }
+
+        private void белыеToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GameIsOver = 0;
+            setShahPosition();
+            starts(shashka1, 1);
+            starts(shashka2, 1);
+            starts(shashka3, 1);
+            starts(shashka4, 1);
+            starts(shashka5, 1);
+            starts(shashka6, 1);
+            starts(shashka7, 1);
+            starts(shashka8, 1);
+            starts(shashka9, 1);
+            starts(shashka10, 1);
+            starts(shashka11, 1);
+            starts(shashka12, 1);
+            starts(shashka13, 0);
+            starts(shashka14, 0);
+            starts(shashka15, 0);
+            starts(shashka16, 0);
+            starts(shashka17, 0);
+            starts(shashka18, 0);
+            starts(shashka19, 0);
+            starts(shashka20, 0);
+            starts(shashka21, 0);
+            starts(shashka22, 0);
+            starts(shashka23, 0);
+            starts(shashka24, 0);
+            blackCount = 12;
+            whiteCount = 12;
+            direction = 0;
+            turn = 0;
+            rubly = 0;
+            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
+            computer = 1;
+        }
+
+        private void компьютерКомпьютерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GameIsOver = 0;
+            setShahPosition();
+            starts(shashka1, 1);
+            starts(shashka2, 1);
+            starts(shashka3, 1);
+            starts(shashka4, 1);
+            starts(shashka5, 1);
+            starts(shashka6, 1);
+            starts(shashka7, 1);
+            starts(shashka8, 1);
+            starts(shashka9, 1);
+            starts(shashka10, 1);
+            starts(shashka11, 1);
+            starts(shashka12, 1);
+            starts(shashka13, 0);
+            starts(shashka14, 0);
+            starts(shashka15, 0);
+            starts(shashka16, 0);
+            starts(shashka17, 0);
+            starts(shashka18, 0);
+            starts(shashka19, 0);
+            starts(shashka20, 0);
+            starts(shashka21, 0);
+            starts(shashka22, 0);
+            starts(shashka23, 0);
+            starts(shashka24, 0);
+            blackCount = 12;
+            whiteCount = 12;
+            direction = 0;
+            turn = 0;
+            rubly = 0;
+            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
+            computer = 1;
+            rubl();
+            while (GameIsOver != 1)
+            {
+                comp();
+            }
+        }
+
+        private void черныеToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GameIsOver = 0;
+            setShahPosition();
+            starts(shashka1, 0);
+            starts(shashka2, 0);
+            starts(shashka3, 0);
+            starts(shashka4, 0);
+            starts(shashka5, 0);
+            starts(shashka6, 0);
+            starts(shashka7, 0);
+            starts(shashka8, 0);
+            starts(shashka9, 0);
+            starts(shashka10, 0);
+            starts(shashka11, 0);
+            starts(shashka12, 0);
+            starts(shashka13, 1);
+            starts(shashka14, 1);
+            starts(shashka15, 1);
+            starts(shashka16, 1);
+            starts(shashka17, 1);
+            starts(shashka18, 1);
+            starts(shashka19, 1);
+            starts(shashka20, 1);
+            starts(shashka21, 1);
+            starts(shashka22, 1);
+            starts(shashka23, 1);
+            starts(shashka24, 1);
+            blackCount = 12;
+            whiteCount = 12;
+            direction = 1;
+            turn = 0;
+            rubly = 0;
+            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
+            computer = 1;
+            rubl();
+            comp();
+        }
+
+        private void сДругомToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GameIsOver = 0;
+            setShahPosition();
+            starts(shashka1, 1);
+            starts(shashka2, 1);
+            starts(shashka3, 1);
+            starts(shashka4, 1);
+            starts(shashka5, 1);
+            starts(shashka6, 1);
+            starts(shashka7, 1);
+            starts(shashka8, 1);
+            starts(shashka9, 1);
+            starts(shashka10, 1);
+            starts(shashka11, 1);
+            starts(shashka12, 1);
+            starts(shashka13, 0);
+            starts(shashka14, 0);
+            starts(shashka15, 0);
+            starts(shashka16, 0);
+            starts(shashka17, 0);
+            starts(shashka18, 0);
+            starts(shashka19, 0);
+            starts(shashka20, 0);
+            starts(shashka21, 0);
+            starts(shashka22, 0);
+            starts(shashka23, 0);
+            starts(shashka24, 0);
+            blackCount = 12;
+            whiteCount = 12;
+            direction = 0;
+            turn = 0;
+            rubly = 0;
+            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
+            computer = 0;
+        }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("bin\\Readme.txt");
         }
         private void белыеToolStripMenuItem_Click(object sender, EventArgs e)
         {
