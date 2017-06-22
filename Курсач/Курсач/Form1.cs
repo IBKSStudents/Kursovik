@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Threading;
 
 
 namespace Курсач
@@ -24,7 +25,8 @@ namespace Курсач
             whiteCount = 12,    // Count of white shashkas
             direction = 0,      // Direction of turns
             turn = 0,           // Turns
-            computer = 1;       // Game with computer or no
+            computer = 1,       // Game with computer or no
+            GameIsOver = 0;     // When gameover
         Point DownPoint; 
         private Random rnd = new Random();
 
@@ -4228,7 +4230,7 @@ namespace Курсач
                                 if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] > 12)
                                 {
                                     if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
-                                    continue;
+                                    return 1;
                                 }
                             }
                             if (((y - (y+j) != 1) && (damka[shah[y, x] - 1] == 0)) || (x - (x+i) > 1) || ((x+i) - x > 1)) {ret++; continue;}
@@ -4255,17 +4257,17 @@ namespace Курсач
                                     if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
                                 }
                             }
-                            if (shah[y, x] > 12) { ret++; continue; }
+                            if (shah[y, x] < 13) { ret++; continue; }
                             if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
                             if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
                             if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
                             {
                                 if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
                                 if ((damka[shah[y, x] - 1] == 0) && ((y + j) < y)) { ret++; continue; }
-                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] > 12)
+                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] < 13)
                                 {
                                     if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
-                                    continue;
+                                    return 1;
                                 }
                             }
                             if (((y - (y + j) != -1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
@@ -4301,11 +4303,11 @@ namespace Курсач
                             if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
                             {
                                 if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
-                                if ((damka[shah[y, x] - 1] == 0) && ((y + j) > y)) { ret++; continue; }
+                                if ((damka[shah[y, x] - 1] == 0) && ((y + j) < y)) { ret++; continue; }
                                 if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] < 13)
                                 {
                                     if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
-                                    continue;
+                                    return 1;
                                 }
                             }
                             if (((y - (y + j) != -1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
@@ -4332,17 +4334,17 @@ namespace Курсач
                                     if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
                                 }
                             }
-                            if (shah[y, x] < 13) { ret++; continue; }
+                            if (shah[y, x] > 12) { ret++; continue; }
                             if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
                             if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
                             if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
                             {
                                 if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
                                 if ((damka[shah[y, x] - 1] == 0) && ((y + j) > y)) { ret++; continue; }
-                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] < 13)
+                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] > 12)
                                 {
                                     if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
-                                    continue;
+                                    return 1;
                                 }
                             }
                             if (((y - (y + j) != 1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
@@ -4355,6 +4357,7 @@ namespace Курсач
 
         private void comp()
         {
+            Thread.Sleep(1000);
             int[] shashki = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             int index = 0;
             for (int i = 1; i < 25; i++)
@@ -4383,13 +4386,13 @@ namespace Курсач
             Console.WriteLine("####################################################");
 
             int num, hod;
-            if (index == 1) num = index; else num = rnd.Next(0, index - 1);
+            num = rnd.Next(0, index - 1);
             int[,] hodi = new int[8,2] { { -2, -2}, { -1, -1}, { 2, 2}, { 1, 1}, { 2, -2}, { -2, 2}, { -1, 1}, { 1, -1} };
-            x0 = shahOb[shashki[num]].Location.X;
-            y0 = shahOb[shashki[num]].Location.Y;
+            x0 = shahOb[shashki[num] - 1].Location.X;
+            y0 = shahOb[shashki[num] - 1].Location.Y;
             int x, y, xx, yy;
-            xx = shahOb[shashki[num]].Location.X;
-            yy = shahOb[shashki[num]].Location.Y;
+            xx = shahOb[shashki[num] - 1].Location.X;
+            yy = shahOb[shashki[num] - 1].Location.Y;
             do
             {
                 hod = rnd.Next(0, 7);
@@ -4397,15 +4400,15 @@ namespace Курсач
                 y = yy + 58 * hodi[hod, 1];
                 if ((x < 17) || (x > 480) || (y < 31) || (y > 494)) continue;
             } while (allow(x, y) != 1);
-            shahOb[shashki[num]].Location = new Point(x, y);
+            shahOb[shashki[num] - 1].Location = new Point(x, y);
             DownPoint = new Point();
-            shah[(y - 31) / 58, (x - 17) / 58] = 1;
+            shah[(y - 31) / 58, (x - 17) / 58] = shashki[num];
             shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
             checkDamka((y - 31) / 58, (x - 17) / 58);
             turn = (turn + 1) % 2;
             if ((blackCount == 0) || (whiteCount == 0)) gameover();
             rubly = rubl();
-            shahOb[shashki[num]].BringToFront();
+            shahOb[shashki[num] - 1].BringToFront();
         }
 
         /*
@@ -4439,6 +4442,7 @@ namespace Курсач
 
         private void gameover()
         {
+            GameIsOver = 1;
             Form game = new gameover();
             if(whiteCount==0)
                 game.BackgroundImage = Image.FromFile("bin\\images\\blackWin.png");
@@ -5545,6 +5549,7 @@ namespace Курсач
 
         private void белыеToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            GameIsOver = 0;
             setShahPosition();
             starts(shashka1, 1);
             starts(shashka2, 1);
@@ -5579,8 +5584,50 @@ namespace Курсач
             computer = 1;
         }
 
+        private void компьютерКомпьютерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GameIsOver = 0;
+            setShahPosition();
+            starts(shashka1, 1);
+            starts(shashka2, 1);
+            starts(shashka3, 1);
+            starts(shashka4, 1);
+            starts(shashka5, 1);
+            starts(shashka6, 1);
+            starts(shashka7, 1);
+            starts(shashka8, 1);
+            starts(shashka9, 1);
+            starts(shashka10, 1);
+            starts(shashka11, 1);
+            starts(shashka12, 1);
+            starts(shashka13, 0);
+            starts(shashka14, 0);
+            starts(shashka15, 0);
+            starts(shashka16, 0);
+            starts(shashka17, 0);
+            starts(shashka18, 0);
+            starts(shashka19, 0);
+            starts(shashka20, 0);
+            starts(shashka21, 0);
+            starts(shashka22, 0);
+            starts(shashka23, 0);
+            starts(shashka24, 0);
+            blackCount = 12;
+            whiteCount = 12;
+            direction = 0;
+            turn = 0;
+            rubly = 0;
+            for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
+            computer = 1;
+            while (GameIsOver != 1)
+            {
+                comp();
+            }
+        }
+
         private void черныеToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            GameIsOver = 0;
             setShahPosition();
             starts(shashka1, 0);
             starts(shashka2, 0);
@@ -5619,6 +5666,7 @@ namespace Курсач
 
         private void сДругомToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            GameIsOver = 0;
             setShahPosition();
             starts(shashka1, 1);
             starts(shashka2, 1);
@@ -5774,6 +5822,7 @@ namespace Курсач
         }
         private void белыеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            GameIsOver = 0;
             setShahPosition();
             starts(shashka1, 1);
             starts(shashka2, 1);
@@ -5812,6 +5861,7 @@ namespace Курсач
         }
         private void черныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            GameIsOver = 0;
             setShahPosition();
             starts(shashka1, 0);
             starts(shashka2, 0);
