@@ -55,13 +55,13 @@
             this.shashka14 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.правилаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новаяИграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сДругомToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сКомпьютеромToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.белыеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.черныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.правилаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -328,6 +328,12 @@
             this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
             resources.ApplyResources(this.менюToolStripMenuItem, "менюToolStripMenuItem");
             // 
+            // правилаToolStripMenuItem
+            // 
+            this.правилаToolStripMenuItem.Name = "правилаToolStripMenuItem";
+            resources.ApplyResources(this.правилаToolStripMenuItem, "правилаToolStripMenuItem");
+            this.правилаToolStripMenuItem.Click += new System.EventHandler(this.правилаToolStripMenuItem_Click);
+            // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
@@ -367,12 +373,6 @@
             this.черныеToolStripMenuItem.Name = "черныеToolStripMenuItem";
             resources.ApplyResources(this.черныеToolStripMenuItem, "черныеToolStripMenuItem");
             this.черныеToolStripMenuItem.Click += new System.EventHandler(this.черныеToolStripMenuItem_Click_1);
-            // 
-            // правилаToolStripMenuItem
-            // 
-            this.правилаToolStripMenuItem.Name = "правилаToolStripMenuItem";
-            resources.ApplyResources(this.правилаToolStripMenuItem, "правилаToolStripMenuItem");
-            this.правилаToolStripMenuItem.Click += new System.EventHandler(this.правилаToolStripMenuItem_Click);
             // 
             // okno
             // 
