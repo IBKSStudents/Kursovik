@@ -7,8 +7,8 @@
     <ProjectGuid>{85CBBF29-8F2F-4149-944A-4D1BDEB88AAA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VorAMix</RootNamespace>
-    <AssemblyName>VorAMix</AssemblyName>
+    <RootNamespace>Voramix</RootNamespace>
+    <AssemblyName>Voramix</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
