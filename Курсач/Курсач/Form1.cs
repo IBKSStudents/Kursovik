@@ -4420,6 +4420,31 @@ namespace Курсач
             starts(shashka22, 0);
             starts(shashka23, 0);
             starts(shashka24, 0);
+            shashka1.Visible = false;
+            shashka2.Visible = false;
+            shashka3.Visible = false;
+            shashka4.Visible = false;
+            shashka5.Visible = false;
+            shashka6.Visible = false;
+            shashka7.Visible = false;
+            shashka8.Visible = false;
+            shashka9.Visible = false;
+            shashka10.Visible = false;
+            shashka11.Visible = false;
+            shashka12.Visible = false;
+            shashka13.Visible = false;
+            shashka14.Visible = false;
+            shashka15.Visible = false;
+            shashka16.Visible = false;
+            shashka17.Visible = false;
+            shashka18.Visible = false;
+            shashka19.Visible = false;
+            shashka20.Visible = false;
+            shashka21.Visible = false;
+            shashka22.Visible = false;
+            shashka23.Visible = false;
+            shashka24.Visible = false;
+
         }
         private void shashka1_MouseDown(object sender, MouseEventArgs e)
         {
