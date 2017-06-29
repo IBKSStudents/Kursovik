@@ -55,13 +55,15 @@
             this.shashka14 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.правилаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новаяИграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сДругомToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сКомпьютеромToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.белыеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.черныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.правилаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.тестToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notAllowedMoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -315,7 +317,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.менюToolStripMenuItem,
-            this.новаяИграToolStripMenuItem});
+            this.новаяИграToolStripMenuItem,
+            this.тестToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -327,6 +330,12 @@
             this.справкаToolStripMenuItem});
             this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
             resources.ApplyResources(this.менюToolStripMenuItem, "менюToolStripMenuItem");
+            // 
+            // правилаToolStripMenuItem
+            // 
+            this.правилаToolStripMenuItem.Name = "правилаToolStripMenuItem";
+            resources.ApplyResources(this.правилаToolStripMenuItem, "правилаToolStripMenuItem");
+            this.правилаToolStripMenuItem.Click += new System.EventHandler(this.правилаToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -368,11 +377,18 @@
             resources.ApplyResources(this.черныеToolStripMenuItem, "черныеToolStripMenuItem");
             this.черныеToolStripMenuItem.Click += new System.EventHandler(this.черныеToolStripMenuItem_Click_1);
             // 
-            // правилаToolStripMenuItem
+            // тестToolStripMenuItem
             // 
-            this.правилаToolStripMenuItem.Name = "правилаToolStripMenuItem";
-            resources.ApplyResources(this.правилаToolStripMenuItem, "правилаToolStripMenuItem");
-            this.правилаToolStripMenuItem.Click += new System.EventHandler(this.правилаToolStripMenuItem_Click);
+            this.тестToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.notAllowedMoveToolStripMenuItem});
+            this.тестToolStripMenuItem.Name = "тестToolStripMenuItem";
+            resources.ApplyResources(this.тестToolStripMenuItem, "тестToolStripMenuItem");
+            // 
+            // notAllowedMoveToolStripMenuItem
+            // 
+            this.notAllowedMoveToolStripMenuItem.Name = "notAllowedMoveToolStripMenuItem";
+            resources.ApplyResources(this.notAllowedMoveToolStripMenuItem, "notAllowedMoveToolStripMenuItem");
+            this.notAllowedMoveToolStripMenuItem.Click += new System.EventHandler(this.notAllowedMoveToolStripMenuItem_Click);
             // 
             // okno
             // 
@@ -451,6 +467,8 @@
         private System.Windows.Forms.ToolStripMenuItem белыеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem черныеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem правилаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem тестToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem notAllowedMoveToolStripMenuItem;
     }
 }
 
