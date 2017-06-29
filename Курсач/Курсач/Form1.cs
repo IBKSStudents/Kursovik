@@ -26,7 +26,7 @@ namespace Курсач
         private int[,]   shah     =      new int[8, 8]   { { 0, 21, 0, 22, 0, 23, 0, 24 }, { 17, 0, 18, 0, 19, 0, 20, 0 }, { 0, 13, 0, 14, 0, 15, 0, 16 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 9, 0, 10, 0, 11, 0, 12, 0 }, { 0, 5, 0, 6, 0, 7, 0, 8 }, { 1, 0, 2, 0, 3, 0, 4, 0 } };
         private int[,]   shahs    =      new int[8, 8]   { { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 } };
         private int[,]   shashki  =      new int[12, 9]  { { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
-        private int[,]   hodi     =      new int[8, 2]   { { -2, 2 }, { -2, -2 }, { -1, 1 }, { -1, -1 }, { 1, -1 }, { 1, 1 }, { 2, -2 }, { 2, -2 } };
+        private int[,]   hodi     =      new int[8, 2]   { { -2, 2 }, { -2, -2 }, { -1, 1 }, { -1, -1 }, { 1, -1 }, { 1, 1 }, { 2, -2 }, { 2, 2 } };
         private int x0, y0, rubly = 0,
             rublys = 0,         // rubly for hod compa
             blackCount = 12,    // Count of black shashkas
@@ -39,7 +39,9 @@ namespace Курсач
             computer = 0,       // Game with computer or no
             GameIsOver = 0,     // When gameover
             DamkaNoComp = 0,    // To dispose error with damka and hod compa
+            DamkaNoComps = 0,    // To dispose error with damka and hod compa
             priora = 0,         // Max prioritet hoda compa
+            frubl,              // Begining rubly
             index = 0;          // Count of shashkas allowed to move
         private Point DownPoint;
         private Random rnd = new Random();
@@ -231,16 +233,26 @@ namespace Курсач
 
         private void checkDamkas(int j, int i)
         {
-            if (turn == 0)
+            if (turns == 0)
             {
                 if (direction == 0)
                 {
-                    if ((j == 0) && (damkas[shahs[j, i] - 1] == 0)) damkas[shahs[j, i] - 1] = 1;
-                    return;
+                    if ((j == 0) && (damkas[shahs[j, i] - 1] == 0))
+                    {
+                        damkas[shahs[j, i] - 1] = 1;
+                        DamkaNoComps = 1;
+                        turns = (turns + 1) % 2;
+                    }
+                        return;
                 }
                 else
                 {
-                    if ((j == 7) && (damkas[shahs[j, i] - 1] == 0)) damkas[shahs[j, i] - 1] = 1;
+                    if ((j == 7) && (damkas[shahs[j, i] - 1] == 0))
+                    {
+                        damkas[shahs[j, i] - 1] = 1;
+                        DamkaNoComps = 1;
+                        turns = (turns + 1) % 2;
+                    }
                     return;
                 }
             }
@@ -248,12 +260,22 @@ namespace Курсач
             {
                 if (direction == 0)
                 {
-                    if ((j == 7) && (damkas[shahs[j, i] - 1] == 0)) damkas[shahs[j, i] - 1] = 1;
+                    if ((j == 7) && (damkas[shahs[j, i] - 1] == 0))
+                    {
+                        damkas[shahs[j, i] - 1] = 1;
+                        DamkaNoComps = 1;
+                        turns = (turns + 1) % 2;
+                    }
                     return;
                 }
                 else
                 {
-                    if ((j == 0) && (damkas[shahs[j, i] - 1] == 0)) damkas[shahs[j, i] - 1] = 1;
+                    if ((j == 0) && (damkas[shahs[j, i] - 1] == 0))
+                    {
+                        damkas[shahs[j, i] - 1] = 1;
+                        DamkaNoComps = 1;
+                        turns = (turns + 1) % 2;
+                    }
                     return;
                 }
             }
@@ -4045,7 +4067,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[0] == 1)
+                        if (damkas[0] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4121,7 +4143,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[1] == 1)
+                        if (damkas[1] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4197,7 +4219,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[2] == 1)
+                        if (damkas[2] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4273,7 +4295,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[3] == 1)
+                        if (damkas[3] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4349,7 +4371,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[4] == 1)
+                        if (damkas[4] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4425,7 +4447,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[5] == 1)
+                        if (damkas[5] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4501,7 +4523,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[6] == 1)
+                        if (damkas[6] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4577,7 +4599,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[7] == 1)
+                        if (damkas[7] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4653,7 +4675,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[8] == 1)
+                        if (damkas[8] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4729,7 +4751,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[9] == 1)
+                        if (damkas[9] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4805,7 +4827,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[10] == 1)
+                        if (damkas[10] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4881,7 +4903,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[11] == 1)
+                        if (damkas[11] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -4973,7 +4995,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[12] == 1)
+                        if (damkas[12] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5050,7 +5072,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[13] == 1)
+                        if (damkas[13] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5127,7 +5149,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[14] == 1)
+                        if (damkas[14] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5204,7 +5226,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[15] == 1)
+                        if (damkas[15] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5281,7 +5303,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[16] == 1)
+                        if (damkas[16] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5358,7 +5380,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[17] == 1)
+                        if (damkas[17] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5435,7 +5457,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[18] == 1)
+                        if (damkas[18] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5512,7 +5534,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[19] == 1)
+                        if (damkas[19] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5589,7 +5611,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[20] == 1)
+                        if (damkas[20] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5666,7 +5688,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[21] == 1)
+                        if (damkas[21] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5743,7 +5765,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[22] == 1)
+                        if (damkas[22] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5820,7 +5842,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[23] == 1)
+                        if (damkas[23] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5916,7 +5938,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[12] == 1)
+                        if (damkas[12] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -5993,7 +6015,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[13] == 1)
+                        if (damkas[13] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6070,7 +6092,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[14] == 1)
+                        if (damkas[14] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6147,7 +6169,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[15] == 1)
+                        if (damkas[15] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6224,7 +6246,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[16] == 1)
+                        if (damkas[16] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6301,7 +6323,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[17] == 1)
+                        if (damkas[17] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6378,7 +6400,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[18] == 1)
+                        if (damkas[18] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6455,7 +6477,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[19] == 1)
+                        if (damkas[19] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6532,7 +6554,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[20] == 1)
+                        if (damkas[20] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6609,7 +6631,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[21] == 1)
+                        if (damkas[21] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6686,7 +6708,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[22] == 1)
+                        if (damkas[22] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6763,7 +6785,7 @@ namespace Курсач
                         }
 
 
-                        if (damka[23] == 1)
+                        if (damkas[23] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 - 1;
@@ -6849,7 +6871,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[0] == 1)
+                        if (damkas[0] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -6925,7 +6947,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[1] == 1)
+                        if (damkas[1] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -7001,7 +7023,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[2] == 1)
+                        if (damkas[2] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -7077,7 +7099,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[3] == 1)
+                        if (damkas[3] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -7153,7 +7175,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[4] == 1)
+                        if (damkas[4] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -7229,7 +7251,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[5] == 1)
+                        if (damkas[5] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -7305,7 +7327,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[6] == 1)
+                        if (damkas[6] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -7381,7 +7403,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[7] == 1)
+                        if (damkas[7] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -7457,7 +7479,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[8] == 1)
+                        if (damkas[8] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -7533,7 +7555,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[9] == 1)
+                        if (damkas[9] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -7609,7 +7631,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[10] == 1)
+                        if (damkas[10] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -7685,7 +7707,7 @@ namespace Курсач
                             }
                         }
 
-                        if (damka[11] == 1)
+                        if (damkas[11] == 1)
                         {
                             x1l = x00 - 1;
                             y1l = y00 + 1;
@@ -8060,12 +8082,16 @@ namespace Курсач
             shahs = new int[8, 8] { { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 } };
             for(int i = 0; i < 24; i++)
             {
-                shahs[(loc[i].Y - 31) / 58, (loc[i].X - 17) / 58] = i + 1;
+                if(vis[i]==true) shahs[(loc[i].Y - 31) / 58, (loc[i].X - 17) / 58] = i + 1;
                 damkas[i] = damka[i];
+                rubs[i] = rub[i];
             }
             turns = turn;
             blackCounts = blackCount;
             whiteCounts = whiteCount;
+            rublys = rubly;
+            frubl = rubly;
+            DamkaNoComps = 0;
         }
 
         private void cAllow(Button s)
@@ -8074,20 +8100,15 @@ namespace Курсач
                 Y0 = s.Location.Y,
                 x, y;
 
-            int frubl, fdamka;
+            int fdamka;
             for (int j = 0; j < 8; j++)
             {
                 setCoord();
-                frubl = rubls();
                 fdamka = damkas[shahs[(Y0 - 31) / 58, (X0 - 17) / 58] - 1];
-                turns = turn;
-                blackCounts = blackCount;
-                whiteCounts = whiteCount;
                 x = X0 + 58 * hodi[j, 0];
                 y = Y0 + 58 * hodi[j, 1];
                 shashki[index, j + 1] = 0;
                 int al = allows(X0, Y0, x, y);
-                Console.Write("{0} ", al);
                 if (al > 0)
                 {                    
                     shahs[(y - 31) / 58, (x - 17) / 58] = shahs[(Y0 - 31) / 58, (X0 - 17) / 58];
@@ -8095,9 +8116,8 @@ namespace Курсач
                     checkDamkas((y - 31) / 58, (x - 17) / 58);                    
                     turns = (turns + 1) % 2;                    
                     rublys = rubls();
-                    if (rublys == 1)
+                    if ((rublys == 1) && (DamkaNoComps == 0) && (frubl == 0) && (al != 4) && (fdamka == damka[shahs[(y - 31) / 58, (x - 17) / 58] - 1]))
                     {
-
                         shashki[index, j + 1] = 1;
                     }
                     else
@@ -8126,7 +8146,6 @@ namespace Курсач
                 }
                 else shashki[index, j + 1] = 0;
             }
-            Console.WriteLine();
             index++;
         }
 
@@ -8134,81 +8153,74 @@ namespace Курсач
         {
             int x = (s.Location.X - 17) / 58,
                 y = (s.Location.Y - 31) / 58,
-                j;
+                i, j;
 
             if (turn == 0)
             {
                 if (direction == 0)
                 {
                     int ret = 0;
-                    for (int i = -2; i < 3; i++)
+                    for (int ii = 0; ii < 8; ii++)
                     {
-                        if (i == 0) continue;
-                        for (int jj = -1; jj < 2; jj++)
+                        i = hodi[ii, 0];
+                        j = hodi[ii, 1];
+                        if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
+                        if (rubly == 1)
                         {
-                            if (jj == 0) continue;
-                            j = i * jj;
-                            if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
-                            if (rubly == 1)
+                            if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
+                            else
                             {
-                                if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
-                                else
-                                {
-                                    if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
-                                }
+                                if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
                             }
-                            if (shah[y, x] > 12) { ret++; continue; }
-                            if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
-                            if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
-                            if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
-                            {
-                                if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
-                                if ((damka[shah[y, x] - 1] == 0) && ((y + j) > y)) { ret++; continue; }
-                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] > 12)
-                                {
-                                    if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
-                                    return 1;
-                                }
-                            }
-                            if (((y - (y + j) != 1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
                         }
+                        if (shah[y, x] > 12) { ret++; continue; }
+                        if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
+                        if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
+                        if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
+                        {
+                            if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
+                            if ((damka[shah[y, x] - 1] == 0) && ((y + j) > y)) { ret++; continue; }
+                            if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] > 12)
+                            {
+                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
+                                return 1;
+                            }
+                        }
+                        if (((y - (y + j) != 1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
+
                     }
                     if (ret == 8) return 0; else return 1;
                 }
                 else
                 {
                     int ret = 0;
-                    for (int i = -2; i < 3; i++)
+                    for (int ii = 0; ii < 8; ii++)
                     {
-                        if (i == 0) continue;
-                        for (int jj = -1; jj < 2; jj++)
+                        i = hodi[ii, 0];
+                        j = hodi[ii, 1];
+                        if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
+                        if (rubly == 1)
                         {
-                            if (jj == 0) continue;
-                            j = i * jj;
-                            if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
-                            if (rubly == 1)
+                            if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
+                            else
                             {
-                                if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
-                                else
-                                {
-                                    if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
-                                }
+                                if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
                             }
-                            if (shah[y, x] < 13) { ret++; continue; }
-                            if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
-                            if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
-                            if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
-                            {
-                                if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
-                                if ((damka[shah[y, x] - 1] == 0) && ((y + j) < y)) { ret++; continue; }
-                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] < 13)
-                                {
-                                    if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
-                                    return 1;
-                                }
-                            }
-                            if (((y - (y + j) != -1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
                         }
+                        if (shah[y, x] < 13) { ret++; continue; }
+                        if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
+                        if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
+                        if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
+                        {
+                            if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
+                            if ((damka[shah[y, x] - 1] == 0) && ((y + j) < y)) { ret++; continue; }
+                            if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] < 13)
+                            {
+                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
+                                return 1;
+                            }
+                        }
+                        if (((y - (y + j) != -1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
                     }
                     if (ret == 8) return 0; else return 1;
                 }
@@ -8218,74 +8230,66 @@ namespace Курсач
                 if (direction == 0)
                 {
                     int ret = 0;
-                    for (int i = -2; i < 3; i++)
+                    for (int ii = 0; ii < 8; ii++)
                     {
-                        if (i == 0) continue;
-                        for (int jj = -1; jj < 2; jj++)
+                        i = hodi[ii, 0];
+                        j = hodi[ii, 1];
+                        if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
+                        if (rubly == 1)
                         {
-                            if (jj == 0) continue;
-                            j = i * jj;
-                            if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
-                            if (rubly == 1)
+                            if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
+                            else
                             {
-                                if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
-                                else
-                                {
-                                    if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
-                                }
+                                if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
                             }
-                            if (shah[y, x] < 13) { ret++; continue; }
-                            if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
-                            if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
-                            if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
-                            {
-                                if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
-                                if ((damka[shah[y, x] - 1] == 0) && ((y + j) < y)) { ret++; continue; }
-                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] < 13)
-                                {
-                                    if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
-                                    return 1;
-                                }
-                            }
-                            if (((y - (y + j) != -1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
                         }
+                        if (shah[y, x] < 13) { ret++; continue; }
+                        if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
+                        if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
+                        if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
+                        {
+                            if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
+                            if ((damka[shah[y, x] - 1] == 0) && ((y + j) < y)) { ret++; continue; }
+                            if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] < 13)
+                            {
+                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
+                                return 1;
+                            }
+                        }
+                        if (((y - (y + j) != -1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
                     }
                     if (ret == 8) return 0; else return 1;
                 }
                 else
                 {
                     int ret = 0;
-                    for (int i = -2; i < 3; i++)
+                    for (int ii = 0; ii < 8; ii++)
                     {
-                        if (i == 0) continue;
-                        for (int jj = -1; jj < 2; jj++)
+                        i = hodi[ii, 0];
+                        j = hodi[ii, 1];
+                        if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
+                        if (rubly == 1)
                         {
-                            if (jj == 0) continue;
-                            j = i * jj;
-                            if (((x + i) < 0) || ((x + i) > 7) || ((y + j) < 0) || ((y + j) > 7)) { ret++; continue; }
-                            if (rubly == 1)
+                            if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
+                            else
                             {
-                                if (rub[shah[y, x] - 1] == 0) { ret++; continue; }
-                                else
-                                {
-                                    if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
-                                }
+                                if ((((x + (x + i)) / 2) == (x + i)) || (((x + (x + i)) / 2) == x) || (((y + (y + j)) / 2) == (y + j)) || (((y + (y + j)) / 2) == y)) { ret++; continue; }
                             }
-                            if (shah[y, x] > 12) { ret++; continue; }
-                            if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
-                            if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
-                            if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
-                            {
-                                if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
-                                if ((damka[shah[y, x] - 1] == 0) && ((y + j) > y)) { ret++; continue; }
-                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] > 12)
-                                {
-                                    if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
-                                    return 1;
-                                }
-                            }
-                            if (((y - (y + j) != 1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
                         }
+                        if (shah[y, x] > 12) { ret++; continue; }
+                        if (((x + i) == x) || ((y + j) == y)) { ret++; continue; }
+                        if (shah[(y + j), (x + i)] != 0) { ret++; continue; }
+                        if ((((x + (x + i)) / 2) != (x + i)) && (((x + (x + i)) / 2) != x) && (((y + (y + j)) / 2) != (y + j)) && (((y + (y + j)) / 2) != y))
+                        {
+                            if ((damka[shah[y, x] - 1] == 1) && (((y - (y + j)) > 2) || (((y - (y + j)) < -2)))) { ret++; continue; }
+                            if ((damka[shah[y, x] - 1] == 0) && ((y + j) > y)) { ret++; continue; }
+                            if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] > 12)
+                            {
+                                if (shah[((y + (y + j)) / 2), ((x + (x + i)) / 2)] == 0) { ret++; continue; }
+                                return 1;
+                            }
+                        }
+                        if (((y - (y + j) != 1) && (damka[shah[y, x] - 1] == 0)) || (x - (x + i) > 1) || ((x + i) - x > 1)) { ret++; continue; }
                     }
                     if (ret == 8) return 0; else return 1;
                 }
@@ -8333,6 +8337,7 @@ namespace Курсач
 
         private void comp()
         {
+            if (GameIsOver == 1) return;
             if (DamkaNoComp == 1)
             {
                 DamkaNoComp = 0;
@@ -8346,6 +8351,8 @@ namespace Курсач
             DoWork();
             priora = 0;
             shashki = new int[12, 9] { { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
+            
+
             for (int i = 1; i < 25; i++)
             {
                 for (int ii = 0; ii < 8; ii++)
@@ -8386,14 +8393,11 @@ namespace Курсач
             int[] priors = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
             int prInd = 0;
             for (int i = 1; i < 9; i++) if (shashki[num, i] == priora) { priors[prInd++] = i; }
-            do
-            {
                 hod = rnd.Next(0, prInd - 1);
                 hod = priors[hod] - 1;
                 x = x0 + 58 * hodi[hod, 0];
                 y = y0 + 58 * hodi[hod, 1];
-                if ((x < 17) || (x > 480) || (y < 31) || (y > 494)) continue;
-            } while (allow(x, y) != 1);
+            allow(x, y);
             shahOb[shashki[num, 0] - 1].Location = new Point(x, y);
             DownPoint = new Point();
             shah[(y - 31) / 58, (x - 17) / 58] = shashki[num, 0];
