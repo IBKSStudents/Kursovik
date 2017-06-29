@@ -8332,7 +8332,8 @@ namespace Курсач
 
         private void DoWork()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(1200);
+            okno.ActiveForm.Update();
         }
 
         private void comp()
