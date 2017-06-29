@@ -8337,7 +8337,6 @@ namespace Курсач
 
         private void comp()
         {
-            if (GameIsOver == 1) return;
             if (DamkaNoComp == 1)
             {
                 DamkaNoComp = 0;
@@ -8347,6 +8346,8 @@ namespace Курсач
             {
                 DamkaNoComp = 0;
             }
+            if (GameIsOver == 0) checkAbility();
+            if (GameIsOver == 1) return;
             index = 0;
             DoWork();
             priora = 0;
@@ -8417,6 +8418,7 @@ namespace Курсач
 
         private void gameover()
         {
+            if (GameIsOver == 1) return;
             GameIsOver = 1;
             Form game = new gameover();
             if (whiteCount == 0)
@@ -8728,9 +8730,50 @@ namespace Курсач
             if (clicks[2] == 1) { Point dp = new Point(e.Location.X - DownPoint.X, e.Location.Y - DownPoint.Y); shashka3.Location = new Point(shashka3.Location.X + dp.X, shashka3.Location.Y + dp.Y); }
 
         }
+        private void ArinaBugHunter(int Number)
+        {
+            if (Number == 500)
+            {
+                for (int x = 0; x < 8; x++)
+                {
+                    for (int y = 0; y < 8; y++)
+                    {
+                        if (shah[y, x] > 0)
+                        {
+                            shahOb[shah[y, x] - 1].Location = new Point((x * 58) + 17, (y * 58) + 31);
+                            shahOb[shah[y, x] - 1].Visible = true;
+                        }
+                    }
+                }
+                return;
+            }
+            for(int i=0; i < 24; i++)
+            {
+                if ((clicks[i] == 1) && (i != Number))
+                {
+                    for (int j = 0; j < 24; j++)
+                    {
+                        clicks[j] = 0;
+                    }
+                    for(int x = 0; x < 8; x++)
+                    {
+                        for(int y = 0; y < 8; y++)
+                        {
+                            if (shah[y, x] > 0)
+                            {
+                                shahOb[shah[y, x] - 1].Location = new Point((x * 58) + 17, (y * 58) + 31);
+                            }
+                        }
+                    }
+
+                    return;
+                }
+            }
+        }
         //-----------------------------CLICKS------------------------------------
         private void shashka1_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(0);
             clicks[0] = (clicks[0] + 1) % 2;
             if (clicks[0] == 0)
             {
@@ -8749,7 +8792,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -8765,6 +8808,7 @@ namespace Курсач
         }
         private void shashka2_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(1);
             clicks[1] = (clicks[1] + 1) % 2;
             if (clicks[1] == 0)
             {
@@ -8783,7 +8827,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -8799,6 +8843,7 @@ namespace Курсач
         }
         private void shashka3_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(2);
             clicks[2] = (clicks[2] + 1) % 2;
             if (clicks[2] == 0)
             {
@@ -8817,7 +8862,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -8833,6 +8878,7 @@ namespace Курсач
         }
         private void shashka4_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(3);
             clicks[3] = (clicks[3] + 1) % 2;
             if (clicks[3] == 0)
             {
@@ -8851,7 +8897,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -8867,6 +8913,7 @@ namespace Курсач
         }
         private void shashka5_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(4);
             clicks[4] = (clicks[4] + 1) % 2;
             if (clicks[4] == 0)
             {
@@ -8885,7 +8932,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -8901,6 +8948,7 @@ namespace Курсач
         }
         private void shashka6_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(5);
             clicks[5] = (clicks[5] + 1) % 2;
             if (clicks[5] == 0)
             {
@@ -8919,7 +8967,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -8935,6 +8983,7 @@ namespace Курсач
         }
         private void shashka7_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(6);
             clicks[6] = (clicks[6] + 1) % 2;
             if (clicks[6] == 0)
             {
@@ -8953,7 +9002,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -8969,6 +9018,7 @@ namespace Курсач
         }
         private void shashka8_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(7);
             clicks[7] = (clicks[7] + 1) % 2;
             if (clicks[7] == 0)
             {
@@ -8987,7 +9037,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9003,6 +9053,7 @@ namespace Курсач
         }
         private void shashka9_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(8);
             clicks[8] = (clicks[8] + 1) % 2;
             if (clicks[8] == 0)
             {
@@ -9021,7 +9072,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9037,6 +9088,7 @@ namespace Курсач
         }
         private void shashka10_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(9);
             clicks[9] = (clicks[9] + 1) % 2;
             if (clicks[9] == 0)
             {
@@ -9055,7 +9107,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9071,6 +9123,7 @@ namespace Курсач
         }
         private void shashka11_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(10);
             clicks[10] = (clicks[10] + 1) % 2;
             if (clicks[10] == 0)
             {
@@ -9089,7 +9142,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9105,6 +9158,7 @@ namespace Курсач
         }
         private void shashka12_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(11);
             clicks[11] = (clicks[11] + 1) % 2;
             if (clicks[11] == 0)
             {
@@ -9123,7 +9177,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9139,6 +9193,7 @@ namespace Курсач
         }
         private void shashka13_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(12);
             clicks[12] = (clicks[12] + 1) % 2;
             if (clicks[12] == 0)
             {
@@ -9157,7 +9212,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9173,6 +9228,7 @@ namespace Курсач
         }
         private void shashka14_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(13);
             clicks[13] = (clicks[13] + 1) % 2;
             if (clicks[13] == 0)
             {
@@ -9191,7 +9247,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9207,6 +9263,7 @@ namespace Курсач
         }
         private void shashka15_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(14);
             clicks[14] = (clicks[14] + 1) % 2;
             if (clicks[14] == 0)
             {
@@ -9225,7 +9282,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9241,6 +9298,7 @@ namespace Курсач
         }
         private void shashka16_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(15);
             clicks[15] = (clicks[15] + 1) % 2;
             if (clicks[15] == 0)
             {
@@ -9259,7 +9317,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9275,6 +9333,7 @@ namespace Курсач
         }
         private void shashka17_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(16);
             clicks[16] = (clicks[16] + 1) % 2;
             if (clicks[16] == 0)
             {
@@ -9293,7 +9352,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9309,6 +9368,7 @@ namespace Курсач
         }
         private void shashka18_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(17);
             clicks[17] = (clicks[17] + 1) % 2;
             if (clicks[17] == 0)
             {
@@ -9327,7 +9387,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9343,6 +9403,7 @@ namespace Курсач
         }
         private void shashka19_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(18);
             clicks[18] = (clicks[18] + 1) % 2;
             if (clicks[18] == 0)
             {
@@ -9361,7 +9422,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9377,6 +9438,7 @@ namespace Курсач
         }
         private void shashka20_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(19);
             clicks[19] = (clicks[19] + 1) % 2;
             if (clicks[19] == 0)
             {
@@ -9395,7 +9457,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9411,6 +9473,7 @@ namespace Курсач
         }
         private void shashka21_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(20);
             clicks[20] = (clicks[20] + 1) % 2;
             if (clicks[20] == 0)
             {
@@ -9429,7 +9492,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9445,6 +9508,7 @@ namespace Курсач
         }
         private void shashka22_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(21);
             clicks[21] = (clicks[21] + 1) % 2;
             if (clicks[21] == 0)
             {
@@ -9463,7 +9527,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9479,6 +9543,7 @@ namespace Курсач
         }
         private void shashka23_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(22);
             clicks[22] = (clicks[22] + 1) % 2;
             if (clicks[22] == 0)
             {
@@ -9497,7 +9562,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9513,6 +9578,7 @@ namespace Курсач
         }
         private void shashka24_Click(object sender, EventArgs e)
         {
+            ArinaBugHunter(23);
             clicks[23] = (clicks[23] + 1) % 2;
             if (clicks[23] == 0)
             {
@@ -9531,7 +9597,7 @@ namespace Курсач
                     turn = (turn + 1) % 2;
                     if ((blackCount == 0) || (whiteCount == 0)) gameover();
                     rubly = rubl();
-                    if(GameIsOver != 1) { if (computer == 1) comp(); checkAbility();}
+                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
                 }
                 else
                 {
@@ -9902,6 +9968,44 @@ namespace Курсач
             turn = 0;
             rubly = 0;
             for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
+        }
+
+        private void notAllowedMoveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            shashka1.Visible = false;
+            shashka2.Visible = false;
+            shashka3.Visible = false;
+            shashka4.Visible = false;
+            shashka5.Visible = false;
+            shashka6.Visible = false;
+            shashka7.Visible = false;
+            shashka8.Visible = false;
+            shashka9.Visible = false;
+            shashka10.Visible = false;
+            shashka11.Visible = false;
+            shashka12.Visible = false;
+            shashka13.Visible = false;
+            shashka14.Visible = false;
+            shashka15.Visible = false;
+            shashka16.Visible = false;
+            shashka17.Visible = false;
+            shashka18.Visible = false;
+            shashka19.Visible = false;
+            shashka20.Visible = false;
+            shashka21.Visible = false;
+            shashka22.Visible = false;
+            shashka23.Visible = false;
+            shashka24.Visible = false;
+            shah = new int[8, 8] { { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 } };
+            shah[7, 6] = 1;
+            shah[6, 7] = 13;
+            shah[4, 3] = 2;
+            ArinaBugHunter(500);
+            if ((computer == 1) && (direction == 1))
+            {
+                turn = 0;
+                comp();
+            }
         }
     }
 }
