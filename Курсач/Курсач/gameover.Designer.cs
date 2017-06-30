@@ -54,7 +54,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "gameover";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "gameover";
+            this.Text = "Конец игры";
             this.ResumeLayout(false);
 
         }
