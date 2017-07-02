@@ -43,7 +43,7 @@ namespace Курсач
             priora = 0,         // Max prioritet hoda compa
             frubl,              // Begining rubly
             index = 0;          // Count of shashkas allowed to move
-        private Point DownPoint;
+        private Point DownPoint, center;
         private Random rnd = new Random();
 
         private void deleteShashka(int j, int i)
@@ -8333,7 +8333,7 @@ namespace Курсач
         private void DoWork()
         {
             Thread.Sleep(1200);
-            okno.ActiveForm.Update();
+            this.Update();
         }
 
         private void comp()
@@ -8456,7 +8456,8 @@ namespace Курсач
             shahOb[21] = shashka22;
             shahOb[22] = shashka23;
             shahOb[23] = shashka24;
-
+            тестToolStripMenuItem.Visible = false;
+            center = this.Location;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -9973,6 +9974,7 @@ namespace Курсач
 
         private void notAllowedMoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            тестToolStripMenuItem.Visible = false; 
             shashka1.Visible = false;
             shashka2.Visible = false;
             shashka3.Visible = false;
@@ -10007,6 +10009,13 @@ namespace Курсач
                 turn = 0;
                 comp();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Size = new Size(522, 550);
+            this.Location = center;
+            тестToolStripMenuItem.Visible = true;
         }
     }
 }

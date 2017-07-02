@@ -62,9 +62,10 @@
             this.сКомпьютеромToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.белыеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.черныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.компьютерКомпьютерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.тестToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notAllowedMoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.компьютерКомпьютерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.root = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -379,6 +380,12 @@
             resources.ApplyResources(this.черныеToolStripMenuItem, "черныеToolStripMenuItem");
             this.черныеToolStripMenuItem.Click += new System.EventHandler(this.черныеToolStripMenuItem_Click_1);
             // 
+            // компьютерКомпьютерToolStripMenuItem
+            // 
+            this.компьютерКомпьютерToolStripMenuItem.Name = "компьютерКомпьютерToolStripMenuItem";
+            resources.ApplyResources(this.компьютерКомпьютерToolStripMenuItem, "компьютерКомпьютерToolStripMenuItem");
+            this.компьютерКомпьютерToolStripMenuItem.Click += new System.EventHandler(this.компьютерКомпьютерToolStripMenuItem_Click);
+            // 
             // тестToolStripMenuItem
             // 
             this.тестToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -392,17 +399,19 @@
             resources.ApplyResources(this.notAllowedMoveToolStripMenuItem, "notAllowedMoveToolStripMenuItem");
             this.notAllowedMoveToolStripMenuItem.Click += new System.EventHandler(this.notAllowedMoveToolStripMenuItem_Click);
             // 
-            // компьютерКомпьютерToolStripMenuItem
+            // root
             // 
-            this.компьютерКомпьютерToolStripMenuItem.Name = "компьютерКомпьютерToolStripMenuItem";
-            resources.ApplyResources(this.компьютерКомпьютерToolStripMenuItem, "компьютерКомпьютерToolStripMenuItem");
-            this.компьютерКомпьютерToolStripMenuItem.Click += new System.EventHandler(this.компьютерКомпьютерToolStripMenuItem_Click);
+            resources.ApplyResources(this.root, "root");
+            this.root.Name = "root";
+            this.root.UseVisualStyleBackColor = true;
+            this.root.Click += new System.EventHandler(this.button1_Click);
             // 
             // okno
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.root);
             this.Controls.Add(this.shashka24);
             this.Controls.Add(this.shashka23);
             this.Controls.Add(this.shashka21);
@@ -478,6 +487,7 @@
         private System.Windows.Forms.ToolStripMenuItem тестToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notAllowedMoveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem компьютерКомпьютерToolStripMenuItem;
+        private System.Windows.Forms.Button root;
     }
 }
 
