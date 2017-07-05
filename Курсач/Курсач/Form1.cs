@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading;
+using System.Net;
+using System.Net.Sockets;
 
 
 namespace Курсач
@@ -243,7 +245,7 @@ namespace Курсач
                         DamkaNoComps = 1;
                         turns = (turns + 1) % 2;
                     }
-                        return;
+                    return;
                 }
                 else
                 {
@@ -8110,36 +8112,33 @@ namespace Курсач
                 shashki[index, j + 1] = 0;
                 int al = allows(X0, Y0, x, y);
                 if (al > 0)
-                {                    
+                {
                     shahs[(y - 31) / 58, (x - 17) / 58] = shahs[(Y0 - 31) / 58, (X0 - 17) / 58];
                     shahs[(Y0 - 31) / 58, (X0 - 17) / 58] = 0;
-                    checkDamkas((y - 31) / 58, (x - 17) / 58);                    
-                    turns = (turns + 1) % 2;                    
+                    checkDamkas((y - 31) / 58, (x - 17) / 58);
+                    turns = (turns + 1) % 2;
                     rublys = rubls();
-                    if ((rublys == 1) && (DamkaNoComps == 0) && (frubl == 0) && (al != 4) && (fdamka == damka[shahs[(y - 31) / 58, (x - 17) / 58] - 1]))
+
+
+                    shashki[index, j + 1] = 2;
+
+                    if ((rublys == 1) && (DamkaNoComps == 0))
                     {
                         shashki[index, j + 1] = 1;
                     }
-                    else
+                    else if ((fdamka == 0) && (damkas[shahs[(y - 31) / 58, (x - 17) / 58] - 1] == 1))
                     {
+                        shashki[index, j + 1] = 3;
+                    }
 
-                        shashki[index, j + 1] = 2;
+                    if (al == 4)
+                    {
+                        shashki[index, j + 1] = 4;
+                    }
 
-                        if ((fdamka == 0) && (damka[shahs[(y - 31) / 58, (x - 17) / 58] - 1] == 1))
-                        {
-                            shashki[index, j + 1] = 3;
-                        }
-
-                        if (al == 4)
-                        {
-                            shashki[index, j + 1] = 4;
-                        }
-
-                        if ((blackCounts == 0) || (whiteCounts == 0))
-                        {
-                            shashki[index, j + 1] = 5;
-                        }
-
+                    if ((blackCounts == 0) || (whiteCounts == 0))
+                    {
+                        shashki[index, j + 1] = 5;
                     }
                     if (priora < shashki[index, j + 1]) priora = shashki[index, j + 1];
                     //if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }

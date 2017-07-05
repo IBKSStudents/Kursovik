@@ -744,14 +744,14 @@
   <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
     <value>Справка</value>
   </data>
-  <data name="version510ToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+  <data name="versionToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="version510ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="versionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
-  <data name="version510ToolStripMenuItem.Text" xml:space="preserve">
-    <value>version 5.1.0</value>
+  <data name="versionToolStripMenuItem.Text" xml:space="preserve">
+    <value>version 5.2.1</value>
   </data>
   <data name="менюToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 20</value>
@@ -1446,6 +1446,12 @@
   <data name="&gt;&gt;справкаToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;versionToolStripMenuItem.Name" xml:space="preserve">
+    <value>versionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;versionToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;новаяИграToolStripMenuItem.Name" xml:space="preserve">
     <value>новаяИграToolStripMenuItem</value>
   </data>
@@ -1492,12 +1498,6 @@
     <value>notAllowedMoveToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;notAllowedMoveToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;version510ToolStripMenuItem.Name" xml:space="preserve">
-    <value>version510ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;version510ToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

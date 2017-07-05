@@ -57,6 +57,7 @@
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.правилаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новаяИграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сДругомToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сКомпьютеромToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +67,6 @@
             this.тестToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notAllowedMoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.root = new System.Windows.Forms.Button();
-            this.version510ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -331,7 +331,7 @@
             this.менюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.правилаToolStripMenuItem,
             this.справкаToolStripMenuItem,
-            this.version510ToolStripMenuItem});
+            this.versionToolStripMenuItem});
             this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
             resources.ApplyResources(this.менюToolStripMenuItem, "менюToolStripMenuItem");
             // 
@@ -346,6 +346,11 @@
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             resources.ApplyResources(this.справкаToolStripMenuItem, "справкаToolStripMenuItem");
             this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
+            // 
+            // versionToolStripMenuItem
+            // 
+            resources.ApplyResources(this.versionToolStripMenuItem, "versionToolStripMenuItem");
+            this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
             // 
             // новаяИграToolStripMenuItem
             // 
@@ -407,11 +412,6 @@
             this.root.Name = "root";
             this.root.UseVisualStyleBackColor = true;
             this.root.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // version510ToolStripMenuItem
-            // 
-            resources.ApplyResources(this.version510ToolStripMenuItem, "version510ToolStripMenuItem");
-            this.version510ToolStripMenuItem.Name = "version510ToolStripMenuItem";
             // 
             // okno
             // 
@@ -495,7 +495,7 @@
         private System.Windows.Forms.ToolStripMenuItem notAllowedMoveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem компьютерКомпьютерToolStripMenuItem;
         private System.Windows.Forms.Button root;
-        private System.Windows.Forms.ToolStripMenuItem version510ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem versionToolStripMenuItem;
     }
 }
 
