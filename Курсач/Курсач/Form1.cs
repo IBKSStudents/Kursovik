@@ -75,7 +75,6 @@ namespace Курсач
             if (shah[i, j] == 23) shashka23.Visible = false;
             if (shah[i, j] == 24) shashka24.Visible = false;
         }
-
         private void setDamka(int i, int j)
         {
             DamkaNoComp = 1;
@@ -202,7 +201,6 @@ namespace Курсач
             }
             turn = (turn + 1) % 2;
         }
-
         private void checkDamka(int j, int i)
         {
             if (turn == 0)
@@ -232,7 +230,6 @@ namespace Курсач
                 }
             }
         }
-
         private void checkDamkas(int j, int i)
         {
             if (turns == 0)
@@ -282,7 +279,6 @@ namespace Курсач
                 }
             }
         }
-
         private int rubl()
         {
             int r = 0, x, y, x00, y00, x1l, x2l, y1l, y2l, x1r, x2r, y1r, y2r, d1r, d1l, d2r, d2l;
@@ -4019,7 +4015,6 @@ namespace Курсач
             }
             return r;
         }
-
         private int rubls()
         {
             int r = 0, x, y, x00, y00, x1l, x2l, y1l, y2l, x1r, x2r, y1r, y2r, d1r, d1l, d2r, d2l;
@@ -7756,7 +7751,6 @@ namespace Курсач
             }
             return r;
         }
-
         private int allow(int x, int y)
         {
 
@@ -7895,7 +7889,6 @@ namespace Курсач
             return 1;
 
         }
-
         private int allows(int X0, int Y0, int x, int y)
         {
 
@@ -8030,7 +8023,6 @@ namespace Курсач
             return 1;
 
         }
-
         private void setCoord()
         {
             vis[0] = shashka1.Visible;
@@ -8095,7 +8087,6 @@ namespace Курсач
             frubl = rubly;
             DamkaNoComps = 0;
         }
-
         private void cAllow(Button s)
         {
             int X0 = s.Location.X,
@@ -8147,7 +8138,6 @@ namespace Курсач
             }
             index++;
         }
-
         private int cAllowForCheck(Button s)
         {
             int x = (s.Location.X - 17) / 58,
@@ -8294,7 +8284,6 @@ namespace Курсач
                 }
             }
         }
-
         private void checkAbility()
         {
             int allows = 0;
@@ -8328,13 +8317,11 @@ namespace Курсач
                 }
             }
         }
-
         private void DoWork()
         {
             Thread.Sleep(1200);
             this.Update();
         }
-
         private void comp()
         {
             if (DamkaNoComp == 1)
@@ -8415,7 +8402,6 @@ namespace Курсач
                 comp();
             }
         }
-
         private void gameover()
         {
             if (GameIsOver == 1) return;
@@ -8771,7 +8757,9 @@ namespace Курсач
                 }
             }
         }
+
         //-----------------------------CLICKS------------------------------------
+
         private void shashka1_Click(object sender, EventArgs e)
         {
             ArinaBugHunter(0);
@@ -9614,6 +9602,7 @@ namespace Курсач
         }
         /*------------------------------END-CLICKS--------------------------------------------*/
 
+
         //1 - белый, иначе - черный
         private void starts(Button o, int cl)
         {
@@ -9624,12 +9613,10 @@ namespace Курсач
             o.FlatAppearance.MouseDownBackColor = Color.Transparent;
             o.FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
-
         private void правилаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("bin\\rools.txt");
         }
-
         private void setShahPosition()
         {
             DamkaNoComp = 0;
@@ -9736,7 +9723,6 @@ namespace Курсач
             direction = 0;      // Direction of turns
             turn = 0;
         }
-
         private void белыеToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             GameIsOver = 0;
@@ -9773,7 +9759,6 @@ namespace Курсач
             for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
             computer = 1;
         }
-
         private void компьютерКомпьютерToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GameIsOver = 0;
@@ -9815,7 +9800,6 @@ namespace Курсач
                 comp();
             }
         }
-
         private void черныеToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             GameIsOver = 0;
@@ -9854,7 +9838,6 @@ namespace Курсач
             rubl();
             comp();
         }
-
         private void сДругомToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GameIsOver = 0;
@@ -9891,7 +9874,6 @@ namespace Курсач
             for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
             computer = 0;
         }
-
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("bin\\Readme.txt");
@@ -9970,7 +9952,6 @@ namespace Курсач
             rubly = 0;
             for (int i = 0; i < 24; i++) { rub[i] = 0; damka[i] = 0; }
         }
-
         private void notAllowedMoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             тестToolStripMenuItem.Visible = false; 
@@ -10009,7 +9990,6 @@ namespace Курсач
                 comp();
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Size = new Size(522, 550);
