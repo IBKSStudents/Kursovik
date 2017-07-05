@@ -759,47 +759,11 @@
   <data name="менюToolStripMenuItem.Text" xml:space="preserve">
     <value>Меню</value>
   </data>
-  <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 22</value>
-  </data>
-  <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
-    <value>С человеком</value>
-  </data>
-  <data name="белыеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 22</value>
-  </data>
-  <data name="белыеToolStripMenuItem.Text" xml:space="preserve">
-    <value>Белые</value>
-  </data>
-  <data name="черныеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 22</value>
-  </data>
-  <data name="черныеToolStripMenuItem.Text" xml:space="preserve">
-    <value>Черные</value>
-  </data>
-  <data name="сКомпьютеромToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 22</value>
-  </data>
-  <data name="сКомпьютеромToolStripMenuItem.Text" xml:space="preserve">
-    <value>С компьютером</value>
-  </data>
-  <data name="компьютерКомпьютерToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 22</value>
-  </data>
-  <data name="компьютерКомпьютерToolStripMenuItem.Text" xml:space="preserve">
-    <value>Компьютер - Компьютер</value>
-  </data>
   <data name="новаяИграToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 20</value>
   </data>
   <data name="новаяИграToolStripMenuItem.Text" xml:space="preserve">
     <value>Новая игра</value>
-  </data>
-  <data name="notAllowedMoveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="notAllowedMoveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Not allowed move</value>
   </data>
   <data name="тестToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 20</value>
@@ -833,6 +797,42 @@
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>25</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 22</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
+    <value>С человеком</value>
+  </data>
+  <data name="сКомпьютеромToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 22</value>
+  </data>
+  <data name="сКомпьютеромToolStripMenuItem.Text" xml:space="preserve">
+    <value>С компьютером</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Белые</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Черные</value>
+  </data>
+  <data name="компьютерКомпьютерToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 22</value>
+  </data>
+  <data name="компьютерКомпьютерToolStripMenuItem.Text" xml:space="preserve">
+    <value>Компьютер - Компьютер</value>
+  </data>
+  <data name="notAllowedMoveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="notAllowedMoveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Not allowed move</value>
   </data>
   <data name="root.Location" type="System.Drawing.Point, System.Drawing">
     <value>1335, 27</value>
