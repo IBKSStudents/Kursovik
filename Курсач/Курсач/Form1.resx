@@ -732,6 +732,48 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="правилаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data name="правилаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Правила</value>
+  </data>
+  <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="versionToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="versionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="versionToolStripMenuItem.Text" xml:space="preserve">
+    <value>version 5.3.0</value>
+  </data>
+  <data name="менюToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 20</value>
+  </data>
+  <data name="менюToolStripMenuItem.Text" xml:space="preserve">
+    <value>Меню</value>
+  </data>
+  <data name="новаяИграToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 20</value>
+  </data>
+  <data name="новаяИграToolStripMenuItem.Text" xml:space="preserve">
+    <value>Новая игра</value>
+  </data>
+  <data name="тестToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="тестToolStripMenuItem.Text" xml:space="preserve">
+    <value>Тест</value>
+  </data>
+  <data name="тестToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -755,39 +797,6 @@
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>25</value>
-  </data>
-  <data name="менюToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 20</value>
-  </data>
-  <data name="менюToolStripMenuItem.Text" xml:space="preserve">
-    <value>Меню</value>
-  </data>
-  <data name="правилаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
-  </data>
-  <data name="правилаToolStripMenuItem.Text" xml:space="preserve">
-    <value>Правила</value>
-  </data>
-  <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
-  </data>
-  <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
-    <value>Справка</value>
-  </data>
-  <data name="versionToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="versionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
-  </data>
-  <data name="versionToolStripMenuItem.Text" xml:space="preserve">
-    <value>version 5.2.1</value>
-  </data>
-  <data name="новаяИграToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 20</value>
-  </data>
-  <data name="новаяИграToolStripMenuItem.Text" xml:space="preserve">
-    <value>Новая игра</value>
   </data>
   <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>213, 22</value>
@@ -818,15 +827,6 @@
   </data>
   <data name="компьютерКомпьютерToolStripMenuItem.Text" xml:space="preserve">
     <value>Компьютер - Компьютер</value>
-  </data>
-  <data name="тестToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
-  </data>
-  <data name="тестToolStripMenuItem.Text" xml:space="preserve">
-    <value>Тест</value>
-  </data>
-  <data name="тестToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="notAllowedMoveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 22</value>
