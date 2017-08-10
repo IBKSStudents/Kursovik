@@ -14,20 +14,12 @@ C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\
 C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.okno.resources
 C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.okno.ru-RU.resources
 C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
-C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Курсач.exe.config
-C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.exe
-C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.pdb
 C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.gameover.resources
-C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Курсач.exe
-C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Курсач.pdb
-C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\ru-RU\Курсач.resources.dll
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.csprojResolveAssemblyReference.cache
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.okno.resources
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.gameover.resources
-C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.Properties.Resources.resources
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.okno.ru-RU.resources
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
-C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\ru-RU\Курсач.resources.dll
 C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Voramix.exe.config
 C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Voramix.exe
 C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Voramix.pdb
@@ -36,3 +28,11 @@ C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\
 C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\ru-RU\Voramix.resources.dll
 C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.exe
 C:\Users\Диверсант\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.pdb
+C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Voramix.exe.config
+C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.exe
+C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.pdb
+C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Voramix.exe
+C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Voramix.pdb
+C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\ru-RU\Voramix.resources.dll
+C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.Properties.Resources.resources
+C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\ru-RU\Voramix.resources.dll
