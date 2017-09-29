@@ -36,3 +36,6 @@ C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\ru-RU\Voramix.resources.dll
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.Properties.Resources.resources
 C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\ru-RU\Voramix.resources.dll
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Voramix.exe.config
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.exe
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.pdb
