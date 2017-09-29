@@ -57,13 +57,16 @@
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.правилаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новаяИграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сДругомToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сКомпьютеромToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.белыеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.черныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.компьютерКомпьютерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.тестToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notAllowedMoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.root = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,9 +77,9 @@
             this.shashka1.Name = "shashka1";
             this.shashka1.TabStop = false;
             this.shashka1.UseVisualStyleBackColor = false;
-            this.shashka1.Click += new System.EventHandler(this.shashka1_Click);
             this.shashka1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka1_MouseDown);
             this.shashka1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka1_MouseMove);
+            this.shashka1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka1_MouseUp);
             // 
             // shashka2
             // 
@@ -84,9 +87,9 @@
             resources.ApplyResources(this.shashka2, "shashka2");
             this.shashka2.Name = "shashka2";
             this.shashka2.UseVisualStyleBackColor = false;
-            this.shashka2.Click += new System.EventHandler(this.shashka2_Click);
             this.shashka2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseDown);
             this.shashka2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseMove);
+            this.shashka2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseUp);
             // 
             // shashka3
             // 
@@ -94,9 +97,9 @@
             resources.ApplyResources(this.shashka3, "shashka3");
             this.shashka3.Name = "shashka3";
             this.shashka3.UseVisualStyleBackColor = false;
-            this.shashka3.Click += new System.EventHandler(this.shashka3_Click);
             this.shashka3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka3_MouseDown);
             this.shashka3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka3_MouseMove);
+            this.shashka3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka3_MouseUp);
             // 
             // shashka4
             // 
@@ -104,9 +107,9 @@
             resources.ApplyResources(this.shashka4, "shashka4");
             this.shashka4.Name = "shashka4";
             this.shashka4.UseVisualStyleBackColor = false;
-            this.shashka4.Click += new System.EventHandler(this.shashka4_Click);
             this.shashka4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka4_MouseDown);
             this.shashka4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka4_MouseMove);
+            this.shashka4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka4_MouseUp);
             // 
             // shashka8
             // 
@@ -114,9 +117,9 @@
             resources.ApplyResources(this.shashka8, "shashka8");
             this.shashka8.Name = "shashka8";
             this.shashka8.UseVisualStyleBackColor = false;
-            this.shashka8.Click += new System.EventHandler(this.shashka8_Click);
             this.shashka8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka8_MouseDown);
             this.shashka8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka8_MouseMove);
+            this.shashka8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka8_MouseUp);
             // 
             // shashka7
             // 
@@ -124,9 +127,9 @@
             resources.ApplyResources(this.shashka7, "shashka7");
             this.shashka7.Name = "shashka7";
             this.shashka7.UseVisualStyleBackColor = false;
-            this.shashka7.Click += new System.EventHandler(this.shashka7_Click);
             this.shashka7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka7_MouseDown);
             this.shashka7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka7_MouseMove);
+            this.shashka7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka7_MouseUp);
             // 
             // shashka5
             // 
@@ -135,9 +138,9 @@
             this.shashka5.Name = "shashka5";
             this.shashka5.TabStop = false;
             this.shashka5.UseVisualStyleBackColor = false;
-            this.shashka5.Click += new System.EventHandler(this.shashka5_Click);
             this.shashka5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka5_MouseDown);
             this.shashka5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka5_MouseMove);
+            this.shashka5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka5_MouseUp);
             // 
             // shashka6
             // 
@@ -145,9 +148,9 @@
             resources.ApplyResources(this.shashka6, "shashka6");
             this.shashka6.Name = "shashka6";
             this.shashka6.UseVisualStyleBackColor = false;
-            this.shashka6.Click += new System.EventHandler(this.shashka6_Click);
             this.shashka6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka6_MouseDown);
             this.shashka6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka6_MouseMove);
+            this.shashka6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka6_MouseUp);
             // 
             // shashka12
             // 
@@ -155,9 +158,9 @@
             resources.ApplyResources(this.shashka12, "shashka12");
             this.shashka12.Name = "shashka12";
             this.shashka12.UseVisualStyleBackColor = false;
-            this.shashka12.Click += new System.EventHandler(this.shashka12_Click);
             this.shashka12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka12_MouseDown);
             this.shashka12.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka12_MouseMove);
+            this.shashka12.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka12_MouseUp);
             // 
             // shashka11
             // 
@@ -165,9 +168,9 @@
             resources.ApplyResources(this.shashka11, "shashka11");
             this.shashka11.Name = "shashka11";
             this.shashka11.UseVisualStyleBackColor = false;
-            this.shashka11.Click += new System.EventHandler(this.shashka11_Click);
             this.shashka11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka11_MouseDown);
             this.shashka11.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka11_MouseMove);
+            this.shashka11.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka11_MouseUp);
             // 
             // shashka9
             // 
@@ -176,9 +179,9 @@
             this.shashka9.Name = "shashka9";
             this.shashka9.TabStop = false;
             this.shashka9.UseVisualStyleBackColor = false;
-            this.shashka9.Click += new System.EventHandler(this.shashka9_Click);
             this.shashka9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka9_MouseDown);
             this.shashka9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka9_MouseMove);
+            this.shashka9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka9_MouseUp);
             // 
             // shashka10
             // 
@@ -186,9 +189,9 @@
             resources.ApplyResources(this.shashka10, "shashka10");
             this.shashka10.Name = "shashka10";
             this.shashka10.UseVisualStyleBackColor = false;
-            this.shashka10.Click += new System.EventHandler(this.shashka10_Click);
             this.shashka10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka10_MouseDown);
             this.shashka10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka10_MouseMove);
+            this.shashka10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka10_MouseUp);
             // 
             // shashka24
             // 
@@ -196,9 +199,9 @@
             resources.ApplyResources(this.shashka24, "shashka24");
             this.shashka24.Name = "shashka24";
             this.shashka24.UseVisualStyleBackColor = false;
-            this.shashka24.Click += new System.EventHandler(this.shashka24_Click);
             this.shashka24.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka24_MouseDown);
             this.shashka24.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka24_MouseMove);
+            this.shashka24.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka24_MouseUp);
             // 
             // shashka23
             // 
@@ -206,9 +209,9 @@
             resources.ApplyResources(this.shashka23, "shashka23");
             this.shashka23.Name = "shashka23";
             this.shashka23.UseVisualStyleBackColor = false;
-            this.shashka23.Click += new System.EventHandler(this.shashka23_Click);
             this.shashka23.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka23_MouseDown);
             this.shashka23.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka23_MouseMove);
+            this.shashka23.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka23_MouseUp);
             // 
             // shashka21
             // 
@@ -217,9 +220,9 @@
             this.shashka21.Name = "shashka21";
             this.shashka21.TabStop = false;
             this.shashka21.UseVisualStyleBackColor = false;
-            this.shashka21.Click += new System.EventHandler(this.shashka21_Click);
             this.shashka21.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka21_MouseDown);
             this.shashka21.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka21_MouseMove);
+            this.shashka21.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka21_MouseUp);
             // 
             // shashka22
             // 
@@ -227,9 +230,9 @@
             resources.ApplyResources(this.shashka22, "shashka22");
             this.shashka22.Name = "shashka22";
             this.shashka22.UseVisualStyleBackColor = false;
-            this.shashka22.Click += new System.EventHandler(this.shashka22_Click);
             this.shashka22.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka22_MouseDown);
             this.shashka22.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka22_MouseMove);
+            this.shashka22.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka22_MouseUp);
             // 
             // shashka20
             // 
@@ -237,9 +240,9 @@
             resources.ApplyResources(this.shashka20, "shashka20");
             this.shashka20.Name = "shashka20";
             this.shashka20.UseVisualStyleBackColor = false;
-            this.shashka20.Click += new System.EventHandler(this.shashka20_Click);
             this.shashka20.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka20_MouseDown);
             this.shashka20.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka20_MouseMove);
+            this.shashka20.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka20_MouseUp);
             // 
             // shashka19
             // 
@@ -247,9 +250,9 @@
             resources.ApplyResources(this.shashka19, "shashka19");
             this.shashka19.Name = "shashka19";
             this.shashka19.UseVisualStyleBackColor = false;
-            this.shashka19.Click += new System.EventHandler(this.shashka19_Click);
             this.shashka19.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka19_MouseDown);
             this.shashka19.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka19_MouseMove);
+            this.shashka19.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka19_MouseUp);
             // 
             // shashka17
             // 
@@ -258,9 +261,9 @@
             this.shashka17.Name = "shashka17";
             this.shashka17.TabStop = false;
             this.shashka17.UseVisualStyleBackColor = false;
-            this.shashka17.Click += new System.EventHandler(this.shashka17_Click);
             this.shashka17.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka17_MouseDown);
             this.shashka17.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka17_MouseMove);
+            this.shashka17.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka17_MouseUp);
             // 
             // shashka18
             // 
@@ -268,9 +271,9 @@
             resources.ApplyResources(this.shashka18, "shashka18");
             this.shashka18.Name = "shashka18";
             this.shashka18.UseVisualStyleBackColor = false;
-            this.shashka18.Click += new System.EventHandler(this.shashka18_Click);
             this.shashka18.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka18_MouseDown);
             this.shashka18.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka18_MouseMove);
+            this.shashka18.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka18_MouseUp);
             // 
             // shashka16
             // 
@@ -278,9 +281,9 @@
             resources.ApplyResources(this.shashka16, "shashka16");
             this.shashka16.Name = "shashka16";
             this.shashka16.UseVisualStyleBackColor = false;
-            this.shashka16.Click += new System.EventHandler(this.shashka16_Click);
             this.shashka16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka16_MouseDown);
             this.shashka16.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka16_MouseMove);
+            this.shashka16.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka16_MouseUp);
             // 
             // shashka15
             // 
@@ -288,9 +291,9 @@
             resources.ApplyResources(this.shashka15, "shashka15");
             this.shashka15.Name = "shashka15";
             this.shashka15.UseVisualStyleBackColor = false;
-            this.shashka15.Click += new System.EventHandler(this.shashka15_Click);
             this.shashka15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka15_MouseDown);
             this.shashka15.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka15_MouseMove);
+            this.shashka15.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka15_MouseUp);
             // 
             // shashka13
             // 
@@ -299,9 +302,9 @@
             this.shashka13.Name = "shashka13";
             this.shashka13.TabStop = false;
             this.shashka13.UseVisualStyleBackColor = false;
-            this.shashka13.Click += new System.EventHandler(this.shashka13_Click);
             this.shashka13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka13_MouseDown);
             this.shashka13.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka13_MouseMove);
+            this.shashka13.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka13_MouseUp);
             // 
             // shashka14
             // 
@@ -309,9 +312,9 @@
             resources.ApplyResources(this.shashka14, "shashka14");
             this.shashka14.Name = "shashka14";
             this.shashka14.UseVisualStyleBackColor = false;
-            this.shashka14.Click += new System.EventHandler(this.shashka14_Click);
             this.shashka14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka14_MouseDown);
             this.shashka14.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka14_MouseMove);
+            this.shashka14.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka14_MouseUp);
             // 
             // menuStrip1
             // 
@@ -327,7 +330,8 @@
             // 
             this.менюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.правилаToolStripMenuItem,
-            this.справкаToolStripMenuItem});
+            this.справкаToolStripMenuItem,
+            this.versionToolStripMenuItem});
             this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
             resources.ApplyResources(this.менюToolStripMenuItem, "менюToolStripMenuItem");
             // 
@@ -343,11 +347,17 @@
             resources.ApplyResources(this.справкаToolStripMenuItem, "справкаToolStripMenuItem");
             this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
             // 
+            // versionToolStripMenuItem
+            // 
+            resources.ApplyResources(this.versionToolStripMenuItem, "versionToolStripMenuItem");
+            this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
+            // 
             // новаяИграToolStripMenuItem
             // 
             this.новаяИграToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.сДругомToolStripMenuItem,
-            this.сКомпьютеромToolStripMenuItem});
+            this.сКомпьютеромToolStripMenuItem,
+            this.компьютерКомпьютерToolStripMenuItem});
             this.новаяИграToolStripMenuItem.Name = "новаяИграToolStripMenuItem";
             resources.ApplyResources(this.новаяИграToolStripMenuItem, "новаяИграToolStripMenuItem");
             // 
@@ -377,6 +387,12 @@
             resources.ApplyResources(this.черныеToolStripMenuItem, "черныеToolStripMenuItem");
             this.черныеToolStripMenuItem.Click += new System.EventHandler(this.черныеToolStripMenuItem_Click_1);
             // 
+            // компьютерКомпьютерToolStripMenuItem
+            // 
+            this.компьютерКомпьютерToolStripMenuItem.Name = "компьютерКомпьютерToolStripMenuItem";
+            resources.ApplyResources(this.компьютерКомпьютерToolStripMenuItem, "компьютерКомпьютерToolStripMenuItem");
+            this.компьютерКомпьютерToolStripMenuItem.Click += new System.EventHandler(this.компьютерКомпьютерToolStripMenuItem_Click);
+            // 
             // тестToolStripMenuItem
             // 
             this.тестToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -390,11 +406,19 @@
             resources.ApplyResources(this.notAllowedMoveToolStripMenuItem, "notAllowedMoveToolStripMenuItem");
             this.notAllowedMoveToolStripMenuItem.Click += new System.EventHandler(this.notAllowedMoveToolStripMenuItem_Click);
             // 
+            // root
+            // 
+            resources.ApplyResources(this.root, "root");
+            this.root.Name = "root";
+            this.root.UseVisualStyleBackColor = true;
+            this.root.Click += new System.EventHandler(this.button1_Click);
+            // 
             // okno
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.root);
             this.Controls.Add(this.shashka24);
             this.Controls.Add(this.shashka23);
             this.Controls.Add(this.shashka21);
@@ -469,6 +493,9 @@
         private System.Windows.Forms.ToolStripMenuItem правилаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem тестToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notAllowedMoveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem компьютерКомпьютерToolStripMenuItem;
+        private System.Windows.Forms.Button root;
+        private System.Windows.Forms.ToolStripMenuItem versionToolStripMenuItem;
     }
 }
 

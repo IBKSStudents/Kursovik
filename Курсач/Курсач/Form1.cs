@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading;
+using System.Net;
+using System.Net.Sockets;
 
 
 namespace Курсач
@@ -43,7 +45,7 @@ namespace Курсач
             priora = 0,         // Max prioritet hoda compa
             frubl,              // Begining rubly
             index = 0;          // Count of shashkas allowed to move
-        private Point DownPoint;
+        private Point DownPoint, center;
         private Random rnd = new Random();
 
         private void deleteShashka(int j, int i)
@@ -243,7 +245,7 @@ namespace Курсач
                         DamkaNoComps = 1;
                         turns = (turns + 1) % 2;
                     }
-                        return;
+                    return;
                 }
                 else
                 {
@@ -8110,36 +8112,33 @@ namespace Курсач
                 shashki[index, j + 1] = 0;
                 int al = allows(X0, Y0, x, y);
                 if (al > 0)
-                {                    
+                {
                     shahs[(y - 31) / 58, (x - 17) / 58] = shahs[(Y0 - 31) / 58, (X0 - 17) / 58];
                     shahs[(Y0 - 31) / 58, (X0 - 17) / 58] = 0;
-                    checkDamkas((y - 31) / 58, (x - 17) / 58);                    
-                    turns = (turns + 1) % 2;                    
+                    checkDamkas((y - 31) / 58, (x - 17) / 58);
+                    turns = (turns + 1) % 2;
                     rublys = rubls();
-                    if ((rublys == 1) && (DamkaNoComps == 0) && (frubl == 0) && (al != 4) && (fdamka == damka[shahs[(y - 31) / 58, (x - 17) / 58] - 1]))
+
+
+                    shashki[index, j + 1] = 2;
+
+                    if ((rublys == 1) && (DamkaNoComps == 0))
                     {
                         shashki[index, j + 1] = 1;
                     }
-                    else
+                    else if ((fdamka == 0) && (damkas[shahs[(y - 31) / 58, (x - 17) / 58] - 1] == 1))
                     {
+                        shashki[index, j + 1] = 3;
+                    }
 
-                        shashki[index, j + 1] = 2;
+                    if (al == 4)
+                    {
+                        shashki[index, j + 1] = 4;
+                    }
 
-                        if ((fdamka == 0) && (damka[shahs[(y - 31) / 58, (x - 17) / 58] - 1] == 1))
-                        {
-                            shashki[index, j + 1] = 3;
-                        }
-
-                        if (al == 4)
-                        {
-                            shashki[index, j + 1] = 4;
-                        }
-
-                        if ((blackCounts == 0) || (whiteCounts == 0))
-                        {
-                            shashki[index, j + 1] = 5;
-                        }
-
+                    if ((blackCounts == 0) || (whiteCounts == 0))
+                    {
+                        shashki[index, j + 1] = 5;
                     }
                     if (priora < shashki[index, j + 1]) priora = shashki[index, j + 1];
                     //if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
@@ -8332,7 +8331,8 @@ namespace Курсач
 
         private void DoWork()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(1200);
+            this.Update();
         }
 
         private void comp()
@@ -8455,7 +8455,8 @@ namespace Курсач
             shahOb[21] = shashka22;
             shahOb[22] = shashka23;
             shahOb[23] = shashka24;
-
+            тестToolStripMenuItem.Visible = false;
+            center = this.Location;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -8509,10 +8510,825 @@ namespace Курсач
             shashka24.Visible = false;
 
         }
+
         private void shashka1_MouseDown(object sender, MouseEventArgs e)
         {
             DownPoint = e.Location;
+            ArinaBugHunter(0);
+            clicks[0] = 1;
+            x0 = shashka1.Location.X;
+            y0 = shashka1.Location.Y;
+            shashka1.BringToFront();
         }
+        private void shashka2_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(1);
+            clicks[1] = 1;
+            x0 = shashka2.Location.X;
+            y0 = shashka2.Location.Y;
+            shashka2.BringToFront();
+        }
+        private void shashka3_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(2);
+            clicks[2] = 1;
+            x0 = shashka3.Location.X;
+            y0 = shashka3.Location.Y;
+            shashka3.BringToFront();
+        }
+        private void shashka4_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(3);
+            clicks[3] = 1;
+            x0 = shashka4.Location.X;
+            y0 = shashka4.Location.Y;
+            shashka4.BringToFront();
+        }
+        private void shashka5_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(4);
+            clicks[4] = 1;
+            x0 = shashka5.Location.X;
+            y0 = shashka5.Location.Y;
+            shashka5.BringToFront();
+        }
+        private void shashka6_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(5);
+            clicks[5] = 1;
+            x0 = shashka6.Location.X;
+            y0 = shashka6.Location.Y;
+            shashka6.BringToFront();
+        }
+        private void shashka7_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(6);
+            clicks[6] = 1;
+            x0 = shashka7.Location.X;
+            y0 = shashka7.Location.Y;
+            shashka7.BringToFront();
+        }
+        private void shashka8_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(7);
+            clicks[7] = 1;
+            x0 = shashka8.Location.X;
+            y0 = shashka8.Location.Y;
+            shashka8.BringToFront();
+        }
+        private void shashka9_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(8);
+            clicks[8] = 1;
+            x0 = shashka9.Location.X;
+            y0 = shashka9.Location.Y;
+            shashka9.BringToFront();
+        }
+        private void shashka10_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(9);
+            clicks[9] = 1;
+            x0 = shashka10.Location.X;
+            y0 = shashka10.Location.Y;
+            shashka10.BringToFront();
+        }
+        private void shashka11_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(10);
+            clicks[10] = 1;
+            x0 = shashka11.Location.X;
+            y0 = shashka11.Location.Y;
+            shashka11.BringToFront();
+        }
+        private void shashka12_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(11);
+            clicks[11] = 1;
+            x0 = shashka12.Location.X;
+            y0 = shashka12.Location.Y;
+            shashka12.BringToFront();
+        }
+        private void shashka13_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(12);
+            clicks[12] = 1;
+            x0 = shashka13.Location.X;
+            y0 = shashka13.Location.Y;
+            shashka13.BringToFront();
+        }
+        private void shashka14_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(13);
+            clicks[13] = 1;
+            x0 = shashka14.Location.X;
+            y0 = shashka14.Location.Y;
+            shashka14.BringToFront();
+        }
+        private void shashka15_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(14);
+            clicks[14] = 1;
+            x0 = shashka15.Location.X;
+            y0 = shashka15.Location.Y;
+            shashka15.BringToFront();
+        }
+        private void shashka16_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(15);
+            clicks[15] = 1;
+            x0 = shashka16.Location.X;
+            y0 = shashka16.Location.Y;
+            shashka16.BringToFront();
+        }
+        private void shashka17_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(16);
+            clicks[16] = 1;
+            x0 = shashka17.Location.X;
+            y0 = shashka17.Location.Y;
+            shashka17.BringToFront();
+        }
+        private void shashka18_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(17);
+            clicks[17] = 1;
+            x0 = shashka18.Location.X;
+            y0 = shashka18.Location.Y;
+            shashka18.BringToFront();
+        }
+        private void shashka19_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(18);
+            clicks[18] = 1;
+            x0 = shashka19.Location.X;
+            y0 = shashka19.Location.Y;
+            shashka19.BringToFront();
+        }
+        private void shashka20_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(19);
+            clicks[19] = 1;
+            x0 = shashka20.Location.X;
+            y0 = shashka20.Location.Y;
+            shashka20.BringToFront();
+        }
+        private void shashka21_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(20);
+            clicks[20] = 1;
+            x0 = shashka21.Location.X;
+            y0 = shashka21.Location.Y;
+            shashka21.BringToFront();
+        }
+        private void shashka22_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(21);
+            clicks[21] = 1;
+            x0 = shashka22.Location.X;
+            y0 = shashka22.Location.Y;
+            shashka22.BringToFront();
+        }
+        private void shashka23_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(22);
+            clicks[22] = 1;
+            x0 = shashka23.Location.X;
+            y0 = shashka23.Location.Y;
+            shashka23.BringToFront();
+        }
+        private void shashka24_MouseDown(object sender, MouseEventArgs e)
+        {
+            DownPoint = e.Location;
+            ArinaBugHunter(23);
+            clicks[23] = 1;
+            x0 = shashka24.Location.X;
+            y0 = shashka24.Location.Y;
+            shashka24.BringToFront();
+        }
+
+        private void shashka1_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[0] = 0;
+            int x, y;
+            x = shashka1.Location.X;
+            y = shashka1.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka1.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 1;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka1.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka2_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[1] = 0;
+            int x, y;
+            x = shashka2.Location.X;
+            y = shashka2.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka2.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 2;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka2.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka3_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[2] = 0;
+            int x, y;
+            x = shashka3.Location.X;
+            y = shashka3.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka3.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 3;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka3.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka4_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[3] = 0;
+            int x, y;
+            x = shashka4.Location.X;
+            y = shashka4.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka4.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 4;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka4.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka5_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[4] = 0;
+            int x, y;
+            x = shashka5.Location.X;
+            y = shashka5.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka5.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 5;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka5.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka6_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[5] = 0;
+            int x, y;
+            x = shashka6.Location.X;
+            y = shashka6.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka6.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 6;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka6.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka7_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[6] = 0;
+            int x, y;
+            x = shashka7.Location.X;
+            y = shashka7.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka7.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 7;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka7.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka8_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[7] = 0;
+            int x, y;
+            x = shashka8.Location.X;
+            y = shashka8.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka8.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 8;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka8.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka9_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[8] = 0;
+            int x, y;
+            x = shashka9.Location.X;
+            y = shashka9.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka9.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 9;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka9.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka10_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[9] = 0;
+            int x, y;
+            x = shashka10.Location.X;
+            y = shashka10.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka10.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 10;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka10.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka11_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[10] = 0;
+            int x, y;
+            x = shashka11.Location.X;
+            y = shashka11.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka11.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 11;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka11.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka12_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[11] = 0;
+            int x, y;
+            x = shashka12.Location.X;
+            y = shashka12.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka12.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 12;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka12.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka13_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[12] = 0;
+            int x, y;
+            x = shashka13.Location.X;
+            y = shashka13.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka13.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 13;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka13.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka14_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[13] = 0;
+            int x, y;
+            x = shashka14.Location.X;
+            y = shashka14.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka14.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 14;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka14.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka15_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[14] = 0;
+            int x, y;
+            x = shashka15.Location.X;
+            y = shashka15.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka15.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 15;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka15.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka16_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[15] = 0;
+            int x, y;
+            x = shashka16.Location.X;
+            y = shashka16.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka16.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 16;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka16.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka17_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[16] = 0;
+            int x, y;
+            x = shashka17.Location.X;
+            y = shashka17.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka17.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 17;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka17.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka18_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[17] = 0;
+            int x, y;
+            x = shashka18.Location.X;
+            y = shashka18.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka18.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 18;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka18.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka19_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[18] = 0;
+            int x, y;
+            x = shashka19.Location.X;
+            y = shashka19.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka19.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 19;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka19.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka20_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[19] = 0;
+            int x, y;
+            x = shashka20.Location.X;
+            y = shashka20.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka20.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 20;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka20.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka21_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[20] = 0;
+            int x, y;
+            x = shashka21.Location.X;
+            y = shashka21.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka21.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 21;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka21.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka22_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[21] = 0;
+            int x, y;
+            x = shashka22.Location.X;
+            y = shashka22.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka22.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 22;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka22.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka23_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[22] = 0;
+            int x, y;
+            x = shashka23.Location.X;
+            y = shashka23.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka23.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 23;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka23.Location = new Point(x0, y0);
+            }
+        }
+        private void shashka24_MouseUp(object sender, MouseEventArgs e)
+        {
+            clicks[23] = 0;
+            int x, y;
+            x = shashka24.Location.X;
+            y = shashka24.Location.Y;
+            x = ((x + 29 - 17) / 58) * 58 + 17;
+            y = ((y + 29 - 31) / 58) * 58 + 31;
+            if (allow(x, y) == 1)
+            {
+                shashka24.Location = new Point(x, y);
+                DownPoint = new Point();
+                shah[(y - 31) / 58, (x - 17) / 58] = 24;
+                shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
+                checkDamka((y - 31) / 58, (x - 17) / 58);
+                turn = (turn + 1) % 2;
+                if ((blackCount == 0) || (whiteCount == 0)) gameover();
+                rubly = rubl();
+                if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
+            }
+            else
+            {
+                shashka24.Location = new Point(x0, y0);
+            }
+        }
+
         private void shashka1_MouseMove(object sender, MouseEventArgs e)
         {
             if (clicks[0] == 1)
@@ -8521,10 +9337,6 @@ namespace Курсач
                 shashka1.Location = new Point(shashka1.Location.X + dp.X, shashka1.Location.Y + dp.Y);
             }
         }
-        private void shashka2_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
         private void shashka2_MouseMove(object sender, MouseEventArgs e)
         {
             if (clicks[1] == 1)
@@ -8532,94 +9344,6 @@ namespace Курсач
                 Point dp = new Point(e.Location.X - DownPoint.X, e.Location.Y - DownPoint.Y);
                 shashka2.Location = new Point(shashka2.Location.X + dp.X, shashka2.Location.Y + dp.Y);
             }
-        }
-        private void shashka3_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka4_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka5_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka6_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka7_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka8_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka9_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka10_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka11_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka12_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka13_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka14_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka15_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka16_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka17_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka18_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka19_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka20_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka21_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka22_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka23_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
-        }
-        private void shashka24_MouseDown(object sender, MouseEventArgs e)
-        {
-            DownPoint = e.Location;
         }
         private void shashka24_MouseMove(object sender, MouseEventArgs e)
         {
@@ -8770,848 +9494,6 @@ namespace Курсач
                 }
             }
         }
-        //-----------------------------CLICKS------------------------------------
-        private void shashka1_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(0);
-            clicks[0] = (clicks[0] + 1) % 2;
-            if (clicks[0] == 0)
-            {
-                int x, y;
-                x = shashka1.Location.X;
-                y = shashka1.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka1.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 1;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka1.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka1.Location.X;
-                y0 = shashka1.Location.Y;
-                shashka1.BringToFront();
-            }
-        }
-        private void shashka2_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(1);
-            clicks[1] = (clicks[1] + 1) % 2;
-            if (clicks[1] == 0)
-            {
-                int x, y;
-                x = shashka2.Location.X;
-                y = shashka2.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka2.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 2;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka2.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka2.Location.X;
-                y0 = shashka2.Location.Y;
-                shashka2.BringToFront();
-            }
-        }
-        private void shashka3_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(2);
-            clicks[2] = (clicks[2] + 1) % 2;
-            if (clicks[2] == 0)
-            {
-                int x, y;
-                x = shashka3.Location.X;
-                y = shashka3.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka3.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 3;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka3.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka3.Location.X;
-                y0 = shashka3.Location.Y;
-                shashka3.BringToFront();
-            }
-        }
-        private void shashka4_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(3);
-            clicks[3] = (clicks[3] + 1) % 2;
-            if (clicks[3] == 0)
-            {
-                int x, y;
-                x = shashka4.Location.X;
-                y = shashka4.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka4.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 4;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka4.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka4.Location.X;
-                y0 = shashka4.Location.Y;
-                shashka4.BringToFront();
-            }
-        }
-        private void shashka5_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(4);
-            clicks[4] = (clicks[4] + 1) % 2;
-            if (clicks[4] == 0)
-            {
-                int x, y;
-                x = shashka5.Location.X;
-                y = shashka5.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka5.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 5;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka5.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka5.Location.X;
-                y0 = shashka5.Location.Y;
-                shashka5.BringToFront();
-            }
-        }
-        private void shashka6_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(5);
-            clicks[5] = (clicks[5] + 1) % 2;
-            if (clicks[5] == 0)
-            {
-                int x, y;
-                x = shashka6.Location.X;
-                y = shashka6.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka6.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 6;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka6.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka6.Location.X;
-                y0 = shashka6.Location.Y;
-                shashka6.BringToFront();
-            }
-        }
-        private void shashka7_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(6);
-            clicks[6] = (clicks[6] + 1) % 2;
-            if (clicks[6] == 0)
-            {
-                int x, y;
-                x = shashka7.Location.X;
-                y = shashka7.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka7.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 7;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka7.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka7.Location.X;
-                y0 = shashka7.Location.Y;
-                shashka7.BringToFront();
-            }
-        }
-        private void shashka8_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(7);
-            clicks[7] = (clicks[7] + 1) % 2;
-            if (clicks[7] == 0)
-            {
-                int x, y;
-                x = shashka8.Location.X;
-                y = shashka8.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka8.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 8;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka8.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka8.Location.X;
-                y0 = shashka8.Location.Y;
-                shashka8.BringToFront();
-            }
-        }
-        private void shashka9_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(8);
-            clicks[8] = (clicks[8] + 1) % 2;
-            if (clicks[8] == 0)
-            {
-                int x, y;
-                x = shashka9.Location.X;
-                y = shashka9.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka9.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 9;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka9.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka9.Location.X;
-                y0 = shashka9.Location.Y;
-                shashka9.BringToFront();
-            }
-        }
-        private void shashka10_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(9);
-            clicks[9] = (clicks[9] + 1) % 2;
-            if (clicks[9] == 0)
-            {
-                int x, y;
-                x = shashka10.Location.X;
-                y = shashka10.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka10.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 10;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka10.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka10.Location.X;
-                y0 = shashka10.Location.Y;
-                shashka10.BringToFront();
-            }
-        }
-        private void shashka11_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(10);
-            clicks[10] = (clicks[10] + 1) % 2;
-            if (clicks[10] == 0)
-            {
-                int x, y;
-                x = shashka11.Location.X;
-                y = shashka11.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka11.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 11;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka11.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka11.Location.X;
-                y0 = shashka11.Location.Y;
-                shashka11.BringToFront();
-            }
-        }
-        private void shashka12_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(11);
-            clicks[11] = (clicks[11] + 1) % 2;
-            if (clicks[11] == 0)
-            {
-                int x, y;
-                x = shashka12.Location.X;
-                y = shashka12.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka12.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 12;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka12.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka12.Location.X;
-                y0 = shashka12.Location.Y;
-                shashka12.BringToFront();
-            }
-        }
-        private void shashka13_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(12);
-            clicks[12] = (clicks[12] + 1) % 2;
-            if (clicks[12] == 0)
-            {
-                int x, y;
-                x = shashka13.Location.X;
-                y = shashka13.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka13.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 13;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka13.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka13.Location.X;
-                y0 = shashka13.Location.Y;
-                shashka13.BringToFront();
-            }
-        }
-        private void shashka14_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(13);
-            clicks[13] = (clicks[13] + 1) % 2;
-            if (clicks[13] == 0)
-            {
-                int x, y;
-                x = shashka14.Location.X;
-                y = shashka14.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka14.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 14;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka14.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka14.Location.X;
-                y0 = shashka14.Location.Y;
-                shashka14.BringToFront();
-            }
-        }
-        private void shashka15_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(14);
-            clicks[14] = (clicks[14] + 1) % 2;
-            if (clicks[14] == 0)
-            {
-                int x, y;
-                x = shashka15.Location.X;
-                y = shashka15.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka15.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 15;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka15.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka15.Location.X;
-                y0 = shashka15.Location.Y;
-                shashka15.BringToFront();
-            }
-        }
-        private void shashka16_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(15);
-            clicks[15] = (clicks[15] + 1) % 2;
-            if (clicks[15] == 0)
-            {
-                int x, y;
-                x = shashka16.Location.X;
-                y = shashka16.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka16.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 16;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka16.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka16.Location.X;
-                y0 = shashka16.Location.Y;
-                shashka16.BringToFront();
-            }
-        }
-        private void shashka17_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(16);
-            clicks[16] = (clicks[16] + 1) % 2;
-            if (clicks[16] == 0)
-            {
-                int x, y;
-                x = shashka17.Location.X;
-                y = shashka17.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka17.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 17;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka17.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka17.Location.X;
-                y0 = shashka17.Location.Y;
-                shashka17.BringToFront();
-            }
-        }
-        private void shashka18_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(17);
-            clicks[17] = (clicks[17] + 1) % 2;
-            if (clicks[17] == 0)
-            {
-                int x, y;
-                x = shashka18.Location.X;
-                y = shashka18.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka18.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 18;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka18.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka18.Location.X;
-                y0 = shashka18.Location.Y;
-                shashka18.BringToFront();
-            }
-        }
-        private void shashka19_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(18);
-            clicks[18] = (clicks[18] + 1) % 2;
-            if (clicks[18] == 0)
-            {
-                int x, y;
-                x = shashka19.Location.X;
-                y = shashka19.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka19.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 19;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka19.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka19.Location.X;
-                y0 = shashka19.Location.Y;
-                shashka19.BringToFront();
-            }
-        }
-        private void shashka20_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(19);
-            clicks[19] = (clicks[19] + 1) % 2;
-            if (clicks[19] == 0)
-            {
-                int x, y;
-                x = shashka20.Location.X;
-                y = shashka20.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka20.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 20;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka20.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka20.Location.X;
-                y0 = shashka20.Location.Y;
-                shashka20.BringToFront();
-            }
-        }
-        private void shashka21_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(20);
-            clicks[20] = (clicks[20] + 1) % 2;
-            if (clicks[20] == 0)
-            {
-                int x, y;
-                x = shashka21.Location.X;
-                y = shashka21.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka21.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 21;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka21.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka21.Location.X;
-                y0 = shashka21.Location.Y;
-                shashka21.BringToFront();
-            }
-        }
-        private void shashka22_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(21);
-            clicks[21] = (clicks[21] + 1) % 2;
-            if (clicks[21] == 0)
-            {
-                int x, y;
-                x = shashka22.Location.X;
-                y = shashka22.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka22.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 22;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka22.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka22.Location.X;
-                y0 = shashka22.Location.Y;
-                shashka22.BringToFront();
-            }
-        }
-        private void shashka23_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(22);
-            clicks[22] = (clicks[22] + 1) % 2;
-            if (clicks[22] == 0)
-            {
-                int x, y;
-                x = shashka23.Location.X;
-                y = shashka23.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka23.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 23;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka23.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka23.Location.X;
-                y0 = shashka23.Location.Y;
-                shashka23.BringToFront();
-            }
-        }
-        private void shashka24_Click(object sender, EventArgs e)
-        {
-            ArinaBugHunter(23);
-            clicks[23] = (clicks[23] + 1) % 2;
-            if (clicks[23] == 0)
-            {
-                int x, y;
-                x = shashka24.Location.X;
-                y = shashka24.Location.Y;
-                x = ((x + 29 - 17) / 58) * 58 + 17;
-                y = ((y + 29 - 31) / 58) * 58 + 31;
-                if (allow(x, y) == 1)
-                {
-                    shashka24.Location = new Point(x, y);
-                    DownPoint = new Point();
-                    shah[(y - 31) / 58, (x - 17) / 58] = 24;
-                    shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-                    checkDamka((y - 31) / 58, (x - 17) / 58);
-                    turn = (turn + 1) % 2;
-                    if ((blackCount == 0) || (whiteCount == 0)) gameover();
-                    rubly = rubl();
-                    if (GameIsOver != 1) { if (computer == 1) comp(); checkAbility(); }
-                }
-                else
-                {
-                    shashka24.Location = new Point(x0, y0);
-                }
-            }
-            else
-            {
-                x0 = shashka24.Location.X;
-                y0 = shashka24.Location.Y;
-                shashka24.BringToFront();
-            }
-        }
-        /*------------------------------END-CLICKS--------------------------------------------*/
 
         //1 - белый, иначе - черный
         private void starts(Button o, int cl)
@@ -9972,6 +9854,7 @@ namespace Курсач
 
         private void notAllowedMoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            тестToolStripMenuItem.Visible = false; 
             shashka1.Visible = false;
             shashka2.Visible = false;
             shashka3.Visible = false;
@@ -10006,6 +9889,13 @@ namespace Курсач
                 turn = 0;
                 comp();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Size = new Size(522, 550);
+            this.Location = center;
+            тестToolStripMenuItem.Visible = true;
         }
     }
 }
