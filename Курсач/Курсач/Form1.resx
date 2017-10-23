@@ -123,13 +123,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="shashka1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 437</value>
+    <value>23, 538</value>
   </data>
   <data name="shashka1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="shashka1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="shashka1.TabIndex" type="System.Int32, mscorlib">
@@ -151,10 +151,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 437</value>
+    <value>177, 538</value>
+  </data>
+  <data name="shashka2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -175,10 +178,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 437</value>
+    <value>332, 538</value>
+  </data>
+  <data name="shashka3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -199,10 +205,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 437</value>
+    <value>487, 538</value>
+  </data>
+  <data name="shashka4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -223,10 +232,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 379</value>
+    <value>564, 466</value>
+  </data>
+  <data name="shashka8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka8.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -247,10 +259,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 379</value>
+    <value>409, 466</value>
+  </data>
+  <data name="shashka7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka7.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -274,13 +289,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 379</value>
+    <value>100, 466</value>
   </data>
   <data name="shashka5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="shashka5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka5.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -301,10 +316,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 379</value>
+    <value>255, 466</value>
+  </data>
+  <data name="shashka6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -325,10 +343,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 321</value>
+    <value>487, 395</value>
+  </data>
+  <data name="shashka12.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka12.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -349,10 +370,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 321</value>
+    <value>332, 395</value>
+  </data>
+  <data name="shashka11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka11.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -376,13 +400,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 321</value>
+    <value>23, 395</value>
   </data>
   <data name="shashka9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="shashka9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka9.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -403,10 +427,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 321</value>
+    <value>177, 395</value>
+  </data>
+  <data name="shashka10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka10.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -427,10 +454,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 31</value>
+    <value>564, 38</value>
+  </data>
+  <data name="shashka24.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka24.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -451,10 +481,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 31</value>
+    <value>409, 38</value>
+  </data>
+  <data name="shashka23.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka23.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -478,13 +511,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 31</value>
+    <value>100, 38</value>
   </data>
   <data name="shashka21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="shashka21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka21.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -505,10 +538,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 31</value>
+    <value>255, 38</value>
+  </data>
+  <data name="shashka22.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka22.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -529,10 +565,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 89</value>
+    <value>487, 110</value>
+  </data>
+  <data name="shashka20.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka20.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -553,10 +592,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 89</value>
+    <value>332, 110</value>
+  </data>
+  <data name="shashka19.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka19.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -580,13 +622,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 89</value>
+    <value>23, 110</value>
   </data>
   <data name="shashka17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="shashka17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka17.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -607,10 +649,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 89</value>
+    <value>177, 110</value>
+  </data>
+  <data name="shashka18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka18.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -631,10 +676,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 147</value>
+    <value>564, 181</value>
+  </data>
+  <data name="shashka16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka16.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -655,10 +703,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 147</value>
+    <value>409, 181</value>
+  </data>
+  <data name="shashka15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka15.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -682,13 +733,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 147</value>
+    <value>100, 181</value>
   </data>
   <data name="shashka13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="shashka13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka13.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -709,10 +760,13 @@
     <value>NoControl</value>
   </data>
   <data name="shashka14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 147</value>
+    <value>255, 181</value>
+  </data>
+  <data name="shashka14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="shashka14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 74</value>
   </data>
   <data name="shashka14.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -733,13 +787,13 @@
     <value>17, 17</value>
   </metadata>
   <data name="правилаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
+    <value>165, 26</value>
   </data>
   <data name="правилаToolStripMenuItem.Text" xml:space="preserve">
     <value>Правила</value>
   </data>
   <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
+    <value>165, 26</value>
   </data>
   <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
     <value>Справка</value>
@@ -748,25 +802,61 @@
     <value>False</value>
   </data>
   <data name="versionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>165, 26</value>
   </data>
   <data name="versionToolStripMenuItem.Text" xml:space="preserve">
     <value>version 5.3.0</value>
   </data>
   <data name="менюToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 20</value>
+    <value>63, 24</value>
   </data>
   <data name="менюToolStripMenuItem.Text" xml:space="preserve">
     <value>Меню</value>
   </data>
+  <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 26</value>
+  </data>
+  <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
+    <value>С человеком</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 26</value>
+  </data>
+  <data name="белыеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Белые</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 26</value>
+  </data>
+  <data name="черныеToolStripMenuItem.Text" xml:space="preserve">
+    <value>Черные</value>
+  </data>
+  <data name="сКомпьютеромToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 26</value>
+  </data>
+  <data name="сКомпьютеромToolStripMenuItem.Text" xml:space="preserve">
+    <value>С компьютером</value>
+  </data>
+  <data name="компьютерКомпьютерToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 26</value>
+  </data>
+  <data name="компьютерКомпьютерToolStripMenuItem.Text" xml:space="preserve">
+    <value>Компьютер - Компьютер</value>
+  </data>
   <data name="новаяИграToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 20</value>
+    <value>101, 24</value>
   </data>
   <data name="новаяИграToolStripMenuItem.Text" xml:space="preserve">
     <value>Новая игра</value>
   </data>
+  <data name="notAllowedMoveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 26</value>
+  </data>
+  <data name="notAllowedMoveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Not allowed move</value>
+  </data>
   <data name="тестToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
+    <value>50, 24</value>
   </data>
   <data name="тестToolStripMenuItem.Text" xml:space="preserve">
     <value>Тест</value>
@@ -777,8 +867,11 @@
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 2, 0, 2</value>
+  </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>506, 24</value>
+    <value>675, 28</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -798,47 +891,14 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
-  <data name="сДругомToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 22</value>
-  </data>
-  <data name="сДругомToolStripMenuItem.Text" xml:space="preserve">
-    <value>С человеком</value>
-  </data>
-  <data name="сКомпьютеромToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 22</value>
-  </data>
-  <data name="сКомпьютеромToolStripMenuItem.Text" xml:space="preserve">
-    <value>С компьютером</value>
-  </data>
-  <data name="белыеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 22</value>
-  </data>
-  <data name="белыеToolStripMenuItem.Text" xml:space="preserve">
-    <value>Белые</value>
-  </data>
-  <data name="черныеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 22</value>
-  </data>
-  <data name="черныеToolStripMenuItem.Text" xml:space="preserve">
-    <value>Черные</value>
-  </data>
-  <data name="компьютерКомпьютерToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 22</value>
-  </data>
-  <data name="компьютерКомпьютерToolStripMenuItem.Text" xml:space="preserve">
-    <value>Компьютер - Компьютер</value>
-  </data>
-  <data name="notAllowedMoveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="notAllowedMoveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Not allowed move</value>
-  </data>
   <data name="root.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1335, 27</value>
+    <value>1780, 33</value>
+  </data>
+  <data name="root.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="root.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 23</value>
+    <value>47, 28</value>
   </data>
   <data name="root.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -862,7 +922,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1344,7 +1404,7 @@
     <value>None</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>506, 512</value>
+    <value>675, 630</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1421,6 +1481,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA
         AAGAAAABwAAAA+AAAAfwAAAP+AAAH/4AAH8=
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
