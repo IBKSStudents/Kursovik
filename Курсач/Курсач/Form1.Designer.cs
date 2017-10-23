@@ -220,6 +220,7 @@
             this.shashka21.Name = "shashka21";
             this.shashka21.TabStop = false;
             this.shashka21.UseVisualStyleBackColor = false;
+            this.shashka21.Click += new System.EventHandler(this.shashka21_Click);
             this.shashka21.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka21_MouseDown);
             this.shashka21.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka21_MouseMove);
             this.shashka21.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka21_MouseUp);
@@ -318,6 +319,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.менюToolStripMenuItem,
             this.новаяИграToolStripMenuItem,

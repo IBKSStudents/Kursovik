@@ -9434,6 +9434,12 @@ namespace Курсач
             if (clicks[6] == 1) { Point dp = new Point(e.Location.X - DownPoint.X, e.Location.Y - DownPoint.Y); shashka7.Location = new Point(shashka7.Location.X + dp.X, shashka7.Location.Y + dp.Y); }
 
         }
+
+        private void shashka21_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void shashka6_MouseMove(object sender, MouseEventArgs e)
         {
             if (clicks[5] == 1) { Point dp = new Point(e.Location.X - DownPoint.X, e.Location.Y - DownPoint.Y); shashka6.Location = new Point(shashka6.Location.X + dp.X, shashka6.Location.Y + dp.Y); }
