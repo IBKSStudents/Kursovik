@@ -4024,7 +4024,7 @@ namespace Курсач
 
         private int rubls()
         {
-            int r = 0, x, y, x00, y00, x1l, x2l, y1l, y2l, x1r, x2r, y1r, y2r, d1r, d1l, d2r, d2l;
+            int r = 0, x, y, x00, y00, x1l, x2l, y1l, y2l, x1r, x2r, y1r, y2r;
             for (int i = 0; i < 24; i++) rubs[i] = 0;
 
             if (turns == 0)
@@ -8100,6 +8100,7 @@ namespace Курсач
 
         private void cAllow(Button s)
         {
+            rublys = rubls();
             int X0 = s.Location.X,
                 Y0 = s.Location.Y,
                 x, y;
@@ -8119,7 +8120,6 @@ namespace Курсач
                     shahs[(Y0 - 31) / 58, (X0 - 17) / 58] = 0;
                     checkDamkas((y - 31) / 58, (x - 17) / 58);
                     turns = (turns + 1) % 2;
-                    rublys = rubls();
 
 
                     shashki[index, j + 1] = 2;
