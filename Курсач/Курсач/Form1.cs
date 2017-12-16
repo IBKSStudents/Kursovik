@@ -8355,8 +8355,14 @@ namespace Курсач
             index = 0;
             DoWork();
             priora = 0;
-            shashki = new int[12, 9] { { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
-            
+            shashki = new int[12, 9];
+            for (int increment = 0; increment < 12; increment++)
+            {
+                for (int incr = 0; incr < 9; incr++)
+                {
+                    shashki[increment, incr] = 0;
+                }
+            }
 
             for (int i = 1; i < 25; i++)
             {
@@ -8377,8 +8383,11 @@ namespace Курсач
             }
 
             int num, hod;
-            int[] pr = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            int prI = 0;
+            int[] pr = new int[12];
+            for (int increment = 0; increment < 12; increment++)
+            {
+                pr[increment] = 0;
+            }
             for (int i = 0; i < 12; i++)
             {
                 for (int j = 1; j < 9; j++)
@@ -8395,7 +8404,11 @@ namespace Курсач
             x0 = shahOb[shashki[num, 0] - 1].Location.X;
             y0 = shahOb[shashki[num, 0] - 1].Location.Y;
             int x, y;
-            int[] priors = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
+            int[] priors = new int[8];
+            for (int increment = 0; increment < 8; increment++)
+            {
+                priors[increment] = 0;
+            }
             int prInd = 0;
             for (int i = 1; i < 9; i++) if (shashki[num, i] == priora) { priors[prInd++] = i; }
                 hod = rnd.Next(0, prInd - 1);
