@@ -1286,7 +1286,7 @@ namespace Курсач
             shahOb[shashki[num, 0] - 1].BringToFront();
             checkAbility();
             sw.Stop();
-            MessageBox.Show((sw.ElapsedMilliseconds / 100.0).ToString());
+            MessageBox.Show((sw.ElapsedMilliseconds).ToString());
             if (DamkaNoComp == 1)
             {
                 DamkaNoComp = 2;
