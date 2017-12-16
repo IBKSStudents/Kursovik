@@ -8100,7 +8100,6 @@ namespace Курсач
 
         private void cAllow(Button s)
         {
-            rublys = rubls();
             int X0 = s.Location.X,
                 Y0 = s.Location.Y,
                 x, y;
@@ -8108,6 +8107,7 @@ namespace Курсач
             int fdamka;
             for (int j = 0; j < 8; j++)
             {
+                rublys = rubls();
                 setCoord();
                 fdamka = damkas[shahs[(Y0 - 31) / 58, (X0 - 17) / 58] - 1];
                 x = X0 + 58 * hodi[j, 0];
@@ -8120,7 +8120,7 @@ namespace Курсач
                     shahs[(Y0 - 31) / 58, (X0 - 17) / 58] = 0;
                     checkDamkas((y - 31) / 58, (x - 17) / 58);
                     turns = (turns + 1) % 2;
-
+                    rublys = rubls();
 
                     shashki[index, j + 1] = 2;
 
@@ -8413,8 +8413,9 @@ namespace Курсач
             rubly = rubl();
             shahOb[shashki[num, 0] - 1].BringToFront();
             checkAbility();
+            rublys = rubls();
             sw.Stop();
-            MessageBox.Show((sw.ElapsedMilliseconds / 100.0).ToString());
+            MessageBox.Show((sw.ElapsedMilliseconds).ToString());
             if (DamkaNoComp == 1)
             {
                 DamkaNoComp = 2;
