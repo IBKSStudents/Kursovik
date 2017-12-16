@@ -48,6 +48,8 @@ namespace Курсач
         private Point DownPoint, center;
         private Random rnd = new Random();
 
+        System.Diagnostics.Stopwatch sw = new Stopwatch();
+
         private void deleteShashka(int j, int i)
         {
             if (shah[i, j] == 1) shashka1.Visible = false;
@@ -8337,6 +8339,8 @@ namespace Курсач
 
         private void comp()
         {
+            sw = new Stopwatch();
+            sw.Start();
             if (DamkaNoComp == 1)
             {
                 DamkaNoComp = 0;
@@ -8409,6 +8413,8 @@ namespace Курсач
             rubly = rubl();
             shahOb[shashki[num, 0] - 1].BringToFront();
             checkAbility();
+            sw.Stop();
+            MessageBox.Show((sw.ElapsedMilliseconds / 100.0).ToString());
             if (DamkaNoComp == 1)
             {
                 DamkaNoComp = 2;

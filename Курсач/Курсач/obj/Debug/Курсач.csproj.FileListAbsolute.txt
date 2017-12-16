@@ -39,3 +39,13 @@ C:\Users\HP 15-ac070ur\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug
 c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Voramix.exe.config
 c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.exe
 c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.pdb
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Voramix.exe
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\Voramix.pdb
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\bin\Debug\ru-RU\Voramix.resources.dll
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.csprojResolveAssemblyReference.cache
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.okno.resources
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.gameover.resources
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Voramix.Properties.Resources.resources
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.okno.ru-RU.resources
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
+c:\Users\mixno\Source\Repos\Kursovik\Курсач\Курсач\obj\Debug\ru-RU\Voramix.resources.dll
