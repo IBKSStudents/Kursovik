@@ -8384,6 +8384,7 @@ namespace Курсач
 
             int num, hod;
             int[] pr = new int[12];
+            int prI = 0;
             for (int increment = 0; increment < 12; increment++)
             {
                 pr[increment] = 0;
