@@ -48,6 +48,8 @@ namespace Курсач
         private Point DownPoint, center;
         private Random rnd = new Random();
 
+        System.Diagnostics.Stopwatch sw = new Stopwatch();
+
         private void deleteShashka(int j, int i)
         {
             if (shah[i, j] == 1) shashka1.Visible = false;
@@ -437,7 +439,7 @@ namespace Курсач
 
         private int rubls()
         {
-            int r = 0, x, y, x00, y00, x1l, x2l, y1l, y2l, x1r, x2r, y1r, y2r, d1r, d1l, d2r, d2l;
+            int r = 0, x, y, x00, y00, x1l, x2l, y1l, y2l, x1r, x2r, y1r, y2r;
             for (int i = 0; i < 24; i++) rubs[i] = 0;
 
             if (turn == direction)
@@ -975,19 +977,21 @@ namespace Курсач
                 x, y;
 
             int fdamka;
+            int y_2 = (Y0 - 31) / 58, x_2 = (X0 - 17) / 58;
             for (int j = 0; j < 8; j++)
             {
                 setCoord();
-                fdamka = damkas[shahs[(Y0 - 31) / 58, (X0 - 17) / 58] - 1];
+                fdamka = damkas[shahs[y_2, x_2] - 1];
                 x = X0 + 58 * hodi[j, 0];
                 y = Y0 + 58 * hodi[j, 1];
+                int y_1 = (y - 31) / 58, x_1 = (x - 17) / 58;
                 shashki[index, j + 1] = 0;
                 int al = allows(X0, Y0, x, y);
                 if (al > 0)
                 {
-                    shahs[(y - 31) / 58, (x - 17) / 58] = shahs[(Y0 - 31) / 58, (X0 - 17) / 58];
-                    shahs[(Y0 - 31) / 58, (X0 - 17) / 58] = 0;
-                    checkDamkas((y - 31) / 58, (x - 17) / 58);
+                    shahs[y_1, x_1] = shahs[y_1, x_1];
+                    shahs[y_2, x_2] = 0;
+                    checkDamkas(y_1, x_1);
                     turns = (turns + 1) % 2;
                     rublys = rubls();
 
@@ -998,7 +1002,7 @@ namespace Курсач
                     {
                         shashki[index, j + 1] = 1;
                     }
-                    else if ((fdamka == 0) && (damkas[shahs[(y - 31) / 58, (x - 17) / 58] - 1] == 1))
+                    else if ((fdamka == 0) && (damkas[shahs[y_1, x_1] - 1] == 1))
                     {
                         shashki[index, j + 1] = 3;
                     }
@@ -1209,6 +1213,8 @@ namespace Курсач
 
         private void comp()
         {
+            sw = new Stopwatch();
+            sw.Start();
             if (DamkaNoComp == 1)
             {
                 DamkaNoComp = 0;
@@ -1273,14 +1279,17 @@ namespace Курсач
             allow(x, y);
             shahOb[shashki[num, 0] - 1].Location = new Point(x, y);
             DownPoint = new Point();
-            shah[(y - 31) / 58, (x - 17) / 58] = shashki[num, 0];
+            int y_1 = (y - 31) / 58, x_1 = (x - 17) / 58;
+            shah[y_1, x_1] = shashki[num, 0];
             shah[(y0 - 31) / 58, (x0 - 17) / 58] = 0;
-            checkDamka((y - 31) / 58, (x - 17) / 58);
+            checkDamka(y_1, x_1);
             turn = (turn + 1) % 2;
             if ((blackCount == 0) || (whiteCount == 0)) gameover();
             rubly = rubl();
             shahOb[shashki[num, 0] - 1].BringToFront();
             checkAbility();
+            sw.Stop();
+            MessageBox.Show((sw.ElapsedMilliseconds).ToString());
             if (DamkaNoComp == 1)
             {
                 DamkaNoComp = 2;
