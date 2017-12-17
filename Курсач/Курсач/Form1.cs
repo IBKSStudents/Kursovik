@@ -48,6 +48,8 @@ namespace Курсач
         private Point DownPoint, center;
         private Random rnd = new Random();
 
+        System.Diagnostics.Stopwatch sw = new Stopwatch();
+
         private void deleteShashka(int j, int i)
         {
             if (shah[i, j] == 1) shashka1.Visible = false;
@@ -568,7 +570,7076 @@ namespace Курсач
                                 r = 1;
                             }
                         }
+<<<<<<< HEAD
                         if ((x2r > 7) && (y2l <= 7))
+=======
+
+                        if (damka[4] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka6.Visible == true)
+                    {
+                        x = shashka6.Location.X;
+                        y = shashka6.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[5] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[5] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[5] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[5] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka7.Visible == true)
+                    {
+                        x = shashka7.Location.X;
+                        y = shashka7.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[6] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[6] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[6] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[6] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka8.Visible == true)
+                    {
+                        x = shashka8.Location.X;
+                        y = shashka8.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[7] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[7] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[7] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[7] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka9.Visible == true)
+                    {
+                        x = shashka9.Location.X;
+                        y = shashka9.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[8] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[8] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[8] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[8] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka10.Visible == true)
+                    {
+                        x = shashka10.Location.X;
+                        y = shashka10.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[9] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[9] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[9] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[9] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka11.Visible == true)
+                    {
+                        x = shashka11.Location.X;
+                        y = shashka11.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[10] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[10] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[10] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[10] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka12.Visible == true)
+                    {
+                        x = shashka12.Location.X;
+                        y = shashka12.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[11] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[11] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[11] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[11] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                }
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                else
+                {
+                    // White 13-24
+                    if (shashka13.Visible == true)
+                    {
+                        x = shashka13.Location.X;
+                        y = shashka13.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[12] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[12] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[12] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[12] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka14.Visible == true)
+                    {
+                        x = shashka14.Location.X;
+                        y = shashka14.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[13] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[13] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[13] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[13] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka15.Visible == true)
+                    {
+                        x = shashka15.Location.X;
+                        y = shashka15.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[14] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[14] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[14] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[14] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka16.Visible == true)
+                    {
+                        x = shashka16.Location.X;
+                        y = shashka16.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[15] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[15] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[15] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[15] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka17.Visible == true)
+                    {
+                        x = shashka17.Location.X;
+                        y = shashka17.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[16] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[16] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[16] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[16] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka18.Visible == true)
+                    {
+                        x = shashka18.Location.X;
+                        y = shashka18.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[17] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[17] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[17] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[17] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka19.Visible == true)
+                    {
+                        x = shashka19.Location.X;
+                        y = shashka19.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[18] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[18] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[18] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[18] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka20.Visible == true)
+                    {
+                        x = shashka20.Location.X;
+                        y = shashka20.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[19] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[19] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[19] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[19] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka21.Visible == true)
+                    {
+                        x = shashka21.Location.X;
+                        y = shashka21.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[20] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[20] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[20] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[20] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka22.Visible == true)
+                    {
+                        x = shashka22.Location.X;
+                        y = shashka22.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[21] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[21] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[21] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[21] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka23.Visible == true)
+                    {
+                        x = shashka23.Location.X;
+                        y = shashka23.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[22] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[22] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[22] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[22] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka24.Visible == true)
+                    {
+                        x = shashka24.Location.X;
+                        y = shashka24.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[23] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[23] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[23] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[23] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+
+            }
+            else
+            {
+                if (direction == 0)
+                {
+                    // Black 13-24
+                    if (shashka13.Visible == true)
+                    {
+                        x = shashka13.Location.X;
+                        y = shashka13.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[12] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[12] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[12] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[12] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[12] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka14.Visible == true)
+                    {
+                        x = shashka14.Location.X;
+                        y = shashka14.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[13] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[13] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[13] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[13] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[13] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka15.Visible == true)
+                    {
+                        x = shashka15.Location.X;
+                        y = shashka15.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[14] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[14] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[14] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[14] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[14] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka16.Visible == true)
+                    {
+                        x = shashka16.Location.X;
+                        y = shashka16.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[15] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[15] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[15] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[15] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[15] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka17.Visible == true)
+                    {
+                        x = shashka17.Location.X;
+                        y = shashka17.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[16] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[16] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[16] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[16] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[16] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka18.Visible == true)
+                    {
+                        x = shashka18.Location.X;
+                        y = shashka18.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[17] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[17] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[17] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[17] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[17] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka19.Visible == true)
+                    {
+                        x = shashka19.Location.X;
+                        y = shashka19.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[18] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[18] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[18] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[18] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[18] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka20.Visible == true)
+                    {
+                        x = shashka20.Location.X;
+                        y = shashka20.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[19] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[19] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[19] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[19] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[19] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka21.Visible == true)
+                    {
+                        x = shashka21.Location.X;
+                        y = shashka21.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[20] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[20] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[20] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[20] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[20] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka22.Visible == true)
+                    {
+                        x = shashka22.Location.X;
+                        y = shashka22.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[21] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[21] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[21] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[21] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[21] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka23.Visible == true)
+                    {
+                        x = shashka23.Location.X;
+                        y = shashka23.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[22] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[22] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[22] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[22] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[22] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (shashka24.Visible == true)
+                    {
+                        x = shashka24.Location.X;
+                        y = shashka24.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[23] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[23] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[23] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damka[23] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shah[y1r, x1r] < 13) && (shah[y1r, x1r] > 0) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shah[y1l, x1l] < 13) && (shah[y1l, x1l] > 0) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[23] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                }
+                else
+                {
+                    // Black 1-12
+                    if (shashka1.Visible == true)
+                    {
+                        x = shashka1.Location.X;
+                        y = shashka1.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[0] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[0] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[0] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[0] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka2.Visible == true)
+                    {
+                        x = shashka2.Location.X;
+                        y = shashka2.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[1] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[1] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[1] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[1] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka3.Visible == true)
+                    {
+                        x = shashka3.Location.X;
+                        y = shashka3.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[2] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[2] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[2] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[2] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka4.Visible == true)
+                    {
+                        x = shashka4.Location.X;
+                        y = shashka4.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[3] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[3] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[3] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[3] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka5.Visible == true)
+                    {
+                        x = shashka5.Location.X;
+                        y = shashka5.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[4] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[4] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[4] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[4] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka6.Visible == true)
+                    {
+                        x = shashka6.Location.X;
+                        y = shashka6.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[5] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[5] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[5] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[5] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka7.Visible == true)
+                    {
+                        x = shashka7.Location.X;
+                        y = shashka7.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[6] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[6] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[6] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[6] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka8.Visible == true)
+                    {
+                        x = shashka8.Location.X;
+                        y = shashka8.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[7] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[7] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[7] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[7] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka9.Visible == true)
+                    {
+                        x = shashka9.Location.X;
+                        y = shashka9.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[8] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[8] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[8] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[8] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka10.Visible == true)
+                    {
+                        x = shashka10.Location.X;
+                        y = shashka10.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[9] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[9] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[9] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[9] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka11.Visible == true)
+                    {
+                        x = shashka11.Location.X;
+                        y = shashka11.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[10] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[10] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[10] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[10] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (shashka12.Visible == true)
+                    {
+                        x = shashka12.Location.X;
+                        y = shashka12.Location.Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                            {
+                                rub[11] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                            {
+                                rub[11] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                            {
+                                rub[11] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damka[11] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0)) || ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0)))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shah[y1r, x1r] < 25) && (shah[y1r, x1r] > 12) && (shah[y2r, x2r] == 0))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shah[y1l, x1l] < 25) && (shah[y1l, x1l] > 12) && (shah[y2l, x2l] == 0))
+                                {
+                                    rub[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+                        //=====================================================================================
+                        //=====================================================================================
+                        //=====================================================================================
+                        //=====================================================================================
+                        //=====================================================================================
+                        //=====================================================================================
+                        //=====================================================================================
+                    }
+                }
+            }
+            return r;
+        }
+
+        private int rubls()
+        {
+            int r = 0, x, y, x00, y00, x1l, x2l, y1l, y2l, x1r, x2r, y1r, y2r;
+            for (int i = 0; i < 24; i++) rubs[i] = 0;
+
+            if (turns == 0)
+            {
+                if (direction == 0)
+                {
+                    // White 1-12
+                    if (vis[1 - 1] == true)
+                    {
+                        x = loc[1 - 1].X;
+                        y = loc[1 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[0] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[0] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[0] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[0] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[2 - 1] == true)
+                    {
+                        x = loc[2 - 1].X;
+                        y = loc[2 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[1] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[1] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[1] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[1] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[3 - 1] == true)
+                    {
+                        x = loc[3 - 1].X;
+                        y = loc[3 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[2] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[2] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[2] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[2] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[4 - 1] == true)
+                    {
+                        x = loc[4 - 1].X;
+                        y = loc[4 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[3] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[3] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[3] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[3] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[5 - 1] == true)
+                    {
+                        x = loc[5 - 1].X;
+                        y = loc[5 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[4] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[4] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[4] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[4] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[6 - 1] == true)
+                    {
+                        x = loc[6 - 1].X;
+                        y = loc[6 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[5] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[5] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[5] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[5] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[7 - 1] == true)
+                    {
+                        x = loc[7 - 1].X;
+                        y = loc[7 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[6] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[6] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[6] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[6] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[8 - 1] == true)
+                    {
+                        x = loc[8 - 1].X;
+                        y = loc[8 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[7] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[7] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[7] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[7] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[9 - 1] == true)
+                    {
+                        x = loc[9 - 1].X;
+                        y = loc[9 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[8] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[8] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[8] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[8] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[10 - 1] == true)
+                    {
+                        x = loc[10 - 1].X;
+                        y = loc[10 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[9] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[9] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[9] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[9] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[11 - 1] == true)
+                    {
+                        x = loc[11 - 1].X;
+                        y = loc[11 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[10] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[10] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[10] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[10] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[12 - 1] == true)
+                    {
+                        x = loc[12 - 1].X;
+                        y = loc[12 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[11] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[11] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[11] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[11] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[11] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                }
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                else
+                {
+                    // White 13-24
+                    if (vis[13 - 1] == true)
+                    {
+                        x = loc[13 - 1].X;
+                        y = loc[13 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[12] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[12] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[12] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[12] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[12] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[12] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[12] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[14 - 1] == true)
+                    {
+                        x = loc[14 - 1].X;
+                        y = loc[14 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[13] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[13] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[13] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[13] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[13] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[13] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[13] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[15 - 1] == true)
+                    {
+                        x = loc[15 - 1].X;
+                        y = loc[15 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[14] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[14] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[14] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[14] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[14] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[14] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[14] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[16 - 1] == true)
+                    {
+                        x = loc[16 - 1].X;
+                        y = loc[16 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[15] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[15] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[15] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[15] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[15] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[15] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[15] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[17 - 1] == true)
+                    {
+                        x = loc[17 - 1].X;
+                        y = loc[17 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[16] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[16] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[16] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[16] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[16] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[16] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[16] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[18 - 1] == true)
+                    {
+                        x = loc[18 - 1].X;
+                        y = loc[18 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[17] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[17] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[17] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[17] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[17] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[17] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[17] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[19 - 1] == true)
+                    {
+                        x = loc[19 - 1].X;
+                        y = loc[19 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[18] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[18] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[18] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[18] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[18] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[18] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[18] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[20 - 1] == true)
+                    {
+                        x = loc[20 - 1].X;
+                        y = loc[20 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[19] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[19] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[19] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[19] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[19] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[19] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[19] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[21 - 1] == true)
+                    {
+                        x = loc[21 - 1].X;
+                        y = loc[21 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[20] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[20] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[20] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[20] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[20] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[20] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[20] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[22 - 1] == true)
+                    {
+                        x = loc[22 - 1].X;
+                        y = loc[22 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[21] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[21] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[21] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[21] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[21] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[21] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[21] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[23 - 1] == true)
+                    {
+                        x = loc[23 - 1].X;
+                        y = loc[23 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[22] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[22] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[22] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[22] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[22] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[22] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[22] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[24 - 1] == true)
+                    {
+                        x = loc[24 - 1].X;
+                        y = loc[24 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[23] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[23] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[23] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[23] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[23] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[23] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[23] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+                //===================================================================================================================
+
+            }
+            else
+            {
+                if (direction == 0)
+                {
+                    // Black 13-24
+                    if (vis[13 - 1] == true)
+                    {
+                        x = loc[13 - 1].X;
+                        y = loc[13 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[12] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[12] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[12] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[12] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[12] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[12] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[12] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[14 - 1] == true)
+                    {
+                        x = loc[14 - 1].X;
+                        y = loc[14 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[13] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[13] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[13] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[13] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[13] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[13] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[13] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[15 - 1] == true)
+                    {
+                        x = loc[15 - 1].X;
+                        y = loc[15 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[14] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[14] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[14] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[14] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[14] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[14] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[14] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[16 - 1] == true)
+                    {
+                        x = loc[16 - 1].X;
+                        y = loc[16 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[15] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[15] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[15] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[15] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[15] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[15] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[15] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[17 - 1] == true)
+                    {
+                        x = loc[17 - 1].X;
+                        y = loc[17 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[16] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[16] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[16] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[16] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[16] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[16] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[16] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[18 - 1] == true)
+                    {
+                        x = loc[18 - 1].X;
+                        y = loc[18 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[17] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[17] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[17] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[17] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[17] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[17] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[17] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[19 - 1] == true)
+                    {
+                        x = loc[19 - 1].X;
+                        y = loc[19 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[18] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[18] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[18] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[18] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[18] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[18] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[18] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[20 - 1] == true)
+                    {
+                        x = loc[20 - 1].X;
+                        y = loc[20 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[19] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[19] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[19] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[19] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[19] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[19] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[19] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[21 - 1] == true)
+                    {
+                        x = loc[21 - 1].X;
+                        y = loc[21 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[20] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[20] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[20] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[20] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[20] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[20] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[20] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[22 - 1] == true)
+                    {
+                        x = loc[22 - 1].X;
+                        y = loc[22 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[21] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[21] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[21] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[21] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[21] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[21] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[21] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[23 - 1] == true)
+                    {
+                        x = loc[23 - 1].X;
+                        y = loc[23 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[22] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[22] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[22] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[22] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[22] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[22] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[22] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    if (vis[24 - 1] == true)
+                    {
+                        x = loc[24 - 1].X;
+                        y = loc[24 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 + 1;
+                        x1r = x00 + 1;
+                        y1r = y00 + 1;
+                        x2l = x00 - 2;
+                        y2l = y00 + 2;
+                        x2r = x00 + 2;
+                        y2r = y00 + 2;
+                        if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[23] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r <= 7))
+                        {
+                            if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[23] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l <= 7))
+                        {
+                            if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[23] = 1;
+                                r = 1;
+                            }
+                        }
+
+
+                        if (damkas[23] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 - 1;
+                            x1r = x00 + 1;
+                            y1r = y00 - 1;
+                            x2l = x00 - 2;
+                            y2l = y00 - 2;
+                            x2r = x00 + 2;
+                            y2r = y00 - 2;
+                            if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[23] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r >= 0))
+                            {
+                                if ((shahs[y1r, x1r] < 13) && (shahs[y1r, x1r] > 0) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[23] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l >= 0))
+                            {
+                                if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[23] = 1;
+                                    r = 1;
+                                }
+                            }
+
+                        }
+                    }
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                    //======================================================================================
+                }
+                else
+                {
+                    // Black 1-12
+                    if (vis[1 - 1] == true)
+                    {
+                        x = loc[1 - 1].X;
+                        y = loc[1 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[0] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[0] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[0] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[0] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[0] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[2 - 1] == true)
+                    {
+                        x = loc[2 - 1].X;
+                        y = loc[2 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[1] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[1] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[1] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[1] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[1] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[3 - 1] == true)
+                    {
+                        x = loc[3 - 1].X;
+                        y = loc[3 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[2] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[2] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[2] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[2] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[2] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[4 - 1] == true)
+                    {
+                        x = loc[4 - 1].X;
+                        y = loc[4 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[3] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[3] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[3] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[3] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[3] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[5 - 1] == true)
+                    {
+                        x = loc[5 - 1].X;
+                        y = loc[5 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[4] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[4] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[4] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[4] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[4] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[6 - 1] == true)
+                    {
+                        x = loc[6 - 1].X;
+                        y = loc[6 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[5] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[5] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[5] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[5] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[5] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[7 - 1] == true)
+                    {
+                        x = loc[7 - 1].X;
+                        y = loc[7 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[6] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[6] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[6] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[6] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[6] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[8 - 1] == true)
+                    {
+                        x = loc[8 - 1].X;
+                        y = loc[8 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[7] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[7] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[7] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[7] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[7] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[9 - 1] == true)
+                    {
+                        x = loc[9 - 1].X;
+                        y = loc[9 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[8] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[8] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[8] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[8] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[8] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[10 - 1] == true)
+                    {
+                        x = loc[10 - 1].X;
+                        y = loc[10 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[9] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[9] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[9] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[9] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[9] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[11 - 1] == true)
+                    {
+                        x = loc[11 - 1].X;
+                        y = loc[11 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[10] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[10] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+                        {
+                            if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                            {
+                                rubs[10] = 1;
+                                r = 1;
+                            }
+                        }
+
+                        if (damkas[10] == 1)
+                        {
+                            x1l = x00 - 1;
+                            y1l = y00 + 1;
+                            x1r = x00 + 1;
+                            y1r = y00 + 1;
+                            x2l = x00 - 2;
+                            y2l = y00 + 2;
+                            x2r = x00 + 2;
+                            y2r = y00 + 2;
+                            if ((x2l >= 0) && (y2l <= 7) && (x2r <= 7))
+                            {
+                                if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                                {
+                                    rubs[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2l < 0) && (y2r <= 7))
+                            {
+                                if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                                {
+                                    rubs[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                            if ((x2r > 7) && (y2l <= 7))
+                            {
+                                if ((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0))
+                                {
+                                    rubs[10] = 1;
+                                    r = 1;
+                                }
+                            }
+                        }
+
+                    }
+                    if (vis[12 - 1] == true)
+                    {
+                        x = loc[12 - 1].X;
+                        y = loc[12 - 1].Y;
+                        x00 = (x - 17) / 58;
+                        y00 = (y - 31) / 58;
+                        x1l = x00 - 1;
+                        y1l = y00 - 1;
+                        x1r = x00 + 1;
+                        y1r = y00 - 1;
+                        x2l = x00 - 2;
+                        y2l = y00 - 2;
+                        x2r = x00 + 2;
+                        y2r = y00 - 2;
+                        if ((x2l >= 0) && (y2l >= 0) && (x2r <= 7))
+                        {
+                            if (((shahs[y1l, x1l] < 25) && (shahs[y1l, x1l] > 12) && (shahs[y2l, x2l] == 0)) || ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0)))
+                            {
+                                rubs[11] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2l < 0) && (y2r >= 0))
+                        {
+                            if ((shahs[y1r, x1r] < 25) && (shahs[y1r, x1r] > 12) && (shahs[y2r, x2r] == 0))
+                            {
+                                rubs[11] = 1;
+                                r = 1;
+                            }
+                        }
+                        if ((x2r > 7) && (y2l >= 0))
+>>>>>>> 518790f72e7e9f3dc68e09f3f4f95a990b5c57b2
                         {
                             if ((shahs[y1l, x1l] < 13) && (shahs[y1l, x1l] > 0) && (shahs[y2l, x2l] == 0))
                             {
@@ -977,6 +8048,7 @@ namespace Курсач
             int fdamka;
             for (int j = 0; j < 8; j++)
             {
+                rublys = rubls();
                 setCoord();
                 fdamka = damkas[shahs[(Y0 - 31) / 58, (X0 - 17) / 58] - 1];
                 x = X0 + 58 * hodi[j, 0];
@@ -990,7 +8062,6 @@ namespace Курсач
                     checkDamkas((y - 31) / 58, (x - 17) / 58);
                     turns = (turns + 1) % 2;
                     rublys = rubls();
-
 
                     shashki[index, j + 1] = 2;
 
@@ -1209,6 +8280,8 @@ namespace Курсач
 
         private void comp()
         {
+            sw = new Stopwatch();
+            sw.Start();
             if (DamkaNoComp == 1)
             {
                 DamkaNoComp = 0;
@@ -1223,8 +8296,14 @@ namespace Курсач
             index = 0;
             DoWork();
             priora = 0;
-            shashki = new int[12, 9] { { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
-            
+            shashki = new int[12, 9];
+            for (int increment = 0; increment < 12; increment++)
+            {
+                for (int incr = 0; incr < 9; incr++)
+                {
+                    shashki[increment, incr] = 0;
+                }
+            }
 
             for (int i = 1; i < 25; i++)
             {
@@ -1245,8 +8324,12 @@ namespace Курсач
             }
 
             int num, hod;
-            int[] pr = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            int[] pr = new int[12];
             int prI = 0;
+            for (int increment = 0; increment < 12; increment++)
+            {
+                pr[increment] = 0;
+            }
             for (int i = 0; i < 12; i++)
             {
                 for (int j = 1; j < 9; j++)
@@ -1263,7 +8346,11 @@ namespace Курсач
             x0 = shahOb[shashki[num, 0] - 1].Location.X;
             y0 = shahOb[shashki[num, 0] - 1].Location.Y;
             int x, y;
-            int[] priors = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
+            int[] priors = new int[8];
+            for (int increment = 0; increment < 8; increment++)
+            {
+                priors[increment] = 0;
+            }
             int prInd = 0;
             for (int i = 1; i < 9; i++) if (shashki[num, i] == priora) { priors[prInd++] = i; }
                 hod = rnd.Next(0, prInd - 1);
@@ -1281,6 +8368,9 @@ namespace Курсач
             rubly = rubl();
             shahOb[shashki[num, 0] - 1].BringToFront();
             checkAbility();
+            rublys = rubls();
+            sw.Stop();
+            MessageBox.Show((sw.ElapsedMilliseconds).ToString());
             if (DamkaNoComp == 1)
             {
                 DamkaNoComp = 2;
@@ -1709,7 +8799,17 @@ namespace Курсач
         {
             shashka_move(2, 19, e);
         }
+<<<<<<< HEAD
         private void shashka21_MouseMove(object sender, MouseEventArgs e)
+=======
+
+        private void shashka21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void shashka6_MouseMove(object sender, MouseEventArgs e)
+>>>>>>> 518790f72e7e9f3dc68e09f3f4f95a990b5c57b2
         {
             shashka_move(2, 20, e);
         }
